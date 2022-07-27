@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { mainStyle } from "../styles/Globalstyle";
+import { useLocation } from "react-router-dom";
+import { useState } from "react";
 
 const SHeader = styled.div`
   width: 100%;
@@ -41,6 +43,21 @@ const Menu = styled.li`
   margin-right: 30px;
   a {
     color: #707070;
+  }
+  &.first {
+    a {
+      color: ${(props) => props.font1};
+    }
+  }
+  &.sec {
+    a {
+      color: ${(props) => props.font2};
+    }
+  }
+  &.thd {
+    a {
+      color: ${(props) => props.font3};
+    }
   }
   &.first:hover {
     .line {
@@ -82,6 +99,26 @@ const Line = styled.div`
 `;
 
 export const Header = () => {
+  const { pathname } = useLocation();
+  const { fstfont, setFstFont } = useState(`#707070`);
+  const { secfont, setSecFont } = useState(`#707070`);
+  const { thdfont, setThdFont } = useState(`#707070`);
+  const menuhandle = () => {
+    if (pathname === "/product") {
+      setFstFont(`${mainStyle.mainColor}`);
+      setSecFont(`#707070`);
+      setThdFont(`#707070`);
+    } else if (pathname === "/service") {
+      setFstFont(`#707070`);
+      setSecFont(`${mainStyle.mainColor}`);
+      setThdFont(`#707070`);
+    } else if (pathname === "/community") {
+      setFstFont(`#707070`);
+      setSecFont(`#707070`);
+      setThdFont(`${mainStyle.mainColor}`);
+    }
+  };
+
   return (
     <SHeader>
       <Link to={"/"}>
@@ -89,17 +126,17 @@ export const Header = () => {
       </Link>
       <MenuWrap>
         <Menus>
-          <Menu className="first">
+          <Menu onClick={menuhandle} font1={fstfont} className="first">
             <Line className="line" />
             <Link to={"/product"}>제품</Link>
           </Menu>
-          <Menu className="sec">
+          <Menu onClick={menuhandle} font2={secfont} className="sec">
             <Line className="line" />
             <Link to={"/service"}>고객지원</Link>
           </Menu>
-          <Menu className="thd">
+          <Menu onClick={menuhandle} font3={thdfont} className="thd">
             <Line className="line" />
-            <Link to={"/event"}>커뮤니티</Link>
+            <Link to={"/community"}>커뮤니티</Link>
           </Menu>
           <Menu>
             <FontAwesomeIcon icon={faMagnifyingGlass} />
