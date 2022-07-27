@@ -6,6 +6,7 @@ export const mainStyle = {
   mainColor: "#FF00AA",
   fontColor: "#1d1d1d",
   blackColor: "#333",
+  mainRgbColor: "255,0,170",
 };
 
 export const Globalstyle = createGlobalStyle`
