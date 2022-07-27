@@ -13,6 +13,10 @@ const SHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
 `;
 const Logo = styled.div`
   font-size: 30px;
