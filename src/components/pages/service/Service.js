@@ -1,3 +1,5 @@
+import { PageTitle } from "../../../PageTitle";
+
 export const Service = () => {
   return (
     <>
