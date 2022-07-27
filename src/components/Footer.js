@@ -5,8 +5,6 @@ const FooterAllWrap = styled.div`
   width: 100%;
   height: 200px;
   display: flex;
-  position: fixed;
-  bottom: 0;
 `;
 
 const FooterBg = styled.div`
@@ -20,7 +18,7 @@ const FooterWrap = styled.div`
   position: absolute;
   z-index: 999;
   height: 200px;
-  padding-top: 50px;
+  padding-top: 75px;
   color: ${mainStyle.blackColor};
   width: 100%;
   display: flex;

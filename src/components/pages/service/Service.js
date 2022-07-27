@@ -1,10 +1,13 @@
 import { PageTitle } from "../../../PageTitle";
+import { MainBanner } from "./MainBanner";
+import { ServiceBox } from "./ServiceBox";
 
 export const Service = () => {
   return (
     <>
       <PageTitle title="Service" />
-      <div>서비스 페이지</div>
+      <MainBanner />
+      <ServiceBox />
     </>
   );
 };
