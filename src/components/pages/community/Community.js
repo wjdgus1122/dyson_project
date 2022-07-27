@@ -1,9 +1,9 @@
 import { PageTitle } from "../../../PageTitle";
 
-export const Event = () => {
+export const Community = () => {
   return (
     <>
-      <PageTitle title="Event" />
+      <PageTitle title="Community" />
       Event
     </>
   );
