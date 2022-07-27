@@ -3,24 +3,17 @@ import { mainStyle } from "../styles/Globalstyle";
 
 const FooterAllWrap = styled.div`
   width: 100%;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.2);
   position: fixed;
   bottom: 0;
 `;
 
-const FooterBg = styled.div`
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 200px;
-  background-color: rgba(29, 29, 29, 0.3);
-  filter: blur(1px);
-`;
-
 const FooterWrap = styled.div`
-  height: 150px;
+  height: 200px;
   padding: ${mainStyle.padding};
+  padding-top: 50px;
   color: ${mainStyle.blackColor};
-  opacity: 0.7;
   display: flex;
   justify-content: space-between;
 
@@ -71,7 +64,6 @@ export const Footer = () => {
   return (
     <>
       <FooterAllWrap>
-        <FooterBg />
         <FooterWrap>
           <FooterLeft>
             <h3>문의 연락처</h3>
