@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mainStyle } from "../../../../styles/Globalstyle";
+import { mainStyle } from "../../../styles/Globalstyle";
 const MainBannerWrap = styled.div``;
 
 const MainBannerBg = styled.div`
@@ -61,7 +61,7 @@ export const MainBanner = () => {
       <MainBannerWrap>
         <MainBannerBg>
           <img
-            src={require("../Image/mainbanner.png")}
+            src={require("./Image/mainbanner.png")}
             alt="service"
             width="100%"
             height="570px"
