@@ -1,10 +1,11 @@
 import { PageTitle } from "../../../PageTitle";
+import { MainBanner } from "./Image/MainBanner";
 
 export const Service = () => {
   return (
     <>
       <PageTitle title="Service" />
-      <div>서비스 페이지</div>
+      <MainBanner />
     </>
   );
 };
