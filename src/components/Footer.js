@@ -3,10 +3,8 @@ import { mainStyle } from "../styles/Globalstyle";
 
 const FooterAllWrap = styled.div`
   width: 100%;
-  height: 200px;
   display: flex;
-  position: fixed;
-  bottom: 0;
+  position: relative;
 `;
 
 const FooterBg = styled.div`
@@ -14,17 +12,20 @@ const FooterBg = styled.div`
   height: 200px;
   background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(5px);
+  position: absolute;
+  bottom: 0;
 `;
 
 const FooterWrap = styled.div`
-  position: absolute;
+  /* position: absolute;
+  bottom: 0; */
   z-index: 999;
   height: 200px;
-  padding-top: 60px;
   color: ${mainStyle.blackColor};
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   h3 {
     font-size: 20px;
