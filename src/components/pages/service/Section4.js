@@ -20,7 +20,11 @@ export const Section4 = () => {
   return (
     <Section4Wrap>
       <Section4Banner>
-        <img src={require("./Image/section.png")} width="100%"></img>
+        <img
+          src={require("./Image/section.png")}
+          width="100%"
+          alt="dyson service center"
+        ></img>
         <Section4Title>고객센터 연락처</Section4Title>
       </Section4Banner>
     </Section4Wrap>
