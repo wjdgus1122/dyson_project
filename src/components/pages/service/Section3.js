@@ -10,7 +10,7 @@ const Section3Banner = styled.div`
 const Section3Title = styled.h1`
   position: absolute;
   top: 50px;
-  left: 42%;
+  left: 45%;
   font-size: 50px;
   font-weight: 500;
   color: white;
