@@ -4,16 +4,25 @@ import { mainStyle } from "../styles/Globalstyle";
 const FooterAllWrap = styled.div`
   width: 100%;
   height: 200px;
-  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
   position: fixed;
   bottom: 0;
 `;
 
-const FooterWrap = styled.div`
+const FooterBg = styled.div`
+  width: 100%;
   height: 200px;
-  padding: ${mainStyle.padding};
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
+`;
+
+const FooterWrap = styled.div`
+  position: absolute;
+  z-index: 999;
+  height: 200px;
   padding-top: 50px;
   color: ${mainStyle.blackColor};
+  width: 100%;
   display: flex;
   justify-content: space-between;
 
@@ -28,6 +37,7 @@ const FooterWrap = styled.div`
 `;
 
 const FooterLeft = styled.div`
+  padding-left: 120px;
   h3 {
     margin-bottom: 10px;
   }
@@ -49,6 +59,7 @@ const FooterCenter = styled.div`
   }
 `;
 const FooterRight = styled.div`
+  padding-right: 120px;
   text-align: right;
   span {
     font-size: 25px;
@@ -64,6 +75,8 @@ export const Footer = () => {
   return (
     <>
       <FooterAllWrap>
+        <FooterBg />
+
         <FooterWrap>
           <FooterLeft>
             <h3>문의 연락처</h3>
