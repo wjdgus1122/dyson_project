@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { mainStyle } from "../../../styles/Globalstyle";
 const MainBannerWrap = styled.div``;
@@ -38,6 +37,7 @@ const Box = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  cursor: pointer;
   span {
     font-size: 30px;
   }
@@ -77,7 +77,7 @@ export const MainBanner = () => {
         </MainBannerBg>
       </MainBannerWrap>
       <ServiceBoxWrap>
-        <Box>
+        <Box onClick={() => window.scrollTo({ top: 1030 })}>
           <BoxCon>
             <span>
               <i class="fa-solid fa-warehouse"></i>
@@ -88,7 +88,7 @@ export const MainBanner = () => {
             </h5>
           </BoxCon>
         </Box>
-        <Box>
+        <Box onClick={() => window.scrollTo({ top: 2596 })}>
           <BoxCon>
             <span>
               <i class="fa-solid fa-screwdriver-wrench"></i>
@@ -97,7 +97,7 @@ export const MainBanner = () => {
             <h5>전국 어디서나 택배를 이용해 편리하게 수리 받으세요.</h5>
           </BoxCon>
         </Box>
-        <Box>
+        <Box onClick={() => window.scrollTo({ top: 4229 })}>
           <BoxCon>
             <span>
               <i class="fa-solid fa-mobile-screen"></i>
@@ -106,7 +106,7 @@ export const MainBanner = () => {
             <h5>보이는 ARS 서비스 또는 제품기술지원</h5>
           </BoxCon>
         </Box>
-        <Box>
+        <Box onClick={() => window.scrollTo({ top: 5816 })}>
           <BoxCon>
             <span>
               <i class="fa-solid fa-credit-card"></i>

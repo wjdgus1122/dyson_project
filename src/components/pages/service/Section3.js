@@ -175,9 +175,9 @@ export const Section3 = () => {
         </Section3Banner>
         <CsServiceWrap>
           <CsCon>
-            <img src={pinklogo} width="202px" height="76px" />
+            <img src={pinklogo} width="202px" height="76px" alt="dysonlogo" />
             <h3>제품상담</h3>
-            <img src={phone} width="426px" height="280px" />
+            <img src={phone} width="426px" height="280px" alt="smartphone" />
             <p>
               다이슨에 연락하고 싶거나 궁금한 점이 있으세요?
               <br /> 옆의 문의 양식을 이용해서 직접 연락하는 방법, <br />
