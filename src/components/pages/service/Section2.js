@@ -9,8 +9,9 @@ const Section2Wrap = styled.div`
 const Section2Banner = styled.div``;
 
 const Section2BoxWrap = styled.div`
-  height: 1000px;
+  height: 80vh;
   padding: ${mainStyle.padding};
+  padding: 100px 0;
   display: flex;
   flex-wrap: wrap;
 `;
@@ -24,7 +25,6 @@ const Box = styled.div`
 
 const BoxCon = styled.div`
   width: 75%;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,6 +34,7 @@ const BoxCon = styled.div`
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 40px;
+    color: ${mainStyle.mainColor};
   }
   h5 {
     font-size: 22px;
