@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { mainStyle } from "../../../styles/Globalstyle";
 const MainBannerWrap = styled.div``;
