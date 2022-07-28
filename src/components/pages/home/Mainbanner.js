@@ -1,10 +1,17 @@
 import styled from "styled-components";
 import { Container } from "../../Container";
 import main_1 from "./img/main_1.jpg";
+import main_2 from "./img/main2.jpg";
+import main_3 from "./img/main3.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { mainStyle } from "../../../styles/Globalstyle";
 import { Link } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper";
+import "swiper/css";
+import "swiper/css/autoplay";
+import "swiper/css/pagination";
 
 const Wrap = styled.div`
   width: 100%;
@@ -27,7 +34,7 @@ const ProductView = styled.div`
   font-weight: 700;
   color: white;
   position: absolute;
-  right: 10px;
+  left: 5px;
   margin-top: 40px;
 `;
 const BottomWrap = styled.div`
@@ -48,31 +55,108 @@ const Text = styled.div`
   svg {
     color: ${mainStyle.mainColor};
   }
+  &.text {
+    color: ${mainStyle.fontColor};
+  }
+  &.arrow {
+    svg {
+      color: white;
+    }
+  }
 `;
 
 export const Mainbanner = () => {
   return (
-    <Wrap style={{ background: `url(${main_1})` }}>
-      <Container>
-        <TextWrap>
-          <Title>
-            과도한 열 손상이 없는 자연스러운 스타일링, 그리고 자머리 정리까지
-          </Title>
-          <Link to={"/product"}>
-            <ProductView>
-              제품보러가기 <FontAwesomeIcon icon={faCaretRight} />{" "}
-            </ProductView>
-          </Link>
-        </TextWrap>
-        <BottomWrap>
-          <Text>
-            코안다 기술이란? <FontAwesomeIcon icon={faCaretRight} />
-          </Text>
-          <Text>
-            추가 악세사리 구입 <FontAwesomeIcon icon={faCaretRight} />
-          </Text>
-        </BottomWrap>
-      </Container>
-    </Wrap>
+    <>
+      <Swiper
+        modules={[Pagination]}
+        direction={"vertical"}
+        pagination={{
+          clickable: true,
+        }}
+        // autoplay={{ delay: 3000, disableOnInteraction: false }}
+        style={{ height: "100vh", overflow: "hidden" }}
+      >
+        <SwiperSlide>
+          <Wrap style={{ background: `url(${main_1}) no-repeat center/cover` }}>
+            <Container>
+              <TextWrap>
+                <Title>
+                  과도한 열 손상이 없는 자연스러운 스타일링, 그리고 잔머리
+                  정리까지
+                </Title>
+                <Link to={"/product"}>
+                  <ProductView>
+                    제품보러가기 <FontAwesomeIcon icon={faCaretRight} />{" "}
+                  </ProductView>
+                </Link>
+              </TextWrap>
+              <BottomWrap>
+                <Text>
+                  코안다 기술이란? <FontAwesomeIcon icon={faCaretRight} />
+                </Text>
+                <Text>
+                  추가 악세사리 구입 <FontAwesomeIcon icon={faCaretRight} />
+                </Text>
+              </BottomWrap>
+            </Container>
+          </Wrap>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Wrap
+            style={{ background: `url(${main_2})  no-repeat right -2px/cover` }}
+          >
+            <Container>
+              <TextWrap>
+                <Title>
+                  다이슨의 가장 강력하고 <br /> 인텔리전트한 <br /> 무선청소기.
+                </Title>
+                <Link to={"/product"}>
+                  <ProductView>
+                    제품보러가기 <FontAwesomeIcon icon={faCaretRight} />{" "}
+                  </ProductView>
+                </Link>
+              </TextWrap>
+              <BottomWrap>
+                <Text className="text">
+                  레이저 디텍트 기술이란?{" "}
+                  <FontAwesomeIcon icon={faCaretRight} />
+                </Text>
+                <Text className="text">
+                  추가 악세사리 구입 <FontAwesomeIcon icon={faCaretRight} />
+                </Text>
+              </BottomWrap>
+            </Container>
+          </Wrap>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Wrap
+            style={{ background: `url(${main_3})  no-repeat center/cover` }}
+          >
+            <Container>
+              <TextWrap>
+                <Title>
+                  날개 없는 선풍기의 <br /> 강력한 바람
+                </Title>
+                <Link to={"/product"}>
+                  <ProductView>
+                    제품보러가기 <FontAwesomeIcon icon={faCaretRight} />{" "}
+                  </ProductView>
+                </Link>
+              </TextWrap>
+              <BottomWrap>
+                <Text className="text arrow">
+                  에어 멀티플라이어 기술이란?{" "}
+                  <FontAwesomeIcon icon={faCaretRight} />
+                </Text>
+                <Text className="text arrow">
+                  추가 악세사리 구입 <FontAwesomeIcon icon={faCaretRight} />
+                </Text>
+              </BottomWrap>
+            </Container>
+          </Wrap>
+        </SwiperSlide>
+      </Swiper>
+    </>
   );
 };
