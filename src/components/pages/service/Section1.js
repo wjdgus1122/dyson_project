@@ -1,20 +1,16 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { mainStyle } from "../../../styles/Globalstyle";
+import { Container } from "../../Container";
+import bannerimg from "./Image/section1.png";
 
 const Section1Wrap = styled.div`
   margin-top: 130px;
 `;
 
 const Section1Banner = styled.div`
-  position: relative;
-`;
-const Section1Title = styled.h1`
-  position: absolute;
-  top: 50px;
-  left: 42%;
-  font-size: 50px;
-  font-weight: 500;
-  color: white;
+  width: 100%;
+  height: 400px;
 `;
 
 const MapWrap = styled.div`
@@ -32,11 +28,14 @@ const Box = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  cursor: pointer;
+  span {
+    color: ${mainStyle.mainColor};
+  }
   h3 {
     font-size: 28px;
-    font-weight: 500;
-    margin-bottom: 10px;
+    font-weight: 700;
+    margin-bottom: 20px;
     padding-left: 30px;
   }
   p {
@@ -50,38 +49,72 @@ const Map = styled.div`
   margin-top: 30px;
   width: 100%;
   height: 766px;
-  background-color: beige;
+`;
+
+const Iframe = styled.iframe`
+  width: 100%;
+  height: 100%;
 `;
 
 export const Section1 = () => {
+  const [map, setMap] = useState(
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.825664695715!2d127.09689921558734!3d37.51202973500503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca5a0b52f9a25%3A0x1ed07bf74dcfe84!2z64uk7J207IqoIO2UhOumrOuvuOyXhCDshJzruYTsiqTshLzthLA!5e0!3m2!1sko!2skr!4v1658975745575!5m2!1sko!2skr"
+  );
+
+  const mapclick1 = () => {
+    setMap(
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.825664695715!2d127.09689921558734!3d37.51202973500503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca5a0b52f9a25%3A0x1ed07bf74dcfe84!2z64uk7J207IqoIO2UhOumrOuvuOyXhCDshJzruYTsiqTshLzthLA!5e0!3m2!1sko!2skr!4v1658975745575!5m2!1sko!2skr"
+    );
+  };
+
+  const mapclick2 = () => {
+    setMap(
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202857.2504405755!2d126.77830456647811!3d37.398237785812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b5b1585ccc3a7%3A0xf1e9a66dce33b956!2z64uk7J207IqoIOqzteyLnSDshJzruYTsiqQg7YyM7Yq464SIIOq0keq1kOyEvO2EsA!5e0!3m2!1sko!2skr!4v1658979694579!5m2!1sko!2sk"
+    );
+  };
+
   return (
-    <Section1Wrap>
-      <Section1Banner>
-        <img src={require("./Image/section.png")} width="100%"></img>
-        <Section1Title>다이슨 서비스센터</Section1Title>
-      </Section1Banner>
-      <MapWrap>
-        <MapTabMenu>
-          <Box>
-            <h3>프리미엄 서비스 센터</h3>
-            <p>
-              롯데월드 하이마트 메가스토어 잠실점 <br />
-              무선 청소기 수리 시 10만원 상당의 프리미엄 청소 서비스 무료 제공
-              (내/외부 물청소 포함)
-            </p>
-          </Box>
-          <Box>
-            <h3>전문 서비스 센터</h3>
-            <p>
-              7개의 다이슨 전문 서비스 센터에서 고객님을 위해 대기하고 있습니다.
-              <br />
-              무선 청소기 수리 시 무료 청소 서비스가 제공됩니다. (에어건을
-              이용한 먼지 제거)
-            </p>
-          </Box>
-        </MapTabMenu>
-        <Map></Map>
-      </MapWrap>
-    </Section1Wrap>
+    <>
+      <Container />
+      <Section1Wrap>
+        <Section1Banner
+          style={{
+            background: `url(${bannerimg}) no-repeat center / cover`,
+          }}
+        ></Section1Banner>
+        <MapWrap>
+          <MapTabMenu>
+            <Box onClick={mapclick1}>
+              <h3>
+                <span>프리미엄</span> 서비스 센터
+              </h3>
+              <p>
+                롯데월드 하이마트 메가스토어 잠실점 <br />
+                무선 청소기 수리 시 10만원 상당의 프리미엄 청소 서비스 무료 제공
+                (내/외부 물청소 포함)
+              </p>
+            </Box>
+            <Box onClick={mapclick2}>
+              <h3>
+                <span>전문</span> 서비스 센터
+              </h3>
+              <p>
+                7개의 다이슨 전문 서비스 센터에서 고객님을 위해 대기하고
+                있습니다.
+                <br />
+                무선 청소기 수리 시 무료 청소 서비스가 제공됩니다. (에어건을
+                이용한 먼지 제거)
+              </p>
+            </Box>
+          </MapTabMenu>
+          <Map>
+            <Iframe
+              src={map}
+              referrerpolicy="no-referrer-when-downgrade"
+            ></Iframe>
+          </Map>
+        </MapWrap>
+      </Section1Wrap>
+    </>
   );
 };
