@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { mainStyle } from "../../../styles/Globalstyle";
 import { Container } from "../../Container";
+import phone from "./Image/mobile.png";
+import pinklogo from "./Image/pinklogo.png";
 
 const Section3Wrap = styled.div`
   margin-top: 130px;
@@ -15,13 +17,13 @@ const CsServiceWrap = styled.div`
   padding: ${mainStyle.padding};
 `;
 const CsCon = styled.div`
+  img {
+    margin: 30px 0;
+  }
   h3 {
     font-size: 50px;
     font-weight: 500;
     color: ${mainStyle.mainColor};
-    :nth-child(2) {
-      margin-bottom: 80px;
-    }
   }
   p {
     font-size: 20px;
@@ -173,8 +175,9 @@ export const Section3 = () => {
         </Section3Banner>
         <CsServiceWrap>
           <CsCon>
-            <h3>dyson</h3>
+            <img src={pinklogo} width="202px" height="76px" />
             <h3>제품상담</h3>
+            <img src={phone} width="426px" height="280px" />
             <p>
               다이슨에 연락하고 싶거나 궁금한 점이 있으세요?
               <br /> 옆의 문의 양식을 이용해서 직접 연락하는 방법, <br />
