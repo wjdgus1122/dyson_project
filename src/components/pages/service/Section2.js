@@ -6,17 +6,7 @@ const Section2Wrap = styled.div`
   margin-top: 130px;
 `;
 
-const Section2Banner = styled.div`
-  position: relative;
-`;
-const Section2Title = styled.h1`
-  position: absolute;
-  top: 50px;
-  left: 42%;
-  font-size: 50px;
-  font-weight: 500;
-  color: white;
-`;
+const Section2Banner = styled.div``;
 
 const Section2BoxWrap = styled.div`
   height: 1000px;
@@ -67,11 +57,10 @@ export const Section2 = () => {
       <Section2Wrap>
         <Section2Banner>
           <img
-            src={require("./Image/section.png")}
+            src={require("./Image/section2.png")}
             width="100%"
             alt="dyson service center"
-          ></img>
-          <Section2Title>수리서비스</Section2Title>
+          />
         </Section2Banner>
 
         <Section2BoxWrap>

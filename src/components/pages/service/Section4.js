@@ -4,6 +4,7 @@ import { Container } from "../../Container";
 const Section4Wrap = styled.div`
   margin-top: 130px;
   h5 {
+    color: ${mainStyle.mainColor};
     font-size: 20px;
     font-weight: 300;
     text-align: center;
@@ -11,17 +12,7 @@ const Section4Wrap = styled.div`
   }
 `;
 
-const Section4Banner = styled.div`
-  position: relative;
-`;
-const Section4Title = styled.h1`
-  position: absolute;
-  top: 50px;
-  left: 40%;
-  font-size: 50px;
-  font-weight: 500;
-  color: white;
-`;
+const Section4Banner = styled.div``;
 
 const DysonContact = styled.div`
   margin-top: 80px;
@@ -59,6 +50,12 @@ const BoxCon = styled.p`
 
 const DysonOnline = styled.div`
   width: 100%;
+  height: 350px;
+  background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 const OnlineTitle = styled.h3`
   font-size: 26px;
@@ -72,8 +69,6 @@ const OnlineBoxWrap = styled.div`
   justify-content: center;
 `;
 const OnlineBox = styled.div`
-  height: 200px;
-  margin-bottom: 80px;
   margin-right: 100px;
   :nth-child(4) {
     margin-right: 0;
@@ -108,11 +103,10 @@ export const Section4 = () => {
       <Section4Wrap>
         <Section4Banner>
           <img
-            src={require("./Image/section.png")}
+            src={require("./Image/section4.png")}
             width="100%"
             alt="dyson service center"
-          ></img>
-          <Section4Title>고객센터 연락처</Section4Title>
+          />
         </Section4Banner>
         <DysonContact>
           <Box>

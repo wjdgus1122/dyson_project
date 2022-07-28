@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { mainStyle } from "../../../styles/Globalstyle";
 import { Container } from "../../Container";
@@ -7,20 +6,10 @@ const Section3Wrap = styled.div`
   margin-top: 130px;
 `;
 
-const Section3Banner = styled.div`
-  position: relative;
-`;
-const Section3Title = styled.h1`
-  position: absolute;
-  top: 50px;
-  left: 45%;
-  font-size: 50px;
-  font-weight: 500;
-  color: white;
-`;
+const Section3Banner = styled.div``;
 
 const CsServiceWrap = styled.div`
-  margin-top: 100px;
+  margin-top: 150px;
   display: flex;
   justify-content: space-between;
   padding: ${mainStyle.padding};
@@ -50,12 +39,12 @@ const CsCon = styled.div`
 `;
 const CsForm = styled.div`
   width: 50%;
-  height: 900px;
+  height: 80vh;
   border: 1px solid ${mainStyle.mainColor};
 `;
 
 const FormBox = styled.form`
-  margin-top: 100px;
+  margin-top: 70px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -72,7 +61,11 @@ const FormBox = styled.form`
     all: unset;
     background-color: #f3f3f3;
     width: 100%;
-    height: 500px;
+    height: 300px;
+    padding: 10px 10px;
+    &::placeholder {
+      color: #000;
+    }
   }
   .sendBtn {
     all: unset;
@@ -95,19 +88,34 @@ const FormBox = styled.form`
 
 const InputName = styled.form`
   display: flex;
-  background-color: #f3f3f3;
+
   margin-bottom: 10px;
   .inputname {
     all: unset;
-    width: 80%;
+    width: 50%;
+    margin-right: 10px;
     background-color: #f3f3f3;
     &::placeholder {
-      color: #000;
+      /* color: #000; */
       padding-left: 10px;
     }
   }
   p {
+    margin-right: 20px;
+  }
+`;
+
+const InputNameCate = styled.div`
+  width: 50%;
+  display: flex;
+  align-items: center;
+  background-color: #f3f3f3;
+  input {
     margin-right: 10px;
+    margin-top: 10px;
+  }
+  label {
+    margin-right: 20px;
   }
 `;
 
@@ -121,7 +129,7 @@ const InputCategory = styled.div`
     color: #000;
     padding-left: 10px;
   }
-  .product {
+  .product label {
     all: unset;
   }
   input {
@@ -145,7 +153,6 @@ const AgreeBtn = styled.div`
     width: 150px;
     height: 40px;
     border: 1px solid ${mainStyle.mainColor};
-    border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,11 +166,10 @@ export const Section3 = () => {
       <Section3Wrap>
         <Section3Banner>
           <img
-            src={require("./Image/section.png")}
+            src={require("./Image/section3.png")}
             width="100%"
             alt="dyson service center"
-          ></img>
-          <Section3Title>제품상담</Section3Title>
+          />
         </Section3Banner>
         <CsServiceWrap>
           <CsCon>
@@ -187,11 +193,13 @@ export const Section3 = () => {
               <form>
                 <InputName>
                   <input type="text" placeholder="이름" className="inputname" />
-                  <p>성별</p>
-                  <input type="radio" name="성별" id="남" />
-                  <label for="남">남</label>
-                  <input type="radio" name="성별" id="여" />
-                  <label for="여">여</label>
+                  <InputNameCate>
+                    <p>성별</p>
+                    <input type="radio" name="성별" id="남" />
+                    <label for="남">남</label>
+                    <input type="radio" name="성별" id="여" />
+                    <label for="여">여</label>
+                  </InputNameCate>
                 </InputName>
 
                 <input type="email" placeholder="email" className="mail" />
@@ -246,7 +254,7 @@ export const Section3 = () => {
                     부품
                   </label>
                 </InputCategory>
-                <input type="text" placeholder="문의사항" className="QNA" />
+                <textarea type="text" placeholder="문의사항" className="QNA" />
                 <br />
                 <AgreeBtn>
                   <input
@@ -260,7 +268,7 @@ export const Section3 = () => {
                     <br /> 읽었으며, 이에 동의합니다.
                   </label>
                   <button className="sendBtn">
-                    <p>SEND ▶</p>
+                    <p>SEND ▸</p>
                   </button>
                 </AgreeBtn>
               </form>

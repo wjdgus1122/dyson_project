@@ -53,6 +53,9 @@ const Box = styled.div`
 
 const BoxCon = styled.div`
   padding: 0 90px;
+  span {
+    color: ${mainStyle.mainColor};
+  }
 `;
 
 export const MainBanner = () => {
@@ -76,7 +79,7 @@ export const MainBanner = () => {
         <Box>
           <BoxCon>
             <span>
-              <i class="fa-solid fa-cart-flatbed"></i>
+              <i class="fa-solid fa-warehouse"></i>
             </span>
             <h3>다이슨 서비스센터</h3>
             <h5>
