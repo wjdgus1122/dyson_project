@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { mainStyle } from "../styles/Globalstyle";
+import { useState } from "react";
 
 const SHeader = styled.div`
   width: 100%;
@@ -12,6 +13,10 @@ const SHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
 `;
 const Logo = styled.div`
   font-size: 30px;
@@ -41,6 +46,30 @@ const Menu = styled.li`
   margin-right: 30px;
   a {
     color: #707070;
+  }
+  &.first {
+    .line {
+      width: ${(props) => props.line1};
+    }
+    a {
+      color: ${(props) => props.font1};
+    }
+  }
+  &.sec {
+    .line {
+      width: ${(props) => props.line2};
+    }
+    a {
+      color: ${(props) => props.font2};
+    }
+  }
+  &.thd {
+    .line {
+      width: ${(props) => props.line3};
+    }
+    a {
+      color: ${(props) => props.font3};
+    }
   }
   &.first:hover {
     .line {
@@ -82,24 +111,78 @@ const Line = styled.div`
 `;
 
 export const Header = () => {
+  const [fstfont, setFstFont] = useState(``);
+  const [secfont, setSecFont] = useState(``);
+  const [thdfont, setThdFont] = useState(``);
+  const [fstline, setFstLine] = useState(``);
+  const [secline, setSecLine] = useState(``);
+  const [thdline, setThdLine] = useState(``);
+  const menuhandle1 = () => {
+    setFstFont(`${mainStyle.mainColor}`);
+    setSecFont(`#707070`);
+    setThdFont(`#707070`);
+    setFstLine("100%");
+    setSecLine("0");
+    setThdLine("0");
+  };
+  const menuhandle2 = () => {
+    setFstFont(`#707070`);
+    setSecFont(`${mainStyle.mainColor}`);
+    setThdFont(`#707070`);
+    setFstLine("0");
+    setSecLine("100%");
+    setThdLine("0");
+  };
+  const menuhandle3 = () => {
+    setFstFont(`#707070`);
+    setSecFont(`#707070`);
+    setThdFont(`${mainStyle.mainColor}`);
+    setFstLine("0");
+    setSecLine("0");
+    setThdLine("100%");
+  };
+  const menuhandle4 = () => {
+    setFstFont(`#707070`);
+    setSecFont(`#707070`);
+    setThdFont(`#707070`);
+    setFstLine("0");
+    setSecLine("0");
+    setThdLine("0");
+  };
+
   return (
     <SHeader>
       <Link to={"/"}>
-        <Logo>dyson</Logo>
+        <Logo onClick={menuhandle4}>dyson</Logo>
       </Link>
       <MenuWrap>
         <Menus>
-          <Menu className="first">
+          <Menu
+            onClick={menuhandle1}
+            font1={fstfont}
+            line1={fstline}
+            className="first"
+          >
             <Line className="line" />
             <Link to={"/product"}>제품</Link>
           </Menu>
-          <Menu className="sec">
+          <Menu
+            onClick={menuhandle2}
+            font2={secfont}
+            line2={secline}
+            className="sec"
+          >
             <Line className="line" />
             <Link to={"/service"}>고객지원</Link>
           </Menu>
-          <Menu className="thd">
+          <Menu
+            onClick={menuhandle3}
+            font3={thdfont}
+            line3={thdline}
+            className="thd"
+          >
             <Line className="line" />
-            <Link to={"/event"}>커뮤니티</Link>
+            <Link to={"/community"}>커뮤니티</Link>
           </Menu>
           <Menu>
             <FontAwesomeIcon icon={faMagnifyingGlass} />
