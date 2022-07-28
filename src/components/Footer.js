@@ -17,8 +17,8 @@ const FooterBg = styled.div`
 `;
 
 const FooterWrap = styled.div`
-  /* position: absolute;
-  bottom: 0; */
+  position: absolute;
+  bottom: 0;
   z-index: 999;
   height: 200px;
   color: ${mainStyle.blackColor};
