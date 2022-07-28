@@ -56,7 +56,7 @@ export const Mainbanner = () => {
       <Container>
         <TextWrap>
           <Title>
-            과도한 열 손상이 없는 자연스러운 스타일링, 그리고 자머리 정리까지
+            과도한 열 손상이 없는 자연스러운 스타일링, 그리고 잔머리 정리까지
           </Title>
           <Link to={"/product"}>
             <ProductView>
