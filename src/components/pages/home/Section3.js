@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import { mainStyle } from "../../../styles/Globalstyle";
 import { Container } from "../../Container";
+import { Link } from "react-router-dom";
+import box1 from "./img/box1.png";
+import box2 from "./img/box2.png";
 
 const Wrap = styled.div`
   width: 100%;
@@ -66,12 +69,26 @@ const SCon = styled.div`
   width: 455px;
   height: 200px;
   border: 1px solid ${mainStyle.mainColor};
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 const BCon = styled.div`
   width: 655px;
   height: 310px;
   border: 1px solid ${mainStyle.mainColor};
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+const Box = styled.div`
+  width: 630px;
+  height: 200px;
+`;
+const SBox = styled.div`
+  width: 365px;
+  height: 150px;
 `;
 const Best = styled.div`
   width: 135px;
@@ -100,15 +117,28 @@ export const Section3 = () => {
           <Text>
             지금 다이슨 리뷰 이벤트 참여하면 참여자 전원 액세서리 바우처 증정
           </Text>
-          <TextBtn>리뷰 작성하러 가기</TextBtn>
+          <Link to={"/community"}>
+            <TextBtn>리뷰 작성하러 가기</TextBtn>
+          </Link>
         </TextWrap>
         <ProductImg />
         <BoxWrap>
-          <SCon />
+          <SCon>
+            <SBox
+              style={{ background: `url(${box2}) no-repeat center/cover` }}
+            />{" "}
+          </SCon>
           <BCon>
+            <Box
+              style={{ background: `url(${box1}) no-repeat center/cover` }}
+            />
             <Best>Best</Best>
           </BCon>
-          <SCon />
+          <SCon>
+            <SBox
+              style={{ background: `url(${box2}) no-repeat center/cover` }}
+            />{" "}
+          </SCon>
         </BoxWrap>
       </Container>
     </Wrap>

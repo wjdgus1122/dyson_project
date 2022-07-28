@@ -3,6 +3,7 @@ import { mainStyle } from "../../../styles/Globalstyle";
 import { Container } from "../../Container";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const TitleWrap = styled.div`
   margin-left: 30px;
@@ -92,55 +93,65 @@ export const Section2 = () => {
           <LeftCon>
             <Con>
               <Box className="box">
-                <ViewBtn>
-                  제품보러가기{" "}
-                  <span>
-                    <FontAwesomeIcon icon={faAngleRight} />
-                  </span>
-                </ViewBtn>
+                <Link to={"/product"}>
+                  <ViewBtn>
+                    제품보러가기{" "}
+                    <span>
+                      <FontAwesomeIcon icon={faAngleRight} />
+                    </span>
+                  </ViewBtn>
+                </Link>
               </Box>
             </Con>
             <Con>
               <Box className="box">
-                <ViewBtn>
-                  제품보러가기{" "}
-                  <span>
-                    <FontAwesomeIcon icon={faAngleRight} />
-                  </span>
-                </ViewBtn>
+                <Link to={"/product"}>
+                  <ViewBtn>
+                    제품보러가기{" "}
+                    <span>
+                      <FontAwesomeIcon icon={faAngleRight} />
+                    </span>
+                  </ViewBtn>
+                </Link>
               </Box>
             </Con>
           </LeftCon>
           <CenterCon>
             <Con>
               <Box className="box">
-                <ViewBtn>
-                  제품보러가기{" "}
-                  <span>
-                    <FontAwesomeIcon icon={faAngleRight} />
-                  </span>
-                </ViewBtn>
+                <Link to={"/product"}>
+                  <ViewBtn>
+                    제품보러가기{" "}
+                    <span>
+                      <FontAwesomeIcon icon={faAngleRight} />
+                    </span>
+                  </ViewBtn>
+                </Link>
               </Box>
             </Con>
             <Con>
               <Box className="box">
-                <ViewBtn>
-                  제품보러가기{" "}
-                  <span>
-                    <FontAwesomeIcon icon={faAngleRight} />
-                  </span>
-                </ViewBtn>
+                <Link to={"/product"}>
+                  <ViewBtn>
+                    제품보러가기{" "}
+                    <span>
+                      <FontAwesomeIcon icon={faAngleRight} />
+                    </span>
+                  </ViewBtn>
+                </Link>
               </Box>
             </Con>
           </CenterCon>
           <RightCon>
             <Box className="box">
-              <ViewBtn>
-                제품보러가기{" "}
-                <span>
-                  <FontAwesomeIcon icon={faAngleRight} />
-                </span>
-              </ViewBtn>
+              <Link to={"/product"}>
+                <ViewBtn>
+                  제품보러가기{" "}
+                  <span>
+                    <FontAwesomeIcon icon={faAngleRight} />
+                  </span>
+                </ViewBtn>
+              </Link>
             </Box>
           </RightCon>
         </ProductWrap>
