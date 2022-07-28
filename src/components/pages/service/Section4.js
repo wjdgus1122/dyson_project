@@ -32,10 +32,10 @@ const DysonContact = styled.div`
 const Box = styled.div`
   text-align: center;
   width: 30%;
-
   :nth-child(2) {
     border-left: 2px solid rgba(29, 29, 29, 0.5);
     border-right: 2px solid rgba(29, 29, 29, 0.5);
+    width: 35%;
   }
 `;
 
@@ -135,7 +135,8 @@ export const Section4 = () => {
                 {" "}
                 이메일에 아래 정보를 기재하시면
                 <br /> 더욱 원활한 서비스가 가능합니다. <br />: 이름, 연락처,
-                제품명 및 시리얼 번호, 도움이 필요하신 사항
+                제품명 및 시리얼 번호,
+                <br /> 도움이 필요하신 사항
               </p>
             </BoxCon>
           </Box>
