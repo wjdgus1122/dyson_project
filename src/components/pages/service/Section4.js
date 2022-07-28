@@ -92,7 +92,7 @@ const OnlineBox = styled.div`
   h6 {
     font-size: 12px;
     font-weight: 100;
-    /* margin-top: 5px; */
+    margin-top: 5px;
   }
 `;
 
