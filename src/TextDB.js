@@ -99,11 +99,11 @@ export const CommunityDB = [
 export const ProductDB = [
   {
     id: 0,
-    title: "다이슨 V15 디텍트™ 컴플리트(골드/골드)",
+    title: "다이슨 V15 디텍트™ 컴플리트",
     price: "1,290,000",
     color: {
-      0: "골드",
-      1: "골드",
+      0: "골드/골드",
+      1: "옐로/니켈",
     },
     imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/products/cord-free-vacuums/sticks/range-reset-2022/v15/pdp/irsgldirgld/dynamic-media/lifestyle/Lifestyle_V15_IRSGLDIRGLD_HEPA_SB_DblCuff.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=576`,
     desc: {
@@ -113,29 +113,14 @@ export const ProductDB = [
       3: "헤어 스크류 툴로 긴 머리카락과 반려동물의 털을 빠르게 청소",
     },
   },
+
   {
     id: 1,
-    title: "다이슨 V15 디텍트™ 컴플리트(옐로/니켈)",
-    price: "1,290,000",
-    color: {
-      0: "옐로",
-      1: "니켈",
-    },
-    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floorcare/sticks/v15-detect/pdp/lifestyle/Lifestyle-SV22-CORE-LB.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
-    desc: {
-      0: "다이슨의 가장 강력하고 인텔리전트한 무선 청소기",
-      1: "레이저 슬림 플러피™ 클리너 헤드와 함께 사용 가능.",
-      2: "강력한 청소 성능의 과학적 근거",
-      3: "헤어 스크류 툴로 긴 머리카락과 반려동물의 털을 빠르게 청소",
-    },
-  },
-  {
-    id: 2,
-    title: "다이슨 V12 디텍트 슬림™ 컴플리트(골드/골드)",
+    title: "다이슨 V12 디텍트 슬림™ 컴플리트",
     price: "1,090,000",
     color: {
-      0: "골드",
-      1: "골드",
+      0: "골드/골드",
+      1: "옐로/니켈",
     },
     imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floorcare/sticks/v12-detected-slim/pdp/lifestyle/gold/Gold.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
     desc: {
@@ -145,24 +130,9 @@ export const ProductDB = [
       3: "헤어 스크류 툴로 긴 머리카락과 반려동물의 털을 빠르게 청소",
     },
   },
+
   {
-    id: 3,
-    title: "다이슨 V12 디텍트 슬림™ 컴플리트(옐로/니켈)",
-    price: "1,090,000",
-    color: {
-      0: "옐로",
-      1: "니켈",
-    },
-    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floorcare/sticks/v12-detected-slim/pdp/lifestyle/yellow/Yellow.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
-    desc: {
-      0: "다이슨의 강력하고 가벼운 무선 청소기",
-      1: "레이저 슬림 플러피™ 클리너 헤드와 함께 사용 가능.",
-      2: "엉킴 방지 클리너 헤드 탑재",
-      3: "헤어 스크류 툴로 긴 머리카락과 반려동물의 털을 빠르게 청소",
-    },
-  },
-  {
-    id: 4,
+    id: 2,
     title: "다이슨 V11 앱솔루트",
     price: "1,090,000",
     color: {},
@@ -174,7 +144,7 @@ export const ProductDB = [
     },
   },
   {
-    id: 5,
+    id: 3,
     title: "다이슨 싸이클론 V10 앱솔루트",
     price: "899,000",
     color: {},
@@ -186,7 +156,7 @@ export const ProductDB = [
     },
   },
   {
-    id: 6,
+    id: 4,
     title: "다이슨 싸이클론 V10 플러피 오리진",
     price: "799,000",
     color: {},
@@ -197,12 +167,12 @@ export const ProductDB = [
     },
   },
   {
-    id: 7,
-    title: "다이슨 옴니-글라이드™ 컴플리트(골드/니켈)",
+    id: 5,
+    title: "다이슨 옴니-글라이드™ 컴플리트",
     price: "699,000",
     color: {
-      0: "골드",
-      1: "니켈",
+      0: "골드/니켈",
+      1: "퍼플/니켈",
     },
     imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/markets/singapore/products/floorcare/sticks/674-gold-tool.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
     desc: {
@@ -212,22 +182,7 @@ export const ProductDB = [
     },
   },
   {
-    id: 8,
-    title: "다이슨 옴니 글라이드™ 컴플리트(퍼플/니켈)",
-    price: "699,000",
-    color: {
-      0: "퍼플",
-      1: "니켈",
-    },
-    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floorcare/handheld/omni-glide/pdp-purple/0_Lifestyle-Machine_800X388_Template_PURPLE.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
-    desc: {
-      0: "방향 조정이 쉬운 무선 청소기.",
-      1: "낮은 가구 틈, 좁은 공간도 간편하게 청소.",
-      2: "1.9kg 가벼운 무게",
-    },
-  },
-  {
-    id: 9,
+    id: 6,
     title: "다이슨 마이크로 1.5kg™",
     price: "699,000",
     color: {},
@@ -238,7 +193,7 @@ export const ProductDB = [
     },
   },
   {
-    id: 10,
+    id: 7,
     title: "다이슨 디지털 슬림™ 컴플리트",
     price: "899,000",
     color: {},
@@ -251,7 +206,7 @@ export const ProductDB = [
     },
   },
   {
-    id: 11,
+    id: 8,
     title: "다이슨 디지털 슬림™",
     price: "799,000",
     color: {},
@@ -263,7 +218,7 @@ export const ProductDB = [
     },
   },
   {
-    id: 12,
+    id: 9,
     title: "다이슨 아웃사이즈™",
     price: "1,290,000",
     color: {},
@@ -275,13 +230,13 @@ export const ProductDB = [
       3: "엉킴방지 헤어 스크류 툴",
     },
   },
+  //청소기
   {
-    id: 13,
-    title: "New 다이슨 에어랩™ 멀티 스타일러 컴플리트(니켈/코퍼)",
+    id: 10,
+    title: "New 다이슨 에어랩™ 멀티 스타일러 컴플리트",
     price: "699,000",
     color: {
-      0: "니켈",
-      1: "코퍼",
+      0: "니켈/코퍼",
     },
     imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/personal-care/308c/lifestyle/400690-01.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=576`,
     desc: {
@@ -292,12 +247,11 @@ export const ProductDB = [
     },
   },
   {
-    id: 14,
-    title: "New 다이슨 에어랩™ 멀티 스타일러 컴플리트 롱(코퍼/니켈)",
+    id: 11,
+    title: "New 다이슨 에어랩™ 멀티 스타일러 컴플리트 롱",
     price: "699,000",
     color: {
-      0: "코퍼",
-      1: "니켈",
+      0: "코퍼/니켈",
     },
     imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/personal-care/308c/lifestyle/395973-01.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=576`,
     desc: {
@@ -308,7 +262,7 @@ export const ProductDB = [
     },
   },
   {
-    id: 15,
+    id: 12,
     title: "다이슨 코랄™ 프로페셔널",
     price: "599,000",
     color: {},
@@ -319,12 +273,15 @@ export const ProductDB = [
     },
   },
   {
-    id: 16,
-    title: "다이슨 코랄™ 스타일 스트레이트너(블랙니켈/푸시아)",
+    id: 13,
+    title: "다이슨 코랄™ 스타일 스트레이트너",
     price: "599,000",
     color: {
-      0: "블랙니켈",
-      1: "푸시아",
+      0: "블랙니켈/푸시아",
+
+      1: "코퍼/니켈",
+
+      2: "푸시아/니켈",
     },
     imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/personal-care/556/lifestyle/Magento-Dyson-Corrale-Lifestyle-Slider-Celsius.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=576`,
     desc: {
@@ -334,41 +291,15 @@ export const ProductDB = [
     },
   },
   {
-    id: 17,
-    title: "다이슨 코랄™ 스타일 스트레이트너(코퍼/니켈)",
-    price: "599,000",
-    color: {
-      0: "코퍼",
-      1: "니켈",
-    },
-    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/personal-care/556/lifestyle/Dyson-Corrale-Lifestyle-copper-nickel.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=576`,
-    desc: {
-      0: "다양한 스타일링을 위한 설계.",
-      1: "정교한 스타일링. 손상은 반으로.",
-    },
-  },
-  {
-    id: 18,
-    title: "다이슨 코랄™ 스타일 스트레이트너(푸시아/니켈)",
-    price: "599,000",
-    color: {
-      0: "푸시아",
-      1: "니켈",
-    },
-    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/personal-care/556/lifestyle/Dyson-Corrale-Lifestyle-fuschia-nickel.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=576`,
-    desc: {
-      0: "다양한 스타일링을 위한 설계.",
-      1: "정교한 스타일링. 손상은 반으로.",
-      2: "무선으로 사용.",
-    },
-  },
-  {
-    id: 19,
-    title: "다이슨 슈퍼소닉™ 니켈/코퍼(보관 케이스 포함)",
+    id: 14,
+    title: "다이슨 슈퍼소닉™(보관 케이스 포함)",
     price: "529,000",
     color: {
-      0: "니켈",
-      1: "코퍼",
+      0: "니켈/코퍼",
+
+      1: "블루/코퍼",
+
+      2: "블루/골드",
     },
     imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/markets/korea/products/personal-care/605e/411106-01.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=576`,
     desc: {
@@ -380,29 +311,17 @@ export const ProductDB = [
     },
   },
   {
-    id: 20,
-    title: "다이슨 슈퍼소닉™ 블루/코퍼(보관 케이스 포함)",
-    price: "529,000",
-    color: {
-      0: "블루",
-      1: "코퍼",
-    },
-    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/markets/korea/products/personal-care/605e/412522-01.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=576`,
-    desc: {
-      0: "과도한 열 없이 빠른 건조.",
-      1: "나만의 헤어스타일링을 위한 5가지 노즐.",
-      2: "새로운 플라이어웨이 노즐 포함.",
-      3: "지능형 열제어 시스템.",
-      4: "강력한 다이슨 디지털 모터 V9 탑재.",
-    },
-  },
-  {
-    id: 21,
-    title: "다이슨 슈퍼소닉™ 푸시아/아이언",
+    id: 15,
+    title: "다이슨 슈퍼소닉™ ",
     price: "499,000",
     color: {
-      0: "푸시아",
-      1: "아이언",
+      0: "푸시아/아이언",
+
+      1: "니켈/코퍼",
+
+      2: "블랙/니켈",
+
+      3: "푸시아/니켈",
     },
     imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/personal-care/605/lifestyle/lifestyle-iron-fuchsia-flyaway.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=576`,
     desc: {
@@ -413,77 +332,9 @@ export const ProductDB = [
       4: "강력한 다이슨 디지털 모터 V9 탑재.",
     },
   },
+
   {
-    id: 22,
-    title: "다이슨 슈퍼소닉™ 블루/골드",
-    price: "599,000",
-    color: {
-      0: "블루",
-      1: "골드",
-    },
-    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/312780-01.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=576`,
-    desc: {
-      0: "과도한 열 없이 빠른 건조.",
-      1: "나만의 헤어스타일링을 위한 5가지 노즐.",
-      2: "새로운 플라이어웨이 노즐 포함.",
-      3: "지능형 열제어 시스템.",
-      4: "23.75 캐럿 골드로 수작업 도금.",
-      5: "‘젯소’ 레드 케이스 제공.",
-    },
-  },
-  {
-    id: 23,
-    title: "다이슨 슈퍼소닉™ 니켈/코퍼",
-    price: "499,000",
-    color: {
-      0: "니켈",
-      1: "코퍼",
-    },
-    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/personal-care/605c/variant-page/389923-01.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=576`,
-    desc: {
-      0: "과도한 열 없이 빠른 건조.",
-      1: "나만의 헤어스타일링을 위한 5가지 노즐.",
-      2: "새로운 플라이어웨이 노즐 포함.",
-      3: "지능형 열제어 시스템.",
-      4: "강력한 다이슨 디지털 모터 V9 탑재.",
-    },
-  },
-  {
-    id: 24,
-    title: "다이슨 슈퍼소닉™ 블랙/니켈",
-    price: "499,000",
-    color: {
-      0: "블랙",
-      1: "니켈",
-    },
-    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/personal-care/605/lifestyle/lifestyle-black-flyaway.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=576`,
-    desc: {
-      0: "과도한 열 없이 빠른 건조.",
-      1: "나만의 헤어스타일링을 위한 5가지 노즐.",
-      2: "새로운 플라이어웨이 노즐 포함.",
-      3: "지능형 열제어 시스템.",
-      4: "강력한 다이슨 디지털 모터 V9 탑재.",
-    },
-  },
-  {
-    id: 25,
-    title: "다이슨 슈퍼소닉™ 푸시아/니켈",
-    price: "499,000",
-    color: {
-      0: "푸시아",
-      1: "니켈",
-    },
-    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/personal-care/605/lifestyle/lifestyle-fuchsia-nickel.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=576`,
-    desc: {
-      0: "과도한 열 없이 빠른 건조.",
-      1: "나만의 헤어스타일링을 위한 5가지 노즐.",
-      2: "새로운 플라이어웨이 노즐 포함.",
-      3: "지능형 열제어 시스템.",
-      4: "강력한 다이슨 디지털 모터 V9 탑재.",
-    },
-  },
-  {
-    id: 26,
+    id: 16,
     title: "다이슨 슈퍼소닉™ 프로페셔널",
     price: "556,000",
     color: {},
@@ -501,12 +352,13 @@ export const ProductDB = [
   // 헤어케어 완료
 
   {
-    id: 27,
-    title: "다이슨 쿨 공기청정기 (화이트/실버)",
+    id: 17,
+    title: "다이슨 쿨 공기청정기",
     price: "899,000",
     color: {
-      0: "화이트",
-      1: "실버",
+      0: "화이트/실버",
+
+      1: "블랙/니켈",
     },
     imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/ec/438e/lifestyle/438E_WHSIL_Lifestyle-desk-purifier.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
     desc: {
@@ -519,30 +371,13 @@ export const ProductDB = [
     },
   },
   {
-    id: 28,
-    title: "다이슨 쿨 공기청정기 (블랙/니켈)",
-    price: "899,000",
-    color: {
-      0: "블랙",
-      1: "니켈",
-    },
-    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/ec/438e/lifestyle/438E_BLKNK_Lifestyle-desk-purifier.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
-    desc: {
-      //   0: "공기 정화와 냉풍 기능을 하나로",
-      //   1: "0.1마이크론 크기의 작은 미세먼지를 99.95% 제거합니다.",
-      2: "HEPA H13 공기청정기 겸 선풍기",
-      3: "공기 품질을 실시간으로 자동 감지 및 보고",
-      4: "넓은 공간을 위한 방안 전체 공기 정화",
-      5: "다이슨 링크 앱을 이용한 컨트롤",
-    },
-  },
-  {
-    id: 29,
-    title: "다이슨 쿨™ 선풍기 타워형 (화이트/ 실버)",
+    id: 18,
+    title: "다이슨 쿨™ 선풍기 타워형",
     price: "598,000",
     color: {
-      0: "",
-      1: "",
+      0: "화이트/실버",
+
+      1: "니켈/블랙",
     },
     imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/300910-01.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
     desc: {
@@ -555,29 +390,13 @@ export const ProductDB = [
   },
 
   {
-    id: 30,
-    title: "다이슨 쿨™ 선풍기 타워형 (니켈/블랙)",
-    price: "598,000",
-    color: {
-      0: "니켈",
-      1: "블랙",
-    },
-    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/300906-01.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
-    desc: {
-      0: "날개 없는 선풍기의 강력한 바람",
-      1: "강력한 풍량.",
-      2: "회전 제어.",
-      3: "빠르게 회전하는 날개없이 안전하게.",
-      4: "편리한 청소.",
-    },
-  },
-  {
-    id: 31,
-    title: "다이슨 쿨 포름알데히드 공기청정기(화이트/골드)",
+    id: 19,
+    title: "다이슨 쿨 포름알데히드 공기청정기",
     price: "999,000",
     color: {
-      0: "화이트",
-      1: "골드",
+      0: "화이트/골드",
+
+      1: "니켈/골드",
     },
     imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/ec/438e/variants/438E_WHSGLD_Lifestyle-desk-purifier.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
     desc: {
@@ -588,30 +407,15 @@ export const ProductDB = [
       4: "다이슨 링크 앱을 이용한 컨트롤",
     },
   },
+
   {
-    id: 32,
-    title: "다이슨 쿨 포름알데히드 공기청정기(니켈/골드)",
-    price: "999,000",
-    color: {
-      0: "니켈",
-      1: "골드",
-    },
-    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/ec/438e/variants/438E_NKSGLD_Lifestyle-desk-purifier.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
-    desc: {
-      0: "HEPA H13 공기청정기 겸 선풍기",
-      1: "포름알데히드 감지 및 파괴. ",
-      2: "공기 품질을 실시간으로 자동 감지 및 보고",
-      3: "넓은 공간을 위한 방안 전체 공기 정화",
-      4: "다이슨 링크 앱을 이용한 컨트롤",
-    },
-  },
-  {
-    id: 33,
-    title: "다이슨 휴미디파이+쿨 포름알데히드 가습 공기청정기(화이트/골드)",
+    id: 20,
+    title: "다이슨 휴미디파이+쿨 포름알데히드 가습 공기청정기",
     price: "1,290,000",
     color: {
-      0: "화이트",
-      1: "골드",
+      0: "화이트/골드",
+
+      1: "니켈/골드",
     },
     imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/ec/358e/sco/lifestyle/lifestyle_machine_PH04_WHSGLD.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
     desc: {
@@ -622,28 +426,13 @@ export const ProductDB = [
     },
   },
   {
-    id: 34,
-    title: "다이슨 휴미디파이+쿨 포름알데히드 가습 공기청정기(니켈/골드)",
-    price: "1,290,000",
-    color: {
-      0: "니켈",
-      1: "골드",
-    },
-    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/369212-01.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
-    desc: {
-      0: "포름알데히드 감지 및 파괴합니다",
-      1: "방 안 전체를 정화하고 가습합니다",
-      2: "반영구적 고체 포름알데히드 센서",
-      3: "초미세먼지를 99.95% 제거합니다",
-    },
-  },
-  {
-    id: 35,
+    id: 21,
     title: "다이슨 핫앤쿨 포름알데히드 공기청정기(화이트/골드)",
     price: "1,090,000",
     color: {
-      0: "화이트",
-      1: "골드",
+      0: "화이트/골드",
+
+      1: "니켈/골드",
     },
     imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/ec/527e/lifestyle/HP09_WHSGLD_Lifestyle_Machine_800X388.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
     desc: {
@@ -654,31 +443,13 @@ export const ProductDB = [
       4: "다이슨 링크 앱 및 호환 가능한 음성 서비스를 이용한 컨트롤",
     },
   },
-  {
-    id: 36,
-    title: "다이슨 핫앤쿨 포름알데히드 공기청정기(니켈/골드)",
-    price: "1,090,000",
-    color: {
-      0: "니켈",
-      1: "골드",
-    },
-    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/ec/527e/lifestyle/HP09_NKSGLD_Lifestyle_Machine_800X388.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
-    desc: {
-      0: "HEPA H13 공기청정기, 선풍기 겸 온풍기.",
-      1: "포름알데히드 감지 및 파괴. ",
-      2: "공기 품질을 실시간으로 자동 감지 및 보고.",
-      3: "넓은 공간을 위한 방안 전체 공기 정화.",
-      4: "다이슨 링크 앱 및 호환 가능한 음성 서비스를 이용한 컨트롤",
-    },
-  },
   //   공기청정기
   {
-    id: 37,
-    title: "다이슨 가습기(화이트/실버)",
+    id: 22,
+    title: "다이슨 가습기",
     price: "659,000",
     color: {
-      0: "화이트",
-      1: "실버",
+      0: "화이트/실버",
     },
     imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/303124-01.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
     desc: {
@@ -687,4 +458,116 @@ export const ProductDB = [
     },
   },
   //   가습기
+];
+
+export const HairMulti = [
+  {
+    key: 0,
+    id: 10,
+    title: "New 다이슨 에어랩™ 멀티 스타일러 컴플리트",
+    price: "699,000",
+    color: {
+      0: "니켈/코퍼",
+    },
+    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/personal-care/308c/lifestyle/400690-01.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=576`,
+    desc: {
+      0: "새롭게 설계된 스타일링 툴 포함",
+      1: "가슴 길이보다 짧은 모발용",
+      2: "다양한 모발 타입용",
+      3: "양방향으로 컬과 웨이브를 만들어주는 새로운 배럴, 정교하게 모양을 잡아주는 브러시, 드라이부터 매끄러운 스타일링, 그리고 잔머리까지 감춰주는1 코안다 스무딩 드라이어 포함",
+    },
+  },
+  {
+    key: 1,
+    id: 11,
+    title: "New 다이슨 에어랩™ 멀티 스타일러 컴플리트 롱",
+    price: "699,000",
+    color: {
+      0: "코퍼/니켈",
+    },
+    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/personal-care/308c/lifestyle/395973-01.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=576`,
+    desc: {
+      0: "새롭게 설계된 스타일링 툴 포함",
+      1: "가슴 길이 이상의 모발용",
+      2: "다양한 모발 타입용",
+      3: "양방향으로 컬과 웨이브를 만들어주는 새로운 배럴, 정교하게 모양을 잡아주는 브러시, 드라이부터 매끄러운 스타일링, 그리고 잔머리까지 감춰주는1 코안다 스무딩 드라이어 포함",
+    },
+  },
+];
+
+export const HairStraight = [
+  {
+    key: 0,
+    id: 12,
+    title: "다이슨 코랄™ 프로페셔널",
+    price: "599,000",
+    color: {},
+    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/323008-01.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=576`,
+    desc: {
+      0: "헤어스타일리스트 전용 제품.",
+      1: "정교한 스타일링. 손상은 반으로.1",
+    },
+  },
+  {
+    key: 1,
+    id: 13,
+    title: "다이슨 코랄™ 스타일 스트레이트너",
+    price: "599,000",
+    color: {
+      0: "블랙니켈/푸시아",
+
+      1: "코퍼/니켈",
+
+      2: "푸시아/니켈",
+    },
+    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/personal-care/556/lifestyle/Magento-Dyson-Corrale-Lifestyle-Slider-Celsius.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=576`,
+    desc: {
+      0: "다양한 스타일링을 위한 설계.",
+      1: "정교한 스타일링. 손상은 반으로.",
+      2: "무선으로 사용.",
+    },
+  },
+];
+
+export const HairDry = [
+  {
+    key: 0,
+    id: 13,
+    title: "다이슨 코랄™ 스타일 스트레이트너",
+    price: "599,000",
+    color: {
+      0: "블랙니켈/푸시아",
+
+      1: "코퍼/니켈",
+
+      2: "푸시아/니켈",
+    },
+    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/personal-care/556/lifestyle/Magento-Dyson-Corrale-Lifestyle-Slider-Celsius.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=576`,
+    desc: {
+      0: "다양한 스타일링을 위한 설계.",
+      1: "정교한 스타일링. 손상은 반으로.",
+      2: "무선으로 사용.",
+    },
+  },
+  {
+    key: 1,
+    id: 14,
+    title: "다이슨 슈퍼소닉™(보관 케이스 포함)",
+    price: "529,000",
+    color: {
+      0: "니켈/코퍼",
+
+      1: "블루/코퍼",
+
+      2: "블루/골드",
+    },
+    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/markets/korea/products/personal-care/605e/411106-01.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=576`,
+    desc: {
+      0: "과도한 열 없이 빠른 건조.",
+      1: "나만의 헤어스타일링을 위한 5가지 노즐.",
+      2: "새로운 플라이어웨이 노즐 포함.",
+      3: "지능형 열제어 시스템.",
+      4: "강력한 다이슨 디지털 모터 V9 탑재.",
+    },
+  },
 ];
