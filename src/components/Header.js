@@ -1,4 +1,7 @@
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBagShopping,
+  faMagnifyingGlass,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
@@ -17,10 +20,12 @@ const SHeader = styled.div`
   top: 0;
   left: 0;
   z-index: 9999;
+  background: ${(props) => props.color};
 `;
 const Logo = styled.div`
   font-size: 30px;
   font-weight: 700;
+  color: ${(props) => props.color};
 `;
 const MenuWrap = styled.div`
   height: 100%;
@@ -46,6 +51,9 @@ const Menu = styled.li`
   margin-right: 30px;
   a {
     color: #707070;
+  }
+  svg {
+    color: ${(props) => props.iconcolor};
   }
   &.first {
     .line {
@@ -95,9 +103,14 @@ const Menu = styled.li`
       color: ${mainStyle.mainColor};
     }
   }
+  &:nth-child(4) {
+    width: 50px;
+    margin-right: 0;
+  }
   &:last-child {
     width: 50px;
     align-items: end;
+    font-size: 25px;
   }
 `;
 const Line = styled.div`
@@ -117,6 +130,9 @@ export const Header = () => {
   const [fstline, setFstLine] = useState(``);
   const [secline, setSecLine] = useState(``);
   const [thdline, setThdLine] = useState(``);
+  const [hdcolor, setHdColor] = useState(`white`);
+  const [logocolor, setLogoColor] = useState("#333");
+  const [svgcolor, setSvgColor] = useState("#333");
   const menuhandle1 = () => {
     setFstFont(`${mainStyle.mainColor}`);
     setSecFont(`#707070`);
@@ -149,11 +165,65 @@ export const Header = () => {
     setSecLine("0");
     setThdLine("0");
   };
-
+  const sclhandle = () => {
+    const scl = window.pageYOffset;
+    if (scl > 400) {
+      setHdColor("#333");
+      setLogoColor("white");
+      if (fstfont === mainStyle.mainColor) {
+        setFstFont(`${mainStyle.mainColor}`);
+        setSecFont("white");
+        setThdFont("white");
+        setSvgColor("white");
+      } else if (secfont === mainStyle.mainColor) {
+        setFstFont("white");
+        setSecFont(`${mainStyle.mainColor}`);
+        setThdFont("white");
+        setSvgColor("white");
+      } else if (thdfont === mainStyle.mainColor) {
+        setFstFont("white");
+        setSecFont("white");
+        setThdFont(`${mainStyle.mainColor}`);
+        setSvgColor("white");
+      } else {
+        setFstFont("white");
+        setSecFont("white");
+        setThdFont("white");
+        setSvgColor("white");
+      }
+    } else {
+      setHdColor("white");
+      setLogoColor("#333");
+      if (fstfont === mainStyle.mainColor) {
+        setFstFont(`${mainStyle.mainColor}`);
+        setSecFont("#707070");
+        setThdFont("#707070");
+        setSvgColor("#333");
+      } else if (secfont === mainStyle.mainColor) {
+        setFstFont("#707070");
+        setSecFont(`${mainStyle.mainColor}`);
+        setThdFont("#707070");
+        setSvgColor("#333");
+      } else if (thdfont === mainStyle.mainColor) {
+        setFstFont("#707070");
+        setSecFont("#707070");
+        setThdFont(`${mainStyle.mainColor}`);
+        setSvgColor("#333");
+      } else {
+        setFstFont("#707070");
+        setSecFont("#707070");
+        setThdFont("#707070");
+        setSvgColor("#333");
+      }
+    }
+  };
+  window.addEventListener("scroll", sclhandle);
   return (
-    <SHeader>
+    <SHeader color={hdcolor}>
       <Link to={"/"}>
-        <Logo onClick={menuhandle4}>dyson</Logo>
+        <Logo onClick={menuhandle4} color={logocolor}>
+          dyson
+        </Logo>
       </Link>
       <MenuWrap>
         <Menus>
@@ -184,8 +254,11 @@ export const Header = () => {
             <Line className="line" />
             <Link to={"/community"}>커뮤니티</Link>
           </Menu>
-          <Menu>
+          <Menu iconcolor={svgcolor}>
             <FontAwesomeIcon icon={faMagnifyingGlass} />
+          </Menu>
+          <Menu iconcolor={svgcolor}>
+            <FontAwesomeIcon icon={faBagShopping} />
           </Menu>
         </Menus>
       </MenuWrap>
