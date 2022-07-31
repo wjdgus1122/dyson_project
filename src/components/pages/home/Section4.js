@@ -7,23 +7,41 @@ import { Link } from "react-router-dom";
 
 const TitleWrap = styled.div`
   margin-bottom: 40px;
+  @media screen and (max-width: 500px) {
+    display: flex;
+  }
 `;
 const Title = styled.div`
   font-size: 100px;
   font-weight: 900;
   font-family: ${mainStyle.fontType};
   color: ${mainStyle.fontColor};
+  @media screen and (max-width: 500px) {
+    font-size: 36px;
+  }
 `;
 const STitle = styled.div`
   font-size: 55px;
   font-weight: 100;
   color: ${mainStyle.fontColor};
+  @media screen and (max-width: 500px) {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
 `;
 const ProductWrap = styled.div`
   width: 100%;
   height: 80vh;
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 500px) {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
 `;
 const LeftCon = styled.div`
   width: 32%;
@@ -31,6 +49,10 @@ const LeftCon = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    height: 38.4%;
+  }
 `;
 const Con = styled.div`
   width: 100%;
@@ -68,6 +90,10 @@ const CenterCon = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    height: 38.4%;
+  }
 `;
 const RightCon = styled.div`
   width: 32%;
@@ -75,6 +101,10 @@ const RightCon = styled.div`
   background-color: beige;
   &:hover .box {
     display: flex;
+  }
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    height: 20%;
   }
 `;
 

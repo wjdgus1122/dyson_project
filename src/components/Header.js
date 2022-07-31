@@ -1,5 +1,6 @@
 import {
   faBagShopping,
+  faBars,
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -31,6 +32,9 @@ const MenuWrap = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 `;
 const Menus = styled.ul`
   height: 100%;
@@ -121,6 +125,12 @@ const Line = styled.div`
   position: absolute;
   top: 0;
   left: 0;
+`;
+const MoMenuWrap = styled.div`
+  display: none;
+  @media screen and (max-width: 500px) {
+    display: block;
+  }
 `;
 
 export const Header = () => {
@@ -262,6 +272,11 @@ export const Header = () => {
           </Menu>
         </Menus>
       </MenuWrap>
+      <MoMenuWrap>
+        <Menu>
+          <FontAwesomeIcon icon={faBars} />
+        </Menu>
+      </MoMenuWrap>
     </SHeader>
   );
 };
