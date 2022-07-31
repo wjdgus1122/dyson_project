@@ -532,25 +532,6 @@ export const HairStraight = [
 export const HairDry = [
   {
     key: 0,
-    id: 13,
-    title: "다이슨 코랄™ 스타일 스트레이트너",
-    price: "599,000",
-    color: {
-      0: "블랙니켈/푸시아",
-
-      1: "코퍼/니켈",
-
-      2: "푸시아/니켈",
-    },
-    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/personal-care/556/lifestyle/Magento-Dyson-Corrale-Lifestyle-Slider-Celsius.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=576`,
-    desc: {
-      0: "다양한 스타일링을 위한 설계.",
-      1: "정교한 스타일링. 손상은 반으로.",
-      2: "무선으로 사용.",
-    },
-  },
-  {
-    key: 1,
     id: 14,
     title: "다이슨 슈퍼소닉™(보관 케이스 포함)",
     price: "529,000",
