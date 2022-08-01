@@ -9,33 +9,55 @@ const Wrap = styled.div`
   width: 100%;
   height: 120vh;
   position: relative;
+  @media screen and (max-width: 500px) {
+    height: auto;
+  }
 `;
 const TitleWrap = styled.div`
   margin-bottom: 40px;
   padding-top: 285px;
+  @media screen and (max-width: 500px) {
+    display: flex;
+    padding-top: 160px;
+    margin-bottom: 0;
+  }
 `;
 const Title = styled.div`
   font-size: 100px;
-  font-weight: 500;
   font-family: ${mainStyle.fontType};
   font-weight: 900;
   color: ${mainStyle.fontColor};
+  @media screen and (max-width: 500px) {
+    font-size: 47px;
+  }
 `;
 const STitle = styled.div`
   font-size: 55px;
   font-weight: 100;
   color: ${mainStyle.fontColor};
   margin-top: 20px;
+  @media screen and (max-width: 500px) {
+    font-size: 17px;
+    margin-left: 20px;
+  }
 `;
 const TextWrap = styled.div`
   width: 555px;
   color: ${mainStyle.blackColor};
   margin-top: 70px;
+  @media screen and (max-width: 500px) {
+    width: 170px;
+    margin-top: 20px;
+  }
 `;
 const Text = styled.div`
   font-size: 40px;
   font-weight: 500;
   line-height: 60px;
+  @media screen and (max-width: 500px) {
+    font-size: 12px;
+    line-height: 18px;
+  }
 `;
 const TextBtn = styled.div`
   font-size: 17px;
@@ -48,6 +70,14 @@ const TextBtn = styled.div`
   border-radius: 25px;
   border: 1px solid ${mainStyle.blackColor};
   margin-top: 50px;
+  @media screen and (max-width: 500px) {
+    width: 80px;
+    height: 20px;
+    border-radius: 10px;
+    font-size: 5px;
+    font-weight: 700;
+    margin-top: 20px;
+  }
 `;
 const ProductImg = styled.div`
   width: 620px;
@@ -56,6 +86,9 @@ const ProductImg = styled.div`
   position: absolute;
   top: 285px;
   right: 130px;
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 `;
 const BoxWrap = styled.div`
   width: 100%;
@@ -63,6 +96,10 @@ const BoxWrap = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  @media screen and (max-width: 500px) {
+    justify-content: center;
+    align-items: center;
+  }
 `;
 const SCon = styled.div`
   width: 455px;
@@ -71,6 +108,9 @@ const SCon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 `;
 const BCon = styled.div`
   width: 655px;
@@ -80,10 +120,18 @@ const BCon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 500px) {
+    width: 270px;
+    height: 105px;
+  }
 `;
 const Box = styled.div`
   width: 630px;
   height: 200px;
+  @media screen and (max-width: 500px) {
+    width: 265px;
+    height: 85px;
+  }
 `;
 const SBox = styled.div`
   width: 365px;
@@ -102,6 +150,13 @@ const Best = styled.div`
   position: absolute;
   right: -20px;
   top: -30px;
+  @media screen and (max-width: 500px) {
+    width: 35px;
+    height: 20px;
+    font-size: 6px;
+    top: -10px;
+    right: -17px;
+  }
 `;
 
 export const Section5 = () => {

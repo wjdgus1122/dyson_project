@@ -15,6 +15,12 @@ const Text = styled.div`
   position: absolute;
   top: 240px;
   right: 120px;
+  @media screen and (max-width: 500px) {
+    width: 230px;
+    font-size: 14px;
+    line-height: 20px;
+    right: 20px;
+  }
 `;
 
 export const Section6 = () => {
