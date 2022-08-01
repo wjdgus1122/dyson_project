@@ -21,6 +21,9 @@ const Wrap = styled.div`
 const TextWrap = styled.div`
   width: 435px;
   position: relative;
+  @media screen and (max-width: 500px) {
+    width: 230px;
+  }
 `;
 const Title = styled.div`
   font-size: 45px;
@@ -28,6 +31,10 @@ const Title = styled.div`
   color: white;
   line-height: 60px;
   padding-top: 220px;
+  @media screen and (max-width: 500px) {
+    font-size: 22px;
+    line-height: 35px;
+  }
 `;
 const ProductView = styled.div`
   font-size: 22px;
@@ -44,6 +51,9 @@ const BottomWrap = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 `;
 const Text = styled.div`
   font-size: 20px;

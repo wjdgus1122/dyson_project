@@ -15,17 +15,32 @@ const Section = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 500px) {
+    height: 100vh;
+    margin-top: 100px;
+  }
 `;
 const ConWrap = styled.div`
   width: 1540px;
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    display: block;
+  }
 `;
 const Con = styled.div`
   width: 285px;
   svg {
     font-size: 30px;
     color: ${mainStyle.mainColor};
+  }
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    margin-bottom: 60px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 `;
 const Title = styled.div`

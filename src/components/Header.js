@@ -1,5 +1,6 @@
 import {
   faBagShopping,
+  faBars,
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -21,16 +22,26 @@ const SHeader = styled.div`
   left: 0;
   z-index: 9999;
   background: ${(props) => props.color};
+  @media screen and (max-width: 500px) {
+    padding: ${mainStyle.mopadding};
+    height: 50px;
+  }
 `;
 const Logo = styled.div`
   font-size: 30px;
   font-weight: 700;
   color: ${(props) => props.color};
+  @media screen and (max-width: 500px) {
+    font-size: 20px;
+  }
 `;
 const MenuWrap = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 `;
 const Menus = styled.ul`
   height: 100%;
@@ -122,6 +133,16 @@ const Line = styled.div`
   top: 0;
   left: 0;
 `;
+const MoMenuWrap = styled.div`
+  display: none;
+  svg {
+    font-size: 18px;
+    color: ${(props) => props.iconcolor};
+  }
+  @media screen and (max-width: 500px) {
+    display: block;
+  }
+`;
 
 export const Header = () => {
   const [fstfont, setFstFont] = useState(``);
@@ -133,6 +154,7 @@ export const Header = () => {
   const [hdcolor, setHdColor] = useState(`white`);
   const [logocolor, setLogoColor] = useState("#333");
   const [svgcolor, setSvgColor] = useState("#333");
+  const [mosvgcolor, setMoSvgColor] = useState("#333");
   const menuhandle1 = () => {
     setFstFont(`${mainStyle.mainColor}`);
     setSecFont(`#707070`);
@@ -170,6 +192,7 @@ export const Header = () => {
     if (scl > 400) {
       setHdColor("#333");
       setLogoColor("white");
+      setMoSvgColor("white");
       if (fstfont === mainStyle.mainColor) {
         setFstFont(`${mainStyle.mainColor}`);
         setSecFont("white");
@@ -194,6 +217,7 @@ export const Header = () => {
     } else {
       setHdColor("white");
       setLogoColor("#333");
+      setMoSvgColor("#333");
       if (fstfont === mainStyle.mainColor) {
         setFstFont(`${mainStyle.mainColor}`);
         setSecFont("#707070");
@@ -262,6 +286,11 @@ export const Header = () => {
           </Menu>
         </Menus>
       </MenuWrap>
+      <MoMenuWrap>
+        <Menu iconcolor={mosvgcolor}>
+          <FontAwesomeIcon icon={faBars} />
+        </Menu>
+      </MoMenuWrap>
     </SHeader>
   );
 };
