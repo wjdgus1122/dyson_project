@@ -46,6 +46,9 @@ const FooterLeft = styled.div`
     font-size: 20px;
     font-weight: 300;
   }
+  @media screen and (max-width: 500px) {
+    padding-left: 50px;
+  }
 `;
 const FooterCenter = styled.div`
   text-align: center;
@@ -69,6 +72,9 @@ const FooterRight = styled.div`
   p {
     margin-top: 10px;
     margin-bottom: 20px;
+  }
+  @media screen and (max-width: 500px) {
+    padding-right: 50px;
   }
 `;
 
