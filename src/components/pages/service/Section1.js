@@ -6,6 +6,10 @@ import bannerimg from "./Image/section1.png";
 
 const Section1Wrap = styled.div`
   margin-top: 130px;
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    padding: ${mainStyle.mopadding};
+  }
 `;
 
 const Section1Banner = styled.div`

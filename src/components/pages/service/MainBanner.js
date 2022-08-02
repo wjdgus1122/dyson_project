@@ -2,7 +2,9 @@ import styled from "styled-components";
 import { mainStyle } from "../../../styles/Globalstyle";
 import responsivetitle from "./Image/responsive.png";
 
-const MainBannerWrap = styled.div``;
+const MainBannerWrap = styled.div`
+  width: 100%;
+`;
 
 const MainBannerBg = styled.div`
   width: 100%;
@@ -57,6 +59,14 @@ const ServiceBoxWrap = styled.div`
   padding: ${mainStyle.padding};
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 500px) {
+    margin-top: -120px;
+    width: 100%;
+    padding: ${mainStyle.mopadding};
+    display: flex;
+    flex-direction: column;
+  }
 `;
 const Box = styled.div`
   width: 390px;
@@ -78,12 +88,26 @@ const Box = styled.div`
     font-size: 15px;
     font-weight: 100;
   }
+  @media screen and (max-width: 500px) {
+    height: 62px;
+    margin-bottom: 28px;
+  }
 `;
 
 const BoxCon = styled.div`
-  padding: 0 90px;
+  padding: 0 80px;
   span {
     color: ${mainStyle.mainColor};
+  }
+  @media screen and (max-width: 500px) {
+    display: flex;
+
+    h5 {
+      display: none;
+    }
+    span {
+      margin-right: 20px;
+    }
   }
 `;
 
