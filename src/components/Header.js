@@ -123,6 +123,11 @@ const Menu = styled.li`
     align-items: end;
     font-size: 25px;
   }
+  @media screen and (max-width: 500px) {
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 `;
 const Line = styled.div`
   height: 8px;
@@ -140,7 +145,7 @@ const MoMenuWrap = styled.div`
     color: ${(props) => props.iconcolor};
   }
   @media screen and (max-width: 500px) {
-    display: block;
+    display: flex;
   }
 `;
 

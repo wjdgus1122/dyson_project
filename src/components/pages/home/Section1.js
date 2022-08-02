@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Container } from "../../Container";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCartFlatbed,
@@ -13,11 +12,24 @@ const Section = styled.div`
   width: 100%;
   height: 45vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #efefef;
+  margin-top: 130px;
   @media screen and (max-width: 500px) {
     height: 100vh;
     margin-top: 100px;
+    background-color: white;
+  }
+`;
+const MainTitle = styled.div`
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 60px;
+  margin-bottom: 65px;
+  @media screen and (max-width: 500px) {
+    display: none;
   }
 `;
 const ConWrap = styled.div`
@@ -27,6 +39,8 @@ const ConWrap = styled.div`
   @media screen and (max-width: 500px) {
     width: 100%;
     display: block;
+    padding: 30px;
+    box-sizing: border-box;
   }
 `;
 const Con = styled.div`
@@ -58,8 +72,9 @@ const Text = styled.div`
 
 export const Section1 = () => {
   return (
-    <Container>
+    <>
       <Section>
+        <MainTitle>다이슨 온라인몰 혜택</MainTitle>
         <ConWrap>
           <Con>
             <FontAwesomeIcon icon={faCartFlatbed} />
@@ -95,6 +110,6 @@ export const Section1 = () => {
           </Con>
         </ConWrap>
       </Section>
-    </Container>
+    </>
   );
 };
