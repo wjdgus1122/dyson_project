@@ -9,6 +9,9 @@ const Wrap = styled.div`
     text-align: center;
     margin: 50px 0 200px 0;
   }
+  @media screen and (max-width: 500px) {
+    margin-top: 250px;
+  }
 `;
 
 const DysonOnline = styled.div`
@@ -19,6 +22,9 @@ const DysonOnline = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 500px) {
+    height: 800px;
+  }
 `;
 const OnlineTitle = styled.h3`
   font-size: 26px;
@@ -30,6 +36,10 @@ const OnlineBoxWrap = styled.div`
   padding: 0 300px;
   display: flex;
   justify-content: center;
+  @media screen and (max-width: 500px) {
+    padding: 0;
+    flex-direction: column;
+  }
 `;
 const OnlineBox = styled.div`
   margin-right: 100px;
@@ -56,6 +66,10 @@ const OnlineBox = styled.div`
     font-size: 12px;
     font-weight: 100;
     margin-top: 5px;
+  }
+  @media screen and (max-width: 500px) {
+    margin-right: 0;
+    margin-bottom: 30px;
   }
 `;
 

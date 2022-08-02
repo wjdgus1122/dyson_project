@@ -1,19 +1,19 @@
 import styled from "styled-components";
-import footerimg from "./Image/footerimg.jpg";
+import footerimg from "./Image/footerimg.png";
 
 const Wrap = styled.div`
   width: 100%;
   margin-top: 96px;
 `;
-const FooterImg = styled.div`
+const Img = styled.div`
   width: 100%;
   height: 605px;
 `;
 
-export const Section4 = () => {
+export const FooterImg = () => {
   return (
     <Wrap>
-      <FooterImg
+      <Img
         style={{
           background: `url(${footerimg}) no-repeat center / cover`,
         }}
