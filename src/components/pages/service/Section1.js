@@ -3,27 +3,47 @@ import styled from "styled-components";
 import { mainStyle } from "../../../styles/Globalstyle";
 import { Container } from "../../Container";
 import bannerimg from "./Image/section1.png";
+import responcenter from "./Image/responcenter.png";
 
 const Section1Wrap = styled.div`
   margin-top: 130px;
   @media screen and (max-width: 500px) {
+    margin-top: 65px;
     width: 100%;
-    padding: ${mainStyle.mopadding};
   }
 `;
 
 const Section1Banner = styled.div`
   width: 100%;
   height: 400px;
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
+`;
+
+const MobileBanner = styled.div`
+  width: 100%;
+  height: 78px;
+  display: none;
+  @media screen and (max-width: 500px) {
+    display: block;
+  }
 `;
 
 const MapWrap = styled.div`
   margin-top: 60px;
   padding: ${mainStyle.padding};
+  @media screen and (max-width: 500px) {
+    padding: ${mainStyle.mopadding};
+  }
 `;
 const MapTabMenu = styled.div`
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 const Box = styled.div`
   width: 49%;
@@ -33,19 +53,43 @@ const Box = styled.div`
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
-  span {
-    color: ${mainStyle.mainColor};
-  }
+
   h3 {
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 20px;
     padding-left: 30px;
+    span {
+      color: ${mainStyle.mainColor};
+    }
   }
   p {
     font-size: 21px;
     font-weight: 100;
     padding-left: 30px;
+  }
+  @media screen and (max-width: 500px) {
+    :nth-child(1) {
+      margin-bottom: 32px;
+    }
+    width: 100%;
+    height: 214px;
+    text-align: center;
+
+    h3 {
+      font-size: 18px;
+      font-weight: 700;
+      padding-left: 0;
+    }
+    p {
+      font-size: 14px;
+      line-height: 25px;
+      font-weight: 100;
+      padding-left: 0;
+      span {
+        font-weight: 700;
+      }
+    }
   }
 `;
 
@@ -53,6 +97,10 @@ const Map = styled.div`
   margin-top: 30px;
   width: 100%;
   height: 766px;
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    height: 100vh;
+  }
 `;
 
 const Iframe = styled.iframe`
@@ -86,6 +134,11 @@ export const Section1 = () => {
             background: `url(${bannerimg}) no-repeat center / cover`,
           }}
         ></Section1Banner>
+        <MobileBanner
+          style={{
+            background: `url(${responcenter}) no-repeat center / cover`,
+          }}
+        />
         <MapWrap>
           <MapTabMenu>
             <Box onClick={mapclick1}>
@@ -93,7 +146,7 @@ export const Section1 = () => {
                 <span>프리미엄</span> 서비스 센터
               </h3>
               <p>
-                롯데월드 하이마트 메가스토어 잠실점 <br />
+                <span>롯데월드 하이마트 메가스토어 잠실점</span> <br />
                 무선 청소기 수리 시 10만원 상당의 프리미엄 청소 서비스 무료 제공
                 (내/외부 물청소 포함)
               </p>
