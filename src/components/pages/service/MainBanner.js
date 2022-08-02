@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { mainStyle } from "../../../styles/Globalstyle";
+import responsivetitle from "./Image/responsive.png";
+
 const MainBannerWrap = styled.div``;
 
 const MainBannerBg = styled.div`
@@ -7,7 +9,22 @@ const MainBannerBg = styled.div`
   height: 570px;
   background-image: url("./Image/mainbanner.png");
   position: relative;
+  @media screen and (max-width: 500px) {
+    .web {
+      display: none;
+    }
+  }
 `;
+
+const Respon = styled.div`
+  width: 100%;
+  height: 407px;
+  display: none;
+  @media screen and (max-width: 500px) {
+    display: block;
+  }
+`;
+
 const BannerConWrap = styled.div`
   color: white;
   position: absolute;
@@ -21,6 +38,17 @@ const BannerConWrap = styled.div`
   h1 {
     font-size: 100px;
     font-weight: 500;
+  }
+  @media screen and (max-width: 500px) {
+    position: absolute;
+    left: 20px;
+    h4 {
+      display: none;
+    }
+    h1 {
+      font-size: 40px;
+      font-weight: 500;
+    }
   }
 `;
 
@@ -65,11 +93,21 @@ export const MainBanner = () => {
       <MainBannerWrap>
         <MainBannerBg>
           <img
+            className="web"
             src={require("./Image/mainbanner.png")}
             alt="service"
             width="100%"
             height="570px"
-          ></img>
+          />
+          <Respon>
+            <img
+              className="mobile"
+              src={responsivetitle}
+              alt="responsivetitle"
+              width="100%"
+              height="407px"
+            />
+          </Respon>
           <BannerConWrap>
             <h4>dyson</h4>
             <h1>고객지원</h1>
