@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import { mainStyle } from "../../../styles/Globalstyle";
 import { Container } from "../../Container";
+import respontell from "./Image/respontell.png";
+
 const Section4Wrap = styled.div`
+  width: 100%;
   margin-top: 130px;
   h5 {
     color: ${mainStyle.mainColor};
@@ -10,15 +13,53 @@ const Section4Wrap = styled.div`
     text-align: center;
     margin: 50px 0 200px 0;
   }
+  .mobiletime {
+    display: none;
+  }
+  @media screen and (max-width: 500px) {
+    width: 100%;
+
+    h5 {
+      display: none;
+    }
+    .mobiletime {
+      display: block;
+      font-size: 20px;
+      font-weight: 300;
+      color: ${mainStyle.mainColor};
+      text-align: center;
+      margin-bottom: 160px;
+    }
+  }
 `;
 
-const Section4Banner = styled.div``;
+const Section4Banner = styled.div`
+  @media screen and (max-width: 500px) {
+    img {
+      display: none;
+    }
+  }
+`;
+
+const MobileBanner = styled.div`
+  display: none;
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    height: 78px;
+    display: block;
+  }
+`;
 
 const DysonContact = styled.div`
   margin-top: 80px;
   padding: 0 300px;
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    padding: 0;
+    flex-direction: column;
+  }
 `;
 const Box = styled.div`
   text-align: center;
@@ -28,12 +69,24 @@ const Box = styled.div`
     border-right: 2px solid rgba(29, 29, 29, 0.5);
     width: 35%;
   }
+  @media screen and (max-width: 500px) {
+    :nth-child(2) {
+      width: 100%;
+      border: none;
+    }
+    width: 100%;
+  }
 `;
 
 const BoxTitle = styled.h2`
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 30px;
+  @media screen and (max-width: 500px) {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+  }
 `;
 
 const BoxCon = styled.p`
@@ -46,6 +99,12 @@ const BoxCon = styled.p`
     font-size: 18px;
     line-height: 25px;
   }
+  @media screen and (max-width: 500px) {
+    text-align: center;
+    p {
+      margin-bottom: 80px;
+    }
+  }
 `;
 
 const DysonOnline = styled.div`
@@ -56,17 +115,28 @@ const DysonOnline = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    height: auto;
+  }
 `;
 const OnlineTitle = styled.h3`
   font-size: 26px;
   font-weight: 700;
   text-align: center;
   margin-bottom: 50px;
+  @media screen and (max-width: 500px) {
+    margin: 100px 0;
+  }
 `;
 const OnlineBoxWrap = styled.div`
   padding: 0 300px;
   display: flex;
   justify-content: center;
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+    padding: 50px 0;
+  }
 `;
 const OnlineBox = styled.div`
   margin-right: 100px;
@@ -94,6 +164,29 @@ const OnlineBox = styled.div`
     font-weight: 100;
     margin-top: 5px;
   }
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    margin-right: 0;
+    h3 {
+      font-size: 25px;
+      font-weight: 500;
+      margin: 17px 0;
+    }
+    span {
+      font-size: 25px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 22px;
+      font-weight: 100;
+      margin-bottom: 60px;
+    }
+    h6 {
+      margin-top: -50px;
+      font-size: 16px;
+      font-weight: 100;
+    }
+  }
 `;
 
 export const Section4 = () => {
@@ -106,6 +199,11 @@ export const Section4 = () => {
             src={require("./Image/section4.png")}
             width="100%"
             alt="dyson service center"
+          />
+          <MobileBanner
+            style={{
+              background: `url(${respontell}) no-repeat center / cover`,
+            }}
           />
         </Section4Banner>
         <DysonContact>
@@ -147,7 +245,12 @@ export const Section4 = () => {
             </BoxCon>
           </Box>
         </DysonContact>
-        <h5>운영시간: 월요일 - 금요일 오전 9시부터 오후 6시</h5>
+        <h6 className="mobiletime">
+          다이슨 고객센터 운영시간 <br /> 월요일 - 금요일 오전 9시부터 오후 6시
+        </h6>
+        <h5 className="webtime">
+          운영시간: 월요일 - 금요일 오전 9시부터 오후 6시
+        </h5>
         <DysonOnline>
           <OnlineTitle>다이슨 온라인몰 혜택</OnlineTitle>
           <OnlineBoxWrap>

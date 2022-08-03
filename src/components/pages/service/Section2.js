@@ -1,12 +1,32 @@
 import styled from "styled-components";
 import { mainStyle } from "../../../styles/Globalstyle";
 import { Container } from "../../Container";
+import responas from "./Image/responas.png";
 
 const Section2Wrap = styled.div`
   margin-top: 130px;
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    margin-top: 120px;
+  }
 `;
 
-const Section2Banner = styled.div``;
+const Section2Banner = styled.div`
+  @media screen and (max-width: 500px) {
+    img {
+      display: none;
+    }
+  }
+`;
+
+const MobileBanner = styled.div`
+  width: 100%;
+  height: 78px;
+  display: none;
+  @media screen and (max-width: 500px) {
+    display: block;
+  }
+`;
 
 const Section2BoxWrap = styled.div`
   height: 80vh;
@@ -14,6 +34,13 @@ const Section2BoxWrap = styled.div`
   padding: 100px 0;
   display: flex;
   flex-wrap: wrap;
+  @media screen and (max-width: 500px) {
+    height: auto;
+    padding: ${mainStyle.mopadding};
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
 `;
 const Box = styled.div`
   width: 50%;
@@ -21,6 +48,10 @@ const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 const BoxCon = styled.div`
@@ -49,6 +80,29 @@ const BoxCon = styled.div`
     text-align: center;
     line-height: 30px;
   }
+  @media screen and (max-width: 500px) {
+    width: 90%;
+    h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      :nth-child(1) {
+        margin-top: 30px;
+      }
+    }
+    h5 {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 20px;
+      margin-bottom: 25px;
+    }
+    h6 {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 20px;
+      margin-bottom: 30px;
+    }
+  }
 `;
 
 export const Section2 = () => {
@@ -61,6 +115,11 @@ export const Section2 = () => {
             src={require("./Image/section2.png")}
             width="100%"
             alt="dyson service center"
+          />
+          <MobileBanner
+            style={{
+              background: `url(${responas}) no-repeat center / cover`,
+            }}
           />
         </Section2Banner>
 
