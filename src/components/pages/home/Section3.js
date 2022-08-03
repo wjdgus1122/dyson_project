@@ -106,6 +106,8 @@ const MoSection = styled.div`
   width: 100%;
   height: 150vh;
   position: relative;
+  overflow: hidden;
+  margin-bottom: 100px;
   @media screen and (max-width: 500px) {
     display: block;
   }
