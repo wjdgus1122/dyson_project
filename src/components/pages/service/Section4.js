@@ -4,6 +4,7 @@ import { Container } from "../../Container";
 import respontell from "./Image/respontell.png";
 
 const Section4Wrap = styled.div`
+  width: 100%;
   margin-top: 130px;
   h5 {
     color: ${mainStyle.mainColor};
@@ -12,10 +13,22 @@ const Section4Wrap = styled.div`
     text-align: center;
     margin: 50px 0 200px 0;
   }
+  .mobiletime {
+    display: none;
+  }
   @media screen and (max-width: 500px) {
     width: 100%;
+
     h5 {
-      padding: ${mainStyle.mopadding};
+      display: none;
+    }
+    .mobiletime {
+      display: block;
+      font-size: 20px;
+      font-weight: 300;
+      color: ${mainStyle.mainColor};
+      text-align: center;
+      margin-bottom: 160px;
     }
   }
 `;
@@ -44,7 +57,7 @@ const DysonContact = styled.div`
   justify-content: space-between;
   @media screen and (max-width: 500px) {
     width: 100%;
-    padding: ${mainStyle.mopadding};
+    padding: 0;
     flex-direction: column;
   }
 `;
@@ -69,6 +82,11 @@ const BoxTitle = styled.h2`
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 30px;
+  @media screen and (max-width: 500px) {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+  }
 `;
 
 const BoxCon = styled.p`
@@ -80,6 +98,12 @@ const BoxCon = styled.p`
     margin-top: 15px;
     font-size: 18px;
     line-height: 25px;
+  }
+  @media screen and (max-width: 500px) {
+    text-align: center;
+    p {
+      margin-bottom: 80px;
+    }
   }
 `;
 
@@ -221,7 +245,12 @@ export const Section4 = () => {
             </BoxCon>
           </Box>
         </DysonContact>
-        <h5>운영시간: 월요일 - 금요일 오전 9시부터 오후 6시</h5>
+        <h6 className="mobiletime">
+          다이슨 고객센터 운영시간 <br /> 월요일 - 금요일 오전 9시부터 오후 6시
+        </h6>
+        <h5 className="webtime">
+          운영시간: 월요일 - 금요일 오전 9시부터 오후 6시
+        </h5>
         <DysonOnline>
           <OnlineTitle>다이슨 온라인몰 혜택</OnlineTitle>
           <OnlineBoxWrap>

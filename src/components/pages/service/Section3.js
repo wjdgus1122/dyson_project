@@ -9,11 +9,14 @@ const Section3Wrap = styled.div`
   margin-top: 130px;
   @media screen and (max-width: 500px) {
     width: 100%;
+    margin-top: 120px;
   }
 `;
 
 const Section3Banner = styled.div`
+  width: 100%;
   @media screen and (max-width: 500px) {
+    width: 100%;
     img {
       display: none;
     }
@@ -25,6 +28,7 @@ const MobileBanner = styled.div`
   height: 78px;
   display: none;
   @media screen and (max-width: 500px) {
+    width: 100%;
     display: block;
   }
 `;
@@ -35,6 +39,8 @@ const CsServiceWrap = styled.div`
   justify-content: space-between;
   padding: ${mainStyle.padding};
   @media screen and (max-width: 500px) {
+    width: 100%;
+    margin-top: 40px;
     padding: ${mainStyle.mopadding};
     flex-direction: column;
   }
@@ -42,6 +48,10 @@ const CsServiceWrap = styled.div`
 const CsCon = styled.div`
   img {
     margin: 30px 0;
+    .dysonphone {
+      width: 426px;
+      height: 280px;
+    }
   }
   h3 {
     font-size: 50px;
@@ -66,8 +76,10 @@ const CsCon = styled.div`
     color: ${mainStyle.fontColor};
   }
   @media screen and (max-width: 500px) {
-    width: 90%;
-    padding: ${mainStyle.mopadding};
+    width: 100%;
+    .side {
+      display: none;
+    }
     .pink {
       display: none;
     }
@@ -75,12 +87,15 @@ const CsCon = styled.div`
       display: none;
     }
     h4 {
+      width: 90%;
       font-size: 24px;
       font-weight: 700;
     }
     p {
+      margin-top: -10px;
       font-size: 16px;
       font-weight: 100;
+      margin-bottom: 20px;
     }
     span {
       font-size: 16px;
@@ -89,6 +104,10 @@ const CsCon = styled.div`
     .web {
       display: none;
     }
+    .dysonphone {
+      width: 90%;
+      height: 280px;
+    }
   }
 `;
 const CsForm = styled.div`
@@ -96,8 +115,8 @@ const CsForm = styled.div`
   height: 80vh;
   border: 1px solid ${mainStyle.mainColor};
   @media screen and (max-width: 500px) {
-    width: 100%;
-    padding: ${mainStyle.mopadding};
+    width: 90%;
+    height: auto;
   }
 `;
 
@@ -145,6 +164,17 @@ const FormBox = styled.form`
   @media screen and (max-width: 500px) {
     width: 100%;
     padding: ${mainStyle.mopadding};
+    margin-top: 40px;
+    .mail {
+      width: 90%;
+    }
+    .cate {
+      width: 90%;
+    }
+    .QNA {
+      width: 84%;
+      height: 250px;
+    }
   }
 `;
 
@@ -164,6 +194,12 @@ const InputName = styled.form`
   p {
     margin-right: 20px;
   }
+  @media screen and (max-width: 500px) {
+    .inputname {
+      width: 42%;
+      margin-right: 10px;
+    }
+  }
 `;
 
 const InputNameCate = styled.div`
@@ -177,6 +213,12 @@ const InputNameCate = styled.div`
   }
   label {
     margin-right: 20px;
+  }
+  @media screen and (max-width: 500px) {
+    width: 45%;
+    p {
+      margin-left: 10px;
+    }
   }
 `;
 
@@ -200,8 +242,20 @@ const InputCategory = styled.div`
     margin-top: 11px;
   }
   @media screen and (max-width: 500px) {
-    width: 100%;
+    width: 79%;
+    flex-wrap: wrap;
     padding: ${mainStyle.mopadding};
+    input {
+      margin-left: 5px;
+    }
+    h3 {
+      margin-left: -10px;
+    }
+    .check {
+      :nth-child(8) {
+        margin-left: 51px;
+      }
+    }
   }
 `;
 
@@ -224,7 +278,21 @@ const AgreeBtn = styled.div`
   }
   @media screen and (max-width: 500px) {
     width: 100%;
+    justify-content: flex-start;
     padding: ${mainStyle.mopadding};
+    margin: 30px 0;
+    .agree {
+      margin-right: 5px;
+      margin-left: -15px;
+    }
+    .sendBtn {
+      width: 140px;
+      height: 40px;
+      margin-right: 60px;
+    }
+    label {
+      margin-right: 10px;
+    }
   }
 `;
 
@@ -255,7 +323,7 @@ export const Section3 = () => {
               alt="dysonlogo"
             />
             <h3>제품상담</h3>
-            <img src={phone} width="426px" height="280px" alt="smartphone" />
+            <img src={phone} alt="smartphone" className="dysonphone" />
             <h4>다이슨에 연락하고 싶거나 궁금한 점이 있으세요?</h4>
             <p>
               <br /> <span className="side">옆의</span> 문의 양식을 이용해서

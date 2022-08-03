@@ -13,6 +13,7 @@ const MainBannerBg = styled.div`
   position: relative;
   @media screen and (max-width: 500px) {
     .web {
+      width: 100%;
       display: none;
     }
   }
@@ -23,6 +24,7 @@ const Respon = styled.div`
   height: 407px;
   display: none;
   @media screen and (max-width: 500px) {
+    width: 100%;
     display: block;
   }
 `;
@@ -34,6 +36,7 @@ const BannerConWrap = styled.div`
   left: 240px;
 
   h4 {
+    margin-top: 60px;
     font-size: 60px;
     font-weight: 500;
   }
@@ -42,6 +45,7 @@ const BannerConWrap = styled.div`
     font-weight: 500;
   }
   @media screen and (max-width: 500px) {
+    width: 100%;
     position: absolute;
     left: 20px;
     h4 {
@@ -62,14 +66,14 @@ const ServiceBoxWrap = styled.div`
 
   @media screen and (max-width: 500px) {
     margin-top: -120px;
-    width: 100%;
+    width: 90%;
     padding: ${mainStyle.mopadding};
     display: flex;
     flex-direction: column;
   }
 `;
 const Box = styled.div`
-  width: 390px;
+  width: 23%;
   height: 250px;
   background-color: #efefef;
   display: flex;
@@ -89,8 +93,14 @@ const Box = styled.div`
     font-weight: 100;
   }
   @media screen and (max-width: 500px) {
+    width: 100%;
     height: 62px;
     margin-bottom: 28px;
+
+    h3 {
+      font-size: 18px;
+      margin: 10px 0;
+    }
   }
 `;
 
@@ -101,7 +111,6 @@ const BoxCon = styled.div`
   }
   @media screen and (max-width: 500px) {
     display: flex;
-
     h5 {
       display: none;
     }
