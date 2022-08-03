@@ -7,7 +7,6 @@ import { Section4 } from "./Section4";
 import { Section5 } from "./Section5";
 
 export const Service = () => {
-  console.log(window.pageYOffset);
   return (
     <>
       <PageTitle title="Service" />
