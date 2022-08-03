@@ -3,18 +3,41 @@ import { mainStyle } from "../../../styles/Globalstyle";
 import { Container } from "../../Container";
 import phone from "./Image/mobile.png";
 import pinklogo from "./Image/pinklogo.png";
+import responcs from "./Image/responcs.png";
 
 const Section3Wrap = styled.div`
   margin-top: 130px;
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
 `;
 
-const Section3Banner = styled.div``;
+const Section3Banner = styled.div`
+  @media screen and (max-width: 500px) {
+    img {
+      display: none;
+    }
+  }
+`;
+
+const MobileBanner = styled.div`
+  width: 100%;
+  height: 78px;
+  display: none;
+  @media screen and (max-width: 500px) {
+    display: block;
+  }
+`;
 
 const CsServiceWrap = styled.div`
   margin-top: 150px;
   display: flex;
   justify-content: space-between;
   padding: ${mainStyle.padding};
+  @media screen and (max-width: 500px) {
+    padding: ${mainStyle.mopadding};
+    flex-direction: column;
+  }
 `;
 const CsCon = styled.div`
   img {
@@ -25,12 +48,16 @@ const CsCon = styled.div`
     font-weight: 500;
     color: ${mainStyle.mainColor};
   }
+  h4 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 25px;
+  }
   p {
     font-size: 20px;
     font-weight: 500;
     line-height: 25px;
     color: ${mainStyle.fontColor};
-    margin-bottom: 30px;
   }
   span {
     font-size: 20px;
@@ -38,11 +65,40 @@ const CsCon = styled.div`
     line-height: 25px;
     color: ${mainStyle.fontColor};
   }
+  @media screen and (max-width: 500px) {
+    width: 90%;
+    padding: ${mainStyle.mopadding};
+    .pink {
+      display: none;
+    }
+    h3 {
+      display: none;
+    }
+    h4 {
+      font-size: 24px;
+      font-weight: 700;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 100;
+    }
+    span {
+      font-size: 16px;
+      font-weight: 100;
+    }
+    .web {
+      display: none;
+    }
+  }
 `;
 const CsForm = styled.div`
   width: 50%;
   height: 80vh;
   border: 1px solid ${mainStyle.mainColor};
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    padding: ${mainStyle.mopadding};
+  }
 `;
 
 const FormBox = styled.form`
@@ -86,6 +142,10 @@ const FormBox = styled.form`
     width: 100%;
     height: 30px;
   }
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    padding: ${mainStyle.mopadding};
+  }
 `;
 
 const InputName = styled.form`
@@ -98,7 +158,6 @@ const InputName = styled.form`
     margin-right: 10px;
     background-color: #f3f3f3;
     &::placeholder {
-      /* color: #000; */
       padding-left: 10px;
     }
   }
@@ -140,6 +199,10 @@ const InputCategory = styled.div`
   .check {
     margin-top: 11px;
   }
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    padding: ${mainStyle.mopadding};
+  }
 `;
 
 const AgreeBtn = styled.div`
@@ -159,6 +222,10 @@ const AgreeBtn = styled.div`
     justify-content: center;
     align-items: center;
   }
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    padding: ${mainStyle.mopadding};
+  }
 `;
 
 export const Section3 = () => {
@@ -172,20 +239,32 @@ export const Section3 = () => {
             width="100%"
             alt="dyson service center"
           />
+          <MobileBanner
+            style={{
+              background: `url(${responcs}) no-repeat center / cover`,
+            }}
+          />
         </Section3Banner>
         <CsServiceWrap>
           <CsCon>
-            <img src={pinklogo} width="202px" height="76px" alt="dysonlogo" />
+            <img
+              className="pink"
+              src={pinklogo}
+              width="202px"
+              height="76px"
+              alt="dysonlogo"
+            />
             <h3>제품상담</h3>
             <img src={phone} width="426px" height="280px" alt="smartphone" />
+            <h4>다이슨에 연락하고 싶거나 궁금한 점이 있으세요?</h4>
             <p>
-              다이슨에 연락하고 싶거나 궁금한 점이 있으세요?
-              <br /> 옆의 문의 양식을 이용해서 직접 연락하는 방법, <br />
+              <br /> <span className="side">옆의</span> 문의 양식을 이용해서
+              직접 연락하는 방법, <br />
               소비자 상담실에 연락하는 방법이 있습니다. <br />
               다이슨 소비자 상담실: 080-300-4253(수신자 부담) / 1588-4253
               <br /> 운영시간: 월-금 오전 9시-오후 6시
             </p>
-            <span>
+            <span className="web">
               다이슨 코리아(유) <br />
               서울특별시 강남구 테헤란로 142, 아크플레이스 17층 06236 <br />
               Email: help@kr.dyson.com
