@@ -7,6 +7,9 @@ import { Link } from "react-router-dom";
 const TitleWrap = styled.div`
   margin-top: 200px;
   color: #ff5555;
+  @media screen and (max-width: 500px) {
+    margin-top: 50px;
+  }
 `;
 
 const Title = styled.div`
@@ -19,11 +22,22 @@ const Title = styled.div`
     margin-right: 20px;
   }
   margin: 10px 0;
+  @media screen and (max-width: 500px) {
+    font-size: 20px;
+    letter-spacing: -4px;
+    span {
+      font-size: 50px;
+      margin-right: 10px;
+    }
+  }
 `;
 
 const Desc = styled.div`
   font-size: 18px;
   font-weight: 400;
+  @media screen and (max-width: 500px) {
+    font-size: 15px;
+  }
 `;
 
 const Category = styled.h3`
@@ -31,16 +45,25 @@ const Category = styled.h3`
   color: #808080;
   margin-top: 60px;
   margin-bottom: 20px;
+  @media screen and (max-width: 500px) {
+    margin-top: 30px;
+  }
 `;
 
 const ConWrap = styled.div`
-  width: 100%;
+  width: 100vw;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  @media screen and (max-width: 500px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 const Con = styled.div`
   width: 500px;
+  @media screen and (max-width: 500px) {
+    width: 90vw;
+  }
 `;
 
 const PrdctImg = styled.div`
@@ -90,6 +113,9 @@ const Btn = styled.div`
   opacity: 0.5;
   font-size: 20px;
   font-weight: 600;
+  @media screen and (max-width: 500px) {
+    margin-bottom: 30px;
+  }
 `;
 
 export const Section2 = () => {

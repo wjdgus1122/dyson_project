@@ -3,10 +3,12 @@ import { mainStyle } from "../../../styles/Globalstyle";
 import banner1 from "./Image/banner1.png";
 
 const Wrap = styled.div`
-  padding-top: 80px;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   background: url(${banner1}) no-repeat left / contain;
+  @media screen and (max-width: 500px) {
+    background: url(${banner1}) no-repeat bottom / contain;
+  }
 `;
 
 const Half = styled.div`
@@ -16,6 +18,11 @@ const Half = styled.div`
   background: linear-gradient(70deg, transparent 50%, #333 0);
   padding: 50px;
   box-sizing: border-box;
+  @media screen and (max-width: 500px) {
+    background: linear-gradient(0deg, transparent 40%, #333 0);
+    padding: 10px;
+    padding-top: 50px;
+  }
 `;
 
 const SvgWrap = styled.div`
@@ -41,11 +48,14 @@ const SvgWrap = styled.div`
 
 const Desc = styled.h4`
   position: absolute;
-  top: 25px;
+  top: 60px;
   left: 47%;
   font-size: 40px;
   font-weight: 600;
   color: #ff5555;
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 `;
 
 const Category = styled.div`
@@ -55,6 +65,9 @@ const Category = styled.div`
   /* display: none; */
   p {
     margin-bottom: 10px;
+  }
+  @media screen and (max-width: 500px) {
+    display: none;
   }
 `;
 
