@@ -45,7 +45,6 @@ const FooterWrap = styled.div`
   @media screen and (max-width: 500px) {
     width: 100%;
     height: 300px;
-    padding: ${mainStyle.mopadding};
     display: flex;
     align-items: flex-start;
   }
@@ -74,7 +73,7 @@ const FooterLeft = styled.div`
     display: none;
   }
   @media screen and (max-width: 500px) {
-    padding-left: 0px;
+    padding-left: 20px;
     width: 200px;
     line-height: 18px;
     .slash {
@@ -122,6 +121,7 @@ const FooterCenter = styled.div`
 const FooterRight = styled.div`
   padding-right: 120px;
   text-align: right;
+  position: relative;
   span {
     font-size: 25px;
     margin-left: 30px;
@@ -139,12 +139,10 @@ const FooterRight = styled.div`
       font-size: 12px;
       font-weight: 500;
       text-align: left;
-    }
-    a {
-      text-align: center;
+      padding-left: 20px;
     }
     position: absolute;
-    bottom: 60px;
+    bottom: 80px;
   }
 `;
 
@@ -153,7 +151,8 @@ const Icon = styled.div`
     cursor: pointer;
   }
   @media screen and (max-width: 500px) {
-    margin-left: 80px;
+    position: absolute;
+    left: 30%;
     span {
       font-size: 30px;
     }
@@ -168,6 +167,9 @@ const FooterBottom = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
 `;
 
 const User = styled.div`

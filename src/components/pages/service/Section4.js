@@ -42,10 +42,10 @@ const Section4Banner = styled.div`
 `;
 
 const MobileBanner = styled.div`
-  width: 100%;
-  height: 78px;
   display: none;
   @media screen and (max-width: 500px) {
+    width: 100%;
+    height: 78px;
     display: block;
   }
 `;

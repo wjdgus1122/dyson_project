@@ -11,11 +11,11 @@ export const Service = () => {
   return (
     <>
       <PageTitle title="Service" />
-      <MainBanner />
-      <Section1 />
-      <Section2 />
-      <Section3 />
-      <Section4 />
+      {/* <MainBanner /> */}
+      {/* <Section1 /> */}
+      {/* <Section2 /> */}
+      {/* <Section3 /> */}
+      {/* <Section4 /> */}
       <Section5 />
     </>
   );
