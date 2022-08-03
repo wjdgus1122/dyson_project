@@ -9,6 +9,7 @@ const MainBannerWrap = styled.div`
 `;
 
 const WebMainBanner = styled.div`
+  margin-top: 80px;
   width: 100%;
   height: 570px;
   @media screen and (max-width: 500px) {

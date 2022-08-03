@@ -4,6 +4,7 @@ import { Container } from "../../Container";
 import phone from "./Image/mobile.png";
 import pinklogo from "./Image/pinklogo.png";
 import responcs from "./Image/responcs.png";
+import webbanner from "./Image/section3.png";
 
 const Section3Wrap = styled.div`
   margin-top: 130px;
@@ -13,13 +14,11 @@ const Section3Wrap = styled.div`
   }
 `;
 
-const Section3Banner = styled.div`
+const WebMainBanner = styled.div`
   width: 100%;
+  height: 400px;
   @media screen and (max-width: 500px) {
-    width: 100%;
-    img {
-      display: none;
-    }
+    display: none;
   }
 `;
 
@@ -41,18 +40,22 @@ const CsServiceWrap = styled.div`
   @media screen and (max-width: 500px) {
     width: 100%;
     margin-top: 40px;
-    padding: ${mainStyle.mopadding};
+    padding: 0;
     flex-direction: column;
   }
 `;
-const CsCon = styled.div`
-  img {
-    margin: 30px 0;
-    .dysonphone {
-      width: 426px;
-      height: 280px;
-    }
+
+const PhoneImg = styled.div`
+  margin: 30px 0;
+  width: 426px;
+  height: 280px;
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    height: 200px;
   }
+`;
+
+const CsCon = styled.div`
   h3 {
     font-size: 50px;
     font-weight: 500;
@@ -77,6 +80,9 @@ const CsCon = styled.div`
   }
   @media screen and (max-width: 500px) {
     width: 100%;
+    .web {
+      display: none;
+    }
     .side {
       display: none;
     }
@@ -101,21 +107,15 @@ const CsCon = styled.div`
       font-size: 16px;
       font-weight: 100;
     }
-    .web {
-      display: none;
-    }
-    .dysonphone {
-      width: 90%;
-      height: 280px;
-    }
   }
 `;
 const CsForm = styled.div`
-  width: 50%;
+  width: 80%;
   height: 80vh;
+
   border: 1px solid ${mainStyle.mainColor};
   @media screen and (max-width: 500px) {
-    width: 90%;
+    width: 100%;
     height: auto;
   }
 `;
@@ -139,9 +139,11 @@ const FormBox = styled.form`
     background-color: #f3f3f3;
     width: 100%;
     height: 300px;
-    padding: 10px 10px;
+
     &::placeholder {
       color: #000;
+      padding-top: 10px;
+      padding-left: 10px;
     }
   }
   .sendBtn {
@@ -163,16 +165,16 @@ const FormBox = styled.form`
   }
   @media screen and (max-width: 500px) {
     width: 100%;
-    padding: ${mainStyle.mopadding};
+    padding: 0 10px;
     margin-top: 40px;
     .mail {
-      width: 90%;
+      width: 94%;
     }
     .cate {
-      width: 90%;
+      width: 94%;
     }
     .QNA {
-      width: 84%;
+      width: 94%;
       height: 250px;
     }
   }
@@ -196,8 +198,7 @@ const InputName = styled.form`
   }
   @media screen and (max-width: 500px) {
     .inputname {
-      width: 42%;
-      margin-right: 10px;
+      width: 43%;
     }
   }
 `;
@@ -211,13 +212,18 @@ const InputNameCate = styled.div`
     margin-right: 10px;
     margin-top: 10px;
   }
+  p {
+    padding-left: 10px;
+  }
   label {
     margin-right: 20px;
   }
+
   @media screen and (max-width: 500px) {
-    width: 45%;
-    p {
-      margin-left: 10px;
+    width: 48%;
+
+    label {
+      margin-right: 10px;
     }
   }
 `;
@@ -242,7 +248,7 @@ const InputCategory = styled.div`
     margin-top: 11px;
   }
   @media screen and (max-width: 500px) {
-    width: 79%;
+    width: 82.5%;
     flex-wrap: wrap;
     padding: ${mainStyle.mopadding};
     input {
@@ -279,19 +285,16 @@ const AgreeBtn = styled.div`
   @media screen and (max-width: 500px) {
     width: 100%;
     justify-content: flex-start;
-    padding: ${mainStyle.mopadding};
-    margin: 30px 0;
+    margin-bottom: 50px;
+    font-size: 14px;
     .agree {
       margin-right: 5px;
-      margin-left: -15px;
+      padding-left: 15px;
     }
     .sendBtn {
       width: 140px;
       height: 40px;
-      margin-right: 60px;
-    }
-    label {
-      margin-right: 10px;
+      margin-right: 20px;
     }
   }
 `;
@@ -299,131 +302,151 @@ const AgreeBtn = styled.div`
 export const Section3 = () => {
   return (
     <>
-      <Container />
       <Section3Wrap>
-        <Section3Banner>
-          <img
-            src={require("./Image/section3.png")}
-            width="100%"
-            alt="dyson service center"
-          />
-          <MobileBanner
-            style={{
-              background: `url(${responcs}) no-repeat center / cover`,
-            }}
-          />
-        </Section3Banner>
-        <CsServiceWrap>
-          <CsCon>
-            <img
-              className="pink"
-              src={pinklogo}
-              width="202px"
-              height="76px"
-              alt="dysonlogo"
-            />
-            <h3>제품상담</h3>
-            <img src={phone} alt="smartphone" className="dysonphone" />
-            <h4>다이슨에 연락하고 싶거나 궁금한 점이 있으세요?</h4>
-            <p>
-              <br /> <span className="side">옆의</span> 문의 양식을 이용해서
-              직접 연락하는 방법, <br />
-              소비자 상담실에 연락하는 방법이 있습니다. <br />
-              다이슨 소비자 상담실: 080-300-4253(수신자 부담) / 1588-4253
-              <br /> 운영시간: 월-금 오전 9시-오후 6시
-            </p>
-            <span className="web">
-              다이슨 코리아(유) <br />
-              서울특별시 강남구 테헤란로 142, 아크플레이스 17층 06236 <br />
-              Email: help@kr.dyson.com
-            </span>
-          </CsCon>
-          <CsForm>
-            <FormBox>
-              <form>
-                <InputName>
-                  <input type="text" placeholder="이름" className="inputname" />
-                  <InputNameCate>
-                    <p>성별</p>
-                    <input type="radio" name="성별" id="남" />
-                    <label for="남">남</label>
-                    <input type="radio" name="성별" id="여" />
-                    <label for="여">여</label>
-                  </InputNameCate>
-                </InputName>
+        <WebMainBanner
+          style={{
+            background: `url(${webbanner}) no-repeat center / cover`,
+          }}
+        ></WebMainBanner>
+        <MobileBanner
+          style={{
+            background: `url(${responcs}) no-repeat center / cover`,
+          }}
+        />
 
-                <input type="email" placeholder="email" className="mail" />
-                <br />
-                <input type="text" placeholder="문의유형" className="cate" />
-                <br />
-                <InputCategory>
-                  <h3>카테고리</h3>
-                  <input
-                    type="checkbox"
-                    name="카테고리"
-                    id="헤어케어"
-                    className="check"
-                  />
-                  <label for="헤어케어" className="product">
-                    헤어케어
-                  </label>
-                  <input
-                    type="checkbox"
-                    name="청소기"
-                    id="청소기"
-                    className="check"
-                  />
-                  <label for="청소기" className="product">
-                    청소기
-                  </label>
-                  <input
-                    type="checkbox"
-                    name="공기청정기"
-                    id="공기청정기"
-                    className="check"
-                  />
-                  <label for="공기청정기" className="product">
-                    공기청정기
-                  </label>
-                  <input
-                    type="checkbox"
-                    name="조명"
-                    id="조명"
-                    className="check"
-                  />
-                  <label for="조명" className="product">
-                    조명
-                  </label>
-                  <input
-                    type="checkbox"
-                    name="부품"
-                    id="부품"
-                    className="check"
-                  />
-                  <label for="부품" className="product">
-                    부품
-                  </label>
-                </InputCategory>
-                <textarea type="text" placeholder="문의사항" className="QNA" />
-                <br />
-                <AgreeBtn>
-                  <input
-                    type="checkbox"
-                    name="agree"
-                    id="agree"
-                    className="agree"
-                  />
-                  <label for="agree">
-                    다이슨의 개인정보처리방침을
-                    <br /> 읽었으며, 이에 동의합니다.
-                  </label>
-                  <button className="sendBtn">
-                    <p>SEND ▸</p>
-                  </button>
-                </AgreeBtn>
-              </form>
-            </FormBox>
-          </CsForm>
+        <CsServiceWrap>
+          <Container>
+            <CsCon>
+              <img
+                className="pink"
+                src={pinklogo}
+                width="202px"
+                height="76px"
+                alt="dysonlogo"
+              />
+              <h3>제품상담</h3>
+              <PhoneImg
+                style={{
+                  background: `url(${phone}) no-repeat center / cover`,
+                }}
+              />
+              <h4>다이슨에 연락하고 싶거나 궁금한 점이 있으세요?</h4>
+              <p>
+                <br /> <span className="side">옆의</span> 문의 양식을 이용해서
+                직접 연락하는 방법, <br />
+                소비자 상담실에 연락하는 방법이 있습니다. <br />
+                다이슨 소비자 상담실: 080-300-4253(수신자 부담) / 1588-4253
+                <br /> 운영시간: 월-금 오전 9시-오후 6시
+              </p>
+              <span className="web">
+                다이슨 코리아(유) <br />
+                서울특별시 강남구 테헤란로 142, 아크플레이스 17층 06236 <br />
+                Email: help@kr.dyson.com
+              </span>
+            </CsCon>
+          </Container>
+          <Container>
+            <CsForm>
+              <FormBox>
+                <form>
+                  <Container>
+                    <InputName>
+                      <input
+                        type="text"
+                        placeholder="이름"
+                        className="inputname"
+                      />
+                      <InputNameCate>
+                        <p>성별</p>
+                        <input type="radio" name="성별" id="남" />
+                        <label for="남">남</label>
+                        <input type="radio" name="성별" id="여" />
+                        <label for="여">여</label>
+                      </InputNameCate>
+                    </InputName>
+
+                    <input type="email" placeholder="email" className="mail" />
+                    <br />
+                    <input
+                      type="text"
+                      placeholder="문의유형"
+                      className="cate"
+                    />
+                    <br />
+                    <InputCategory>
+                      <h3>카테고리</h3>
+                      <input
+                        type="checkbox"
+                        name="카테고리"
+                        id="헤어케어"
+                        className="check"
+                      />
+                      <label for="헤어케어" className="product">
+                        헤어케어
+                      </label>
+                      <input
+                        type="checkbox"
+                        name="청소기"
+                        id="청소기"
+                        className="check"
+                      />
+                      <label for="청소기" className="product">
+                        청소기
+                      </label>
+                      <input
+                        type="checkbox"
+                        name="공기청정기"
+                        id="공기청정기"
+                        className="check"
+                      />
+                      <label for="공기청정기" className="product">
+                        공기청정기
+                      </label>
+                      <input
+                        type="checkbox"
+                        name="조명"
+                        id="조명"
+                        className="check"
+                      />
+                      <label for="조명" className="product">
+                        조명
+                      </label>
+                      <input
+                        type="checkbox"
+                        name="부품"
+                        id="부품"
+                        className="check"
+                      />
+                      <label for="부품" className="product">
+                        부품
+                      </label>
+                    </InputCategory>
+                    <textarea
+                      type="text"
+                      placeholder="문의사항"
+                      className="QNA"
+                    />
+                    <br />
+                    <AgreeBtn>
+                      <input
+                        type="checkbox"
+                        name="agree"
+                        id="agree"
+                        className="agree"
+                      />
+                      <label for="agree">
+                        다이슨의 개인정보처리방침을
+                        <br /> 읽었으며, 이에 동의합니다.
+                      </label>
+                      <button className="sendBtn">
+                        <p>SEND ▸</p>
+                      </button>
+                    </AgreeBtn>
+                  </Container>
+                </form>
+              </FormBox>
+            </CsForm>
+          </Container>
         </CsServiceWrap>
       </Section3Wrap>
     </>
