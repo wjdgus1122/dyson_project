@@ -8,6 +8,7 @@ export const mainStyle = {
   fontColor: "#1d1d1d",
   blackColor: "#333",
   mainRgbColor: "255,0,170",
+  boxColor: "#EFEFEF",
   fontType: `"Comfortaa", cursive`,
 };
 
