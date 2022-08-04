@@ -64,7 +64,7 @@ const Box = styled.div`
     }
   }
   p {
-    font-size: 21px;
+    font-size: 20px;
     font-weight: 100;
     padding-left: 30px;
   }

@@ -29,7 +29,6 @@ const MobileBanner = styled.div`
 
 const ServiceBoxWrap = styled.div`
   margin-top: 60px;
-  padding: ${mainStyle.padding};
   display: flex;
   justify-content: space-between;
 
