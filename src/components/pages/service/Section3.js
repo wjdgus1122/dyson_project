@@ -68,6 +68,7 @@ const CsCon = styled.div`
   }
   p {
     font-size: 20px;
+    margin-bottom: 30px;
     font-weight: 500;
     line-height: 25px;
     color: ${mainStyle.fontColor};
@@ -258,8 +259,11 @@ const InputCategory = styled.div`
       margin-left: -10px;
     }
     .check {
-      :nth-child(8) {
-        margin-left: 51px;
+      :nth-child(2) {
+        margin-left: 14px;
+      }
+      :nth-child(6) {
+        margin-left: 60px;
       }
     }
   }
