@@ -4,18 +4,30 @@ import { Container } from "../../Container";
 import { Link } from "react-router-dom";
 import box1 from "./img/box1.png";
 import box2 from "./img/box2.png";
+import pdimg from "./img/section5.png";
 
 const Wrap = styled.div`
   width: 100%;
-  height: 120vh;
   position: relative;
+  margin-bottom: 200px;
   @media screen and (max-width: 500px) {
     height: auto;
   }
 `;
+const BgCircle = styled.div`
+  width: 615px;
+  height: 615px;
+  border-radius: 50%;
+  background-color: #ff8aca;
+  position: absolute;
+  top: 210px;
+  left: -100px;
+`;
 const TitleWrap = styled.div`
   margin-bottom: 40px;
   padding-top: 285px;
+  position: relative;
+  z-index: 9;
   @media screen and (max-width: 500px) {
     display: flex;
     padding-top: 160px;
@@ -45,6 +57,8 @@ const TextWrap = styled.div`
   width: 555px;
   color: ${mainStyle.blackColor};
   margin-top: 70px;
+  position: relative;
+  z-index: 9;
   @media screen and (max-width: 500px) {
     width: 170px;
     margin-top: 20px;
@@ -163,6 +177,7 @@ export const Section5 = () => {
   return (
     <Wrap>
       <Container>
+        <BgCircle />
         <TitleWrap>
           <Title>Event</Title>
           <STitle>리뷰이벤트</STitle>
@@ -175,7 +190,9 @@ export const Section5 = () => {
             <TextBtn>리뷰 작성하러 가기</TextBtn>
           </Link>
         </TextWrap>
-        <ProductImg />
+        <ProductImg
+          style={{ background: `url(${pdimg}) no-repeat center/cover` }}
+        />
         <BoxWrap>
           <SCon>
             <SBox

@@ -1,11 +1,15 @@
 import styled from "styled-components";
+import bgimg from "./img/section6.png";
+import mbimg from "./img/mobile_section6.png";
 
 const Wrap = styled.div`
   width: 100%;
   height: 80vh;
-  background-color: beige;
-  margin-top: 215px;
+  background: url(${bgimg}) no-repeat center/cover;
   position: relative;
+  @media screen and (max-width: 500px) {
+    background: url(${mbimg}) no-repeat center/cover;
+  }
 `;
 const Text = styled.div`
   width: 565px;
