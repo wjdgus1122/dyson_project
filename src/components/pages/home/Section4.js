@@ -10,6 +10,10 @@ import con_hair from "./img/section4_hair.png";
 import con_light from "./img/section4_light.png";
 import con_va from "./img/section4_va.png";
 
+const Wrap = styled.div`
+  width: 100%;
+  margin-bottom: 200px;
+`;
 const TitleWrap = styled.div`
   margin-bottom: 40px;
   @media screen and (max-width: 500px) {
@@ -245,7 +249,7 @@ const MoCon = styled.div`
 
 export const Section4 = () => {
   return (
-    <>
+    <Wrap>
       <Container>
         <TitleWrap>
           <Title>Product</Title>
@@ -428,6 +432,6 @@ export const Section4 = () => {
           </MoCon>
         </ProductWrap>
       </Container>
-    </>
+    </Wrap>
   );
 };
