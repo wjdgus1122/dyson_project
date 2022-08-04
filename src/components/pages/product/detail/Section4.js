@@ -1,6 +1,7 @@
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
+import { mainStyle } from "../../../../styles/Globalstyle";
 import { Container } from "../../../Container";
 import { Logo } from "./Image/Logo";
 
@@ -30,6 +31,18 @@ const Con = styled.div`
   flex-direction: column;
   align-items: center;
   width: 20%;
+  .new::before {
+    font-size: 20px;
+    position: absolute;
+    content: "New";
+    color: red;
+    transform: translateY(-20px);
+  }
+  &:first-child {
+    transform: translateY(90px);
+    align-items: flex-end;
+    opacity: 0.5;
+  }
 `;
 
 const Img = styled.div`
@@ -38,13 +51,39 @@ const Img = styled.div`
   background-color: gray;
 `;
 
-const Name = styled.div``;
+const Name = styled.h3`
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 5px;
+`;
 
-const Desc = styled.div``;
+const Desc = styled.h4`
+  font-size: 22px;
+  opacity: 0.7;
+`;
 
-const Btn = styled.div``;
+const Btn = styled.div`
+  font-size: 18px;
+  margin: 20px 0;
+  cursor: pointer;
+  svg {
+    color: ${mainStyle.mainColor};
+  }
+`;
 
-const Spec = styled.div``;
+const Line = styled.div`
+  width: 90%;
+  height: 20px;
+  border-top: 1px solid ${mainStyle.mainColor};
+`;
+
+const Spec = styled.p`
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-align: center;
+  line-height: 20px;
+`;
 
 export const Section4 = () => {
   return (
@@ -55,12 +94,10 @@ export const Section4 = () => {
       </Title>
       <ConWrap>
         <Con>
-          <Img />
+          <Img style={{ opacity: 0 }} />
           <Name></Name>
           <Desc></Desc>
-          <Btn>
-            더 알아보기 <FontAwesomeIcon icon={faAngleRight} />
-          </Btn>
+          <Btn></Btn>
           <Spec>흡입력</Spec>
           <Spec>사용시간</Spec>
           <Spec>무게</Spec>
@@ -70,11 +107,12 @@ export const Section4 = () => {
 
         <Con>
           <Img />
-          <Name>v15 detect</Name>
+          <Name className="new">v15 detect</Name>
           <Desc>가장 강력한 흡입력</Desc>
           <Btn>
             더 알아보기 <FontAwesomeIcon icon={faAngleRight} />
           </Btn>
+          <Line />
           <Spec>240 AW</Spec>
           <Spec>60 분</Spec>
           <Spec>3 kg</Spec>
@@ -91,11 +129,12 @@ export const Section4 = () => {
         </Con>
         <Con>
           <Img />
-          <Name></Name>
-          <Desc></Desc>
+          <Name className="new">v12 detect slim</Name>
+          <Desc>흡입력과 가벼움을 동시에</Desc>
           <Btn>
             더 알아보기 <FontAwesomeIcon icon={faAngleRight} />
           </Btn>
+          <Line />
           <Spec>150 AW</Spec>
           <Spec>60 분</Spec>
           <Spec>2.2 kg</Spec>
@@ -114,11 +153,12 @@ export const Section4 = () => {
         </Con>
         <Con>
           <Img />
-          <Name></Name>
-          <Desc></Desc>
+          <Name>v11</Name>
+          <Desc>집안 구석구석 깊숙하게</Desc>
           <Btn>
             더 알아보기 <FontAwesomeIcon icon={faAngleRight} />
           </Btn>
+          <Line />
           <Spec>185 AW</Spec>
           <Spec>60 분</Spec>
           <Spec>3 kg</Spec>
@@ -133,11 +173,12 @@ export const Section4 = () => {
         </Con>
         <Con>
           <Img />
-          <Name></Name>
-          <Desc></Desc>
+          <Name>cyclone v10</Name>
+          <Desc>집안 구석구석 섬세하게</Desc>
           <Btn>
             더 알아보기 <FontAwesomeIcon icon={faAngleRight} />
           </Btn>
+          <Line />
           <Spec>150 AW</Spec>
           <Spec>60 분</Spec>
           <Spec>2.6 kg</Spec>
