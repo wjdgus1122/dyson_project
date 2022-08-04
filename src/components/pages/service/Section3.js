@@ -259,8 +259,11 @@ const InputCategory = styled.div`
       margin-left: -10px;
     }
     .check {
-      :nth-child(8) {
-        margin-left: 51px;
+      :nth-child(2) {
+        margin-left: 14px;
+      }
+      :nth-child(6) {
+        margin-left: 60px;
       }
     }
   }
