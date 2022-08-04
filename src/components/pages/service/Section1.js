@@ -85,10 +85,14 @@ const Box = styled.div`
       font-size: 14px;
       line-height: 25px;
       font-weight: 100;
-      padding-left: 0;
-      span {
-        font-weight: 700;
+      padding: 0 10px;
+      .leftcon {
+        margin-top: 20px;
       }
+    }
+    .jamsil {
+      font-weight: 700;
+      margin-bottom: 40px;
     }
   }
 `;
@@ -146,9 +150,14 @@ export const Section1 = () => {
                 <span>프리미엄</span> 서비스 센터
               </h3>
               <p>
-                <span>롯데월드 하이마트 메가스토어 잠실점</span> <br />
-                무선 청소기 수리 시 10만원 상당의 프리미엄 청소 서비스 무료 제공
-                (내/외부 물청소 포함)
+                <span className="jamsil">
+                  롯데월드 하이마트 메가스토어 잠실점
+                </span>
+                <br />
+                <p className="leftcon">
+                  무선 청소기 수리 시 10만원 상당의 프리미엄 청소 서비스 무료
+                  제공 (내/외부 물청소 포함)
+                </p>
               </p>
             </Box>
             <Box onClick={mapclick2}>
