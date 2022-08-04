@@ -113,6 +113,9 @@ const Btn = styled.div`
   opacity: 0.5;
   font-size: 20px;
   font-weight: 600;
+  &:hover {
+    opacity: 1;
+  }
   @media screen and (max-width: 500px) {
     margin-bottom: 30px;
   }
