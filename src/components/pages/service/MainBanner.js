@@ -94,6 +94,36 @@ const BoxCon = styled.div`
 `;
 
 export const MainBanner = () => {
+  const handleCenter = () => {
+    if (window.innerWidth > 500) {
+      window.scrollTo({ top: 1010, behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: 837, behavior: "smooth" });
+    }
+  };
+  const handleAS = () => {
+    if (window.innerWidth > 500) {
+      window.scrollTo({ top: 2596, behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: 2330, behavior: "smooth" });
+    }
+  };
+
+  const handleCS = () => {
+    if (window.innerWidth > 500) {
+      window.scrollTo({ top: 4100, behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: 3528, behavior: "smooth" });
+    }
+  };
+  const handleTell = () => {
+    if (window.innerWidth > 500) {
+      window.scrollTo({ top: 5558, behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: 4915, behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <MainBannerWrap>
@@ -110,7 +140,7 @@ export const MainBanner = () => {
       </MainBannerWrap>
       <Container>
         <ServiceBoxWrap>
-          <Box onClick={() => window.scrollTo({ top: 1030 })}>
+          <Box onClick={handleCenter}>
             <BoxCon>
               <span>
                 <i class="fa-solid fa-warehouse"></i>
@@ -122,7 +152,7 @@ export const MainBanner = () => {
               </h5>
             </BoxCon>
           </Box>
-          <Box onClick={() => window.scrollTo({ top: 2596 })}>
+          <Box onClick={handleAS}>
             <BoxCon>
               <span>
                 <i class="fa-solid fa-screwdriver-wrench"></i>
@@ -131,7 +161,7 @@ export const MainBanner = () => {
               <h5>전국 어디서나 택배를 이용해 편리하게 수리 받으세요.</h5>
             </BoxCon>
           </Box>
-          <Box onClick={() => window.scrollTo({ top: 4229 })}>
+          <Box onClick={handleCS}>
             <BoxCon>
               <span>
                 <i class="fa-solid fa-mobile-screen"></i>
@@ -140,7 +170,7 @@ export const MainBanner = () => {
               <h5>보이는 ARS 서비스 또는 제품기술지원</h5>
             </BoxCon>
           </Box>
-          <Box onClick={() => window.scrollTo({ top: 5816 })}>
+          <Box onClick={handleTell}>
             <BoxCon>
               <span>
                 <i class="fa-solid fa-credit-card"></i>
