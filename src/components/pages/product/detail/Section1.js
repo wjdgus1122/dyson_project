@@ -165,7 +165,8 @@ const Color = styled.div`
   }
   @media screen and (max-width: 500px) {
     position: absolute;
-    bottom: 150px;
+    bottom: 130px;
+    right: 0;
     p {
       margin-right: 10px;
       &::before {
