@@ -12,6 +12,7 @@ const Wrap = styled.div`
   margin-bottom: 200px;
   @media screen and (max-width: 500px) {
     height: auto;
+    margin-bottom: 100px;
   }
 `;
 const BgCircle = styled.div`
@@ -22,6 +23,12 @@ const BgCircle = styled.div`
   position: absolute;
   top: 210px;
   left: -100px;
+  @media screen and (max-width: 500px) {
+    width: 196px;
+    height: 196px;
+    top: 135px;
+    left: -50px;
+  }
 `;
 const TitleWrap = styled.div`
   margin-bottom: 40px;

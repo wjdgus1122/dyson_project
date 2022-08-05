@@ -13,6 +13,9 @@ import con_va from "./img/section4_va.png";
 const Wrap = styled.div`
   width: 100%;
   margin-bottom: 200px;
+  @media screen and (max-width: 500px) {
+    margin-bottom: 0;
+  }
 `;
 const TitleWrap = styled.div`
   margin-bottom: 40px;
