@@ -11,7 +11,7 @@ const Section = styled.div`
   margin: 200px 0;
   position: relative;
   @media screen and (max-width: 500px) {
-    margin: 100px 0;
+    margin: 0 0 100px 0;
   }
 `;
 const MainImg = styled.div`

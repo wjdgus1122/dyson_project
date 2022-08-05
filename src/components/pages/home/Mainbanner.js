@@ -84,7 +84,7 @@ export const Mainbanner = () => {
         pagination={{
           clickable: true,
         }}
-        // autoplay={{ delay: 3000, disableOnInteraction: false }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
         style={{ height: "100vh", overflow: "hidden" }}
       >
         <SwiperSlide>

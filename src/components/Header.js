@@ -1,6 +1,7 @@
 import {
   faBagShopping,
   faBars,
+  faClose,
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -138,7 +139,7 @@ const Line = styled.div`
   top: 0;
   left: 0;
 `;
-const MoMenuWrap = styled.div`
+const MoMenu = styled.div`
   display: none;
   svg {
     font-size: 18px;
@@ -148,11 +149,52 @@ const MoMenuWrap = styled.div`
     display: flex;
   }
 `;
+const MoMenuBtn = styled.div`
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: ${(props) => props.posi};
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+
+  @media screen and (max-width: 500px) {
+    display: flex;
+    /* & .mocon:nth-child(1) {
+      color: ${mainStyle.mainColor};
+    }
+    & .mocon:nth-child(2) {
+      color: ${(props) => props.mofont1};
+    }
+    & .mocon:nth-child(3) {
+      color: ${(props) => props.mofont2};
+    }
+    & .mocon:nth-child(4) {
+      color: ${(props) => props.mofont3};
+    } */
+  }
+`;
+const CloseBtn = styled.div`
+  font-size: 30px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+`;
+const TextBtn = styled.div`
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 50px;
+`;
 
 export const Header = () => {
   const [fstfont, setFstFont] = useState(``);
   const [secfont, setSecFont] = useState(``);
   const [thdfont, setThdFont] = useState(``);
+  const [homefont, setHomeFont] = useState(`${mainStyle.mainColor}`);
   const [fstline, setFstLine] = useState(``);
   const [secline, setSecLine] = useState(``);
   const [thdline, setThdLine] = useState(``);
@@ -160,6 +202,7 @@ export const Header = () => {
   const [logocolor, setLogoColor] = useState("#333");
   const [svgcolor, setSvgColor] = useState("#333");
   const [mosvgcolor, setMoSvgColor] = useState("#333");
+  const [momenu, setMoMenu] = useState("-100%");
   const menuhandle1 = () => {
     setFstFont(`${mainStyle.mainColor}`);
     setSecFont(`#707070`);
@@ -192,6 +235,13 @@ export const Header = () => {
     setSecLine("0");
     setThdLine("0");
   };
+  const menuhandle5 = () => {
+    setFstFont(`#707070`);
+    setSecFont(`#707070`);
+    setThdFont(`#707070`);
+    setHomeFont(`${mainStyle.mainColor}`);
+  };
+
   const sclhandle = () => {
     const scl = window.pageYOffset;
     if (scl > 400) {
@@ -291,11 +341,36 @@ export const Header = () => {
           </Menu>
         </Menus>
       </MenuWrap>
-      <MoMenuWrap>
-        <Menu iconcolor={mosvgcolor}>
+      <MoMenu>
+        <Menu iconcolor={mosvgcolor} onClick={() => setMoMenu(`0`)}>
           <FontAwesomeIcon icon={faBars} />
         </Menu>
-      </MoMenuWrap>
+      </MoMenu>
+      <MoMenuBtn posi={momenu}>
+        <CloseBtn onClick={() => setMoMenu(`-100%`)}>
+          <FontAwesomeIcon icon={faClose} />
+        </CloseBtn>
+        <Link to={"/"}>
+          <TextBtn onClick={menuhandle5} homefont={homefont} className="mocon">
+            홈
+          </TextBtn>
+        </Link>
+        <Link to={"/product"}>
+          <TextBtn onClick={menuhandle1} mofont1={fstfont} className="mocon">
+            제품
+          </TextBtn>
+        </Link>
+        <Link to={"/service"}>
+          <TextBtn onClick={menuhandle2} mofont2={secfont} className="mocon">
+            고객지원
+          </TextBtn>
+        </Link>
+        <Link to={"/community"}>
+          <TextBtn onClick={menuhandle3} mofont3={thdfont} className="mocon">
+            커뮤니티
+          </TextBtn>
+        </Link>
+      </MoMenuBtn>
     </SHeader>
   );
 };
