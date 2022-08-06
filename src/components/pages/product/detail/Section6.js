@@ -9,6 +9,10 @@ const Title = styled.div`
   font-weight: 600;
   text-align: center;
   margin: 60px 0;
+  @media screen and (max-width: 500px) {
+    font-size: 30px;
+    text-align: left;
+  }
 `;
 
 const Wrap = styled.div`
@@ -20,6 +24,13 @@ const Wrap = styled.div`
     color: ${mainStyle.mainColor};
     opacity: 0.5;
     cursor: pointer;
+    @media screen and (max-width: 500px) {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 `;
 
@@ -34,6 +45,10 @@ const Con = styled.div`
     font-size: 20px;
     transform: translateY(-20px);
     color: red;
+    @media screen and (max-width: 500px) {
+      font-size: 10px;
+      transform: translateY(-10px);
+    }
   }
 `;
 
@@ -41,12 +56,21 @@ const Img = styled.div`
   width: 80%;
   height: 300px;
   background-color: gray;
+  @media screen and (max-width: 500px) {
+    width: 95px;
+    height: 150px;
+  }
 `;
 
 const Name = styled.h3`
   font-size: 30px;
   font-weight: 600;
   margin-top: 30px;
+  @media screen and (max-width: 500px) {
+    height: 50px;
+    font-size: 16px;
+    margin-top: 15px;
+  }
 `;
 
 export const Section6 = () => {

@@ -3,6 +3,9 @@ import styled from "styled-components";
 const Wrap = styled.iframe`
   width: 100%;
   height: 80vh;
+  @media screen and (max-width: 500px) {
+    margin-top: 50px;
+  }
 `;
 
 export const Section2 = () => {

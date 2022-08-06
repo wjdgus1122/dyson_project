@@ -81,8 +81,9 @@ const Img = styled.div`
   top: 0;
   left: 350px;
   @media screen and (max-width: 500px) {
-    width: 300px;
-    top: -50px;
+    width: 250px;
+    height: 80vh;
+    top: -40px;
     left: 60px;
   }
 `;
@@ -94,6 +95,7 @@ const PrdtDesc = styled.div`
   align-items: center;
   width: 50%;
   @media screen and (max-width: 500px) {
+    display: block;
     padding: ${mainStyle.mopadding};
     width: 100%;
   }
@@ -122,10 +124,10 @@ const Desc2 = styled.div`
   font-weight: 400;
   opacity: 0.5;
   @media screen and (max-width: 500px) {
-    width: 100%;
+    width: 90%;
     position: absolute;
     height: auto;
-    top: 100vh;
+    top: 90vh;
   }
 `;
 
