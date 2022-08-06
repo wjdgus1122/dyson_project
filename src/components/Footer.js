@@ -240,7 +240,7 @@ export const Footer = () => {
                 href="https://www.youtube.com/dyson"
               >
                 <span>
-                  <i class="fa-brands fa-youtube"></i>
+                  <i className="fa-brands fa-youtube"></i>
                 </span>
               </a>
 
@@ -250,7 +250,7 @@ export const Footer = () => {
                 href="https://www.instagram.com/dyson_kr/"
               >
                 <span>
-                  <i class="fa-brands fa-instagram"></i>
+                  <i className="fa-brands fa-instagram"></i>
                 </span>
               </a>
               <a
@@ -259,7 +259,7 @@ export const Footer = () => {
                 href="https://ko-kr.facebook.com/DysonKorea/about/"
               >
                 <span>
-                  <i class="fa-brands fa-square-facebook"></i>
+                  <i className="fa-brands fa-square-facebook"></i>
                 </span>
               </a>
             </Icon>
