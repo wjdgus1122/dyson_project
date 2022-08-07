@@ -161,21 +161,8 @@ const MoMenuBtn = styled.div`
   justify-content: center;
   align-items: center;
   transition: 0.5s;
-
   @media screen and (max-width: 500px) {
     display: flex;
-    /* & .mocon:nth-child(1) {
-      color: ${mainStyle.mainColor};
-    }
-    & .mocon:nth-child(2) {
-      color: ${(props) => props.mofont1};
-    }
-    & .mocon:nth-child(3) {
-      color: ${(props) => props.mofont2};
-    }
-    & .mocon:nth-child(4) {
-      color: ${(props) => props.mofont3};
-    } */
   }
 `;
 const CloseBtn = styled.div`
@@ -184,17 +171,40 @@ const CloseBtn = styled.div`
   top: 20px;
   right: 20px;
 `;
+
 const TextBtn = styled.div`
   font-size: 30px;
   font-weight: 900;
   margin-bottom: 50px;
+  a {
+    color: #707070;
+  }
+  &.mocon1 {
+    a {
+      color: ${(props) => props.hmfont};
+    }
+  }
+  &.mocon2 {
+    a {
+      color: ${(props) => props.mofont1};
+    }
+  }
+  &.mocon3 {
+    a {
+      color: ${(props) => props.mofont2};
+    }
+  }
+  &.mocon4 {
+    a {
+      color: ${(props) => props.mofont3};
+    }
+  }
 `;
 
 export const Header = () => {
   const [fstfont, setFstFont] = useState(``);
   const [secfont, setSecFont] = useState(``);
   const [thdfont, setThdFont] = useState(``);
-  const [homefont, setHomeFont] = useState(`${mainStyle.mainColor}`);
   const [fstline, setFstLine] = useState(``);
   const [secline, setSecLine] = useState(``);
   const [thdline, setThdLine] = useState(``);
@@ -203,6 +213,10 @@ export const Header = () => {
   const [svgcolor, setSvgColor] = useState("#333");
   const [mosvgcolor, setMoSvgColor] = useState("#333");
   const [momenu, setMoMenu] = useState("-100%");
+  const [homefont, setHomeFont] = useState(`${mainStyle.mainColor}`);
+  const [mofont1, setMoFont1] = useState(``);
+  const [mofont2, setMoFont2] = useState(``);
+  const [mofont3, setMoFont3] = useState(``);
   const menuhandle1 = () => {
     setFstFont(`${mainStyle.mainColor}`);
     setSecFont(`#707070`);
@@ -235,13 +249,34 @@ export const Header = () => {
     setSecLine("0");
     setThdLine("0");
   };
-  const menuhandle5 = () => {
-    setFstFont(`#707070`);
-    setSecFont(`#707070`);
-    setThdFont(`#707070`);
+  const momenuhandle1 = () => {
+    setMoFont1(`#707070`);
+    setMoFont2(`#707070`);
+    setMoFont3(`#707070`);
     setHomeFont(`${mainStyle.mainColor}`);
+    setMoMenu(`-100%`);
   };
-
+  const momenuhandle2 = () => {
+    setMoFont1(`${mainStyle.mainColor}`);
+    setMoFont2(`#707070`);
+    setMoFont3(`#707070`);
+    setHomeFont(`#707070`);
+    setMoMenu(`-100%`);
+  };
+  const momenuhandle3 = () => {
+    setMoFont1(`#707070`);
+    setMoFont2(`${mainStyle.mainColor}`);
+    setMoFont3(`#707070`);
+    setHomeFont(`#707070`);
+    setMoMenu(`-100%`);
+  };
+  const momenuhandle4 = () => {
+    setMoFont1(`#707070`);
+    setMoFont2(`#707070`);
+    setMoFont3(`${mainStyle.mainColor}`);
+    setHomeFont(`#707070`);
+    setMoMenu(`-100%`);
+  };
   const sclhandle = () => {
     const scl = window.pageYOffset;
     if (scl > 400) {
@@ -297,6 +332,7 @@ export const Header = () => {
     }
   };
   window.addEventListener("scroll", sclhandle);
+  console.log(homefont);
   return (
     <SHeader color={hdcolor}>
       <Link to={"/"}>
@@ -350,26 +386,19 @@ export const Header = () => {
         <CloseBtn onClick={() => setMoMenu(`-100%`)}>
           <FontAwesomeIcon icon={faClose} />
         </CloseBtn>
-        <Link to={"/"}>
-          <TextBtn onClick={menuhandle5} homefont={homefont} className="mocon">
-            홈
-          </TextBtn>
-        </Link>
-        <Link to={"/product"}>
-          <TextBtn onClick={menuhandle1} mofont1={fstfont} className="mocon">
-            제품
-          </TextBtn>
-        </Link>
-        <Link to={"/service"}>
-          <TextBtn onClick={menuhandle2} mofont2={secfont} className="mocon">
-            고객지원
-          </TextBtn>
-        </Link>
-        <Link to={"/community"}>
-          <TextBtn onClick={menuhandle3} mofont3={thdfont} className="mocon">
-            커뮤니티
-          </TextBtn>
-        </Link>
+
+        <TextBtn onClick={momenuhandle1} hmfont={homefont} className="mocon1">
+          <Link to={"/"}>홈</Link>
+        </TextBtn>
+        <TextBtn onClick={momenuhandle2} mofont1={mofont1} className="mocon2">
+          <Link to={"/product"}>제품</Link>
+        </TextBtn>
+        <TextBtn onClick={momenuhandle3} mofont2={mofont2} className="mocon3">
+          <Link to={"/service"}>고객지원</Link>
+        </TextBtn>
+        <TextBtn onClick={momenuhandle4} mofont3={mofont3} className="mocon4">
+          <Link to={"/community"}>커뮤니티</Link>
+        </TextBtn>
       </MoMenuBtn>
     </SHeader>
   );
