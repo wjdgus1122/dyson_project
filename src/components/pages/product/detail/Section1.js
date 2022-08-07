@@ -12,6 +12,9 @@ const Wrap = styled.div`
   display: flex;
   justify-content: space-between;
   position: relative;
+  @media screen and (max-width: 500px) {
+    display: block;
+  }
 `;
 
 const PrdtImg = styled.div``;
@@ -25,6 +28,10 @@ const PinkBox = styled.div`
   height: 250px;
   background-color: ${mainStyle.mainColor};
   opacity: 0.2;
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    height: 130px;
+  }
 `;
 
 const NameWrap = styled.div`
@@ -34,12 +41,21 @@ const NameWrap = styled.div`
   svg {
     width: 100px;
   }
+  @media screen and (max-width: 500px) {
+    left: 20px;
+    svg {
+      width: 60px;
+    }
+  }
 `;
 
 const Name1 = styled.h1`
   font-size: 80px;
   font-weight: 900;
   color: #333;
+  @media screen and (max-width: 500px) {
+    font-size: 30px;
+  }
 `;
 
 const Desc1 = styled.div`
@@ -50,6 +66,12 @@ const Desc1 = styled.div`
   position: absolute;
   top: 550px;
   left: 70px;
+  @media screen and (max-width: 500px) {
+    transform: rotate(0);
+    font-size: 15px;
+    top: 0;
+    left: 20px;
+  }
 `;
 
 const Img = styled.div`
@@ -58,6 +80,12 @@ const Img = styled.div`
   position: absolute;
   top: 0;
   left: 350px;
+  @media screen and (max-width: 500px) {
+    width: 250px;
+    height: 80vh;
+    top: -40px;
+    left: 60px;
+  }
 `;
 
 const PrdtDesc = styled.div`
@@ -66,16 +94,27 @@ const PrdtDesc = styled.div`
   justify-content: center;
   align-items: center;
   width: 50%;
+  @media screen and (max-width: 500px) {
+    display: block;
+    padding: ${mainStyle.mopadding};
+    width: 100%;
+  }
 `;
 
 const DescWrap = styled.div`
   margin-left: 100px;
+  @media screen and (max-width: 500px) {
+    margin-left: 0;
+  }
 `;
 
 const Name2 = styled.div`
   font-size: 26px;
   font-weight: 600;
   margin-bottom: 10px;
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 `;
 
 const Desc2 = styled.div`
@@ -84,6 +123,12 @@ const Desc2 = styled.div`
   font-size: 16px;
   font-weight: 400;
   opacity: 0.5;
+  @media screen and (max-width: 500px) {
+    width: 90%;
+    position: absolute;
+    height: auto;
+    top: 90vh;
+  }
 `;
 
 const Color = styled.div`
@@ -120,12 +165,28 @@ const Color = styled.div`
       opacity: 1;
     }
   }
+  @media screen and (max-width: 500px) {
+    position: absolute;
+    bottom: 130px;
+    right: 0;
+    p {
+      margin-right: 10px;
+      &::before {
+        display: none;
+      }
+    }
+  }
 `;
 
 const Price = styled.div`
   font-size: 30px;
   font-weight: 900;
   margin-bottom: 30px;
+  @media screen and (max-width: 500px) {
+    font-size: 20px;
+    position: absolute;
+    bottom: 130px;
+  }
 `;
 
 const Btn = styled.div`
@@ -147,6 +208,11 @@ const Btn = styled.div`
   &:hover {
     opacity: 1;
   }
+  @media screen and (max-width: 500px) {
+    position: absolute;
+    bottom: -50px;
+    width: 100%;
+  }
 `;
 
 const ThumbnailImg = styled.div`
@@ -161,6 +227,18 @@ const ThumbnailImg = styled.div`
       margin-right: 0;
     }
     background-color: #808080;
+  }
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+    width: 20%;
+    position: absolute;
+    bottom: 250px;
+    right: 0;
+    div {
+      height: 50px;
+      margin-right: 0;
+      margin-top: 10px;
+    }
   }
 `;
 

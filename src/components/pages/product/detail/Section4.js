@@ -18,12 +18,25 @@ const Title = styled.div`
     font-size: 30px;
     font-weight: 100;
   }
+  @media screen and (max-width: 500px) {
+    width: 80%;
+    font-size: 25px;
+    svg {
+      margin: 5px;
+    }
+    span {
+      font-size: 16px;
+    }
+  }
 `;
 
 const ConWrap = styled.div`
   width: 90%;
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 500px) {
+    width: 95%;
+  }
 `;
 
 const Con = styled.div`
@@ -37,11 +50,18 @@ const Con = styled.div`
     content: "New";
     color: red;
     transform: translateY(-20px);
+    @media screen and (max-width: 500px) {
+      font-size: 8px;
+      transform: translateY(-10px);
+    }
   }
   &:first-child {
     transform: translateY(90px);
     align-items: flex-end;
     opacity: 0.5;
+    @media screen and (max-width: 500px) {
+      display: none;
+    }
   }
 `;
 
@@ -49,6 +69,10 @@ const Img = styled.div`
   width: 95%;
   height: 350px;
   background-color: gray;
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    height: 100px;
+  }
 `;
 
 const Name = styled.h3`
@@ -56,11 +80,20 @@ const Name = styled.h3`
   font-weight: 600;
   margin-top: 40px;
   margin-bottom: 5px;
+  @media screen and (max-width: 500px) {
+    height: 50px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
 `;
 
 const Desc = styled.h4`
   font-size: 22px;
   opacity: 0.7;
+  @media screen and (max-width: 500px) {
+    height: 25px;
+    font-size: 10px;
+  }
 `;
 
 const Btn = styled.div`
@@ -69,6 +102,9 @@ const Btn = styled.div`
   cursor: pointer;
   svg {
     color: ${mainStyle.mainColor};
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 10px;
   }
 `;
 
@@ -83,6 +119,9 @@ const Spec = styled.p`
   margin-bottom: 15px;
   text-align: center;
   line-height: 20px;
+  @media screen and (max-width: 500px) {
+    font-size: 12px;
+  }
 `;
 
 export const Section4 = () => {

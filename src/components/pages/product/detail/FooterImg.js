@@ -8,6 +8,9 @@ const Wrap = styled.div`
 const Img = styled.div`
   width: 100%;
   height: 605px;
+  @media screen and (max-width: 500px) {
+    height: 100vh;
+  }
 `;
 
 export const FooterImg = () => {

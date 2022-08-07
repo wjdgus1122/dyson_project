@@ -4,6 +4,9 @@ import review from "./Image/review.png";
 const Wrap = styled.div`
   width: 100%;
   margin-top: 96px;
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 `;
 const Img = styled.div`
   width: 100%;
