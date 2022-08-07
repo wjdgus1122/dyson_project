@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { mainStyle } from "../../../styles/Globalstyle";
 import { CommunityDB } from "../../../TextDB";
@@ -11,19 +12,34 @@ const Wrap = styled.div`
   row-gap: 30px;
 `;
 
-const ConWrap = styled.div``;
-
-const Con = styled.div`
-  max-width: 395px;
-  height: 350px;
-  &::after {
-    content: "New";
+const ConWrap = styled.div`
+  .eventBox::after {
+    content: "Event";
     font-size: 18px;
     font-weight: 500;
     color: white;
     padding: 5px 10px;
     background-color: ${mainStyle.mainColor};
+    position: relative;
+    top: -5px;
+    right: -340px;
   }
+  .newBox::after {
+    content: "New";
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    padding: 5px 10px;
+    background-color: #307800;
+    position: relative;
+    top: -5px;
+    right: -340px;
+  }
+`;
+
+const Con = styled.div`
+  max-width: 395px;
+  height: 350px;
 `;
 
 const Title = styled.div`
@@ -48,23 +64,68 @@ const Date = styled.div`
 `;
 
 export const Section2 = () => {
+  const [event, setEvent] = useState();
+  const [newEl, setNewEl] = useState();
+
+  useEffect(() => {
+    const eventEl = CommunityDB.shift();
+    setEvent(eventEl);
+
+    const newEl = CommunityDB.shift();
+    setNewEl(newEl);
+  }, []);
+
+  console.log(newEl);
+
   return (
     <Container>
       <Wrap>
-        {CommunityDB.map((con) => (
-          <ConWrap>
-            <Con
-              key={con.id}
-              style={{
-                background: `url(${con.bgimg}) no-repeat center/cover`,
-              }}
-              className="newBox"
-            ></Con>
-            <Title>{con.title}</Title>
-            <Date>{con.date}</Date>
-            <Desc>{con.text.slice(0, 50) + "..."}</Desc>
-          </ConWrap>
-        ))}
+        {event && (
+          <>
+            <ConWrap>
+              <Con
+                className="eventBox"
+                style={{
+                  background: `url(${event.bgimg}) no-repeat center/cover`,
+                }}
+              ></Con>
+              <Title>{event.title}</Title>
+              <Date>{event.date}</Date>
+              <Desc>{event.text.slice(0, 50) + "..."}</Desc>
+            </ConWrap>
+          </>
+        )}
+        {newEl && (
+          <>
+            <ConWrap>
+              <Con
+                className="newBox"
+                style={{
+                  background: `url(${newEl.bgimg}) no-repeat center/cover`,
+                }}
+              ></Con>
+              <Title>{newEl.title}</Title>
+              <Date>{newEl.date}</Date>
+              <Desc>{newEl.text.slice(0, 50) + "..."}</Desc>
+            </ConWrap>
+          </>
+        )}
+        {CommunityDB && (
+          <>
+            {CommunityDB.map((con) => (
+              <ConWrap key={con.id}>
+                <Con
+                  style={{
+                    background: `url(${con.bgimg}) no-repeat center/cover`,
+                  }}
+                ></Con>
+                <Title>{con.title}</Title>
+                <Date>{con.date}</Date>
+                <Desc>{con.text.slice(0, 50) + "..."}</Desc>
+              </ConWrap>
+            ))}
+          </>
+        )}
       </Wrap>
     </Container>
   );

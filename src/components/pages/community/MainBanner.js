@@ -26,10 +26,12 @@ const SubWrap = styled.div`
 const SubDesc = styled.div`
   color: ${mainStyle.mainColor};
   margin-bottom: 5px;
+  font-size: 22px;
 `;
 
 const SubTitle = styled.div`
   color: white;
+  font-size: 30px;
 `;
 
 const ConWrap = styled.div`
@@ -50,19 +52,19 @@ const TextWrap = styled.div`
   justify-content: end;
   align-items: flex-end;
 `;
-const Title = styled.h3`
+const Title = styled.h2`
   display: flex;
   justify-content: center;
   font-size: 55px;
   font-weight: 900;
   margin-bottom: 20px;
-`;
-const En = styled.h3`
-  color: ${mainStyle.mainColor};
-  margin-right: 10px;
-`;
-const Ko = styled.h3`
-  color: white;
+  .en {
+    color: ${mainStyle.mainColor};
+    margin-right: 10px;
+  }
+  .ko {
+    color: white;
+  }
 `;
 const Desc = styled.h6`
   font-size: 40px;
@@ -105,8 +107,8 @@ export const MainBanner = () => {
             />
             <TextWrap>
               <Title>
-                <En>Event</En>
-                <Ko>리뷰이벤트</Ko>
+                <span className="en">Event</span>
+                <span className="ko">리뷰이벤트</span>
               </Title>
               <Desc>
                 지금 다이슨 리뷰 이벤트 참여하면
