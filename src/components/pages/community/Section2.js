@@ -1,3 +1,5 @@
+import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { mainStyle } from "../../../styles/Globalstyle";
@@ -8,11 +10,10 @@ const Wrap = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 50px;
-  row-gap: 30px;
-  margin-bottom: 100px;
+  row-gap: 100px;
+  margin: 200px 0 100px;
   @media screen and (max-width: 500px) {
     grid-template-columns: repeat(1, 1fr);
-    row-gap: 100px;
   }
 `;
 
@@ -101,6 +102,15 @@ const Date = styled.div`
   color: ${mainStyle.fontColor};
 `;
 
+const Btn = styled.button`
+  all: unset;
+  font-size: 20px;
+  svg {
+    color: ${mainStyle.mainColor};
+    margin-left: 10px;
+  }
+`;
+
 export const Section2 = () => {
   const [event, setEvent] = useState();
   const [newEl, setNewEl] = useState();
@@ -130,6 +140,10 @@ export const Section2 = () => {
               <Title>{event.title}</Title>
               <Date>{event.date}</Date>
               <Desc>{event.text.slice(0, 50) + "..."}</Desc>
+              <Btn>
+                더보기
+                <FontAwesomeIcon icon={faCaretRight} />
+              </Btn>
             </ConWrap>
           </>
         )}
@@ -145,6 +159,10 @@ export const Section2 = () => {
               <Title>{newEl.title}</Title>
               <Date>{newEl.date}</Date>
               <Desc>{newEl.text.slice(0, 50) + "..."}</Desc>
+              <Btn>
+                더보기
+                <FontAwesomeIcon icon={faCaretRight} />
+              </Btn>
             </ConWrap>
           </>
         )}
@@ -160,6 +178,10 @@ export const Section2 = () => {
                 <Title>{con.title}</Title>
                 <Date>{con.date}</Date>
                 <Desc>{con.text.slice(0, 50) + "..."}</Desc>
+                <Btn>
+                  더보기
+                  <FontAwesomeIcon icon={faCaretRight} />
+                </Btn>
               </ConWrap>
             ))}
           </>
