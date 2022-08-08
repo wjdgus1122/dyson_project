@@ -5,11 +5,15 @@ import { CommunityDB } from "../../../TextDB";
 import { Container } from "../../Container";
 
 const Wrap = styled.div`
-  margin-top: 300px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 50px;
   row-gap: 30px;
+  margin-bottom: 100px;
+  @media screen and (max-width: 500px) {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 100px;
+  }
 `;
 
 const ConWrap = styled.div`
@@ -35,11 +39,39 @@ const ConWrap = styled.div`
     top: -5px;
     right: -340px;
   }
+  @media screen and (max-width: 500px) {
+    .eventBox::after {
+      content: "Event";
+      font-size: 14px;
+      font-weight: 500;
+      color: white;
+      padding: 5px 10px;
+      background-color: ${mainStyle.mainColor};
+      position: relative;
+      top: -5px;
+      right: -390px;
+    }
+    .newBox::after {
+      content: "New";
+      font-size: 14px;
+      font-weight: 500;
+      color: white;
+      padding: 5px 10px;
+      background-color: #307800;
+      position: relative;
+      top: -5px;
+      right: -400px;
+    }
+  }
 `;
 
 const Con = styled.div`
   max-width: 395px;
   height: 350px;
+  @media screen and (max-width: 500px) {
+    height: 200px;
+    max-width: 500px;
+  }
 `;
 
 const Title = styled.div`
@@ -47,6 +79,9 @@ const Title = styled.div`
   font-weight: 700;
   margin: 20px 0;
   color: ${mainStyle.fontColor};
+  @media screen and (max-width: 500px) {
+    margin: 10px 0;
+  }
 `;
 
 const Desc = styled.div`
@@ -55,6 +90,9 @@ const Desc = styled.div`
   line-height: 24px;
   margin: 20px 0;
   color: ${mainStyle.fontColor};
+  @media screen and (max-width: 500px) {
+    margin: 10px 0;
+  }
 `;
 
 const Date = styled.div`

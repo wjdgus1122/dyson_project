@@ -2,9 +2,10 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 import { mainStyle } from "../../../styles/Globalstyle";
+import { Container } from "../../Container";
 
 const Wrap = styled.div`
-  padding: 0 120px;
+  margin: 100px 0;
 `;
 
 const BoxWrap = styled.div`
@@ -18,12 +19,23 @@ const BoxWrap = styled.div`
     font-size: 40px;
     margin: 0 20px;
   }
+  @media screen and (max-width: 500px) {
+    position: unset;
+    flex-direction: column;
+    svg {
+      display: none;
+    }
+  }
 `;
 const Box = styled.div`
   max-width: 475px;
   height: 200px;
   background-color: ${mainStyle.boxColor};
   padding: 30px 50px;
+  @media screen and (max-width: 500px) {
+    margin-bottom: 30px;
+    height: 150px;
+  }
 `;
 const BoxText = styled.div`
   max-width: 400px;
@@ -40,45 +52,50 @@ const Message = styled.div`
   font-size: 20px;
   line-height: 26px;
   margin: 40px 0 30px 0;
+  @media screen and (max-width: 500px) {
+    margin: 20px 0;
+  }
 `;
 
 export const Section1 = () => {
   return (
-    <Wrap>
-      <BoxWrap>
-        <Box>
-          <BoxText>
-            <Name>Step 1</Name>
-            <Message>
-              다이슨 제품 등록 후 개인정보처리방침 및 마케팅 수신에
-              동의해주세요.
-              <br />
-              (필수요건, 일련번호당 1회)
-            </Message>
-          </BoxText>
-        </Box>
-        <FontAwesomeIcon icon={faChevronRight} />
-        <Box>
-          <BoxText>
-            <Name>Step 2</Name>
-            <Message>
-              추후 바우처 지급을 위해 하기 링트의 포멧을 작성해주세요.
-            </Message>
-          </BoxText>
-        </Box>
-        <FontAwesomeIcon icon={faChevronRight} />
-        <Box>
-          <BoxText>
-            <Name>Step 1</Name>
-            <Message>
-              구매한 상품 상세페이지에서 제품 리뷰를 작성해주세요.
-              <br />
-              (리뷰 작성 시, 제품 등록 시 입력한 이메일과 동일한 이메일 작성
-              필수)
-            </Message>
-          </BoxText>
-        </Box>
-      </BoxWrap>
-    </Wrap>
+    <Container>
+      <Wrap>
+        <BoxWrap>
+          <Box>
+            <BoxText>
+              <Name>Step 1</Name>
+              <Message>
+                다이슨 제품 등록 후 개인정보처리방침 및 마케팅 수신에
+                동의해주세요.
+                <br />
+                (필수요건, 일련번호당 1회)
+              </Message>
+            </BoxText>
+          </Box>
+          <FontAwesomeIcon icon={faChevronRight} />
+          <Box>
+            <BoxText>
+              <Name>Step 2</Name>
+              <Message>
+                추후 바우처 지급을 위해 하기 링트의 포멧을 작성해주세요.
+              </Message>
+            </BoxText>
+          </Box>
+          <FontAwesomeIcon icon={faChevronRight} />
+          <Box>
+            <BoxText>
+              <Name>Step 3</Name>
+              <Message>
+                구매한 상품 상세페이지에서 제품 리뷰를 작성해주세요.
+                <br />
+                (리뷰 작성 시, 제품 등록 시 입력한 이메일과 동일한 이메일 작성
+                필수)
+              </Message>
+            </BoxText>
+          </Box>
+        </BoxWrap>
+      </Wrap>
+    </Container>
   );
 };
