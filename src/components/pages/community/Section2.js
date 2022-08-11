@@ -1,10 +1,10 @@
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { mainStyle } from "../../../styles/Globalstyle";
 import { CommunityDB } from "../../../TextDB";
 import { Container } from "../../Container";
+import re_con from "./img/re_con.png";
 
 const Wrap = styled.div`
   display: grid;
@@ -119,7 +119,7 @@ export const Section2 = () => {
           <Con
             className="eventBox"
             style={{
-              background: `url(https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/campaigns/summer-2022/M2_CampaignPage_Module8.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=1025) no-repeat center /cover`,
+              background: `url(${re_con}) no-repeat center /cover`,
             }}
           ></Con>
 
