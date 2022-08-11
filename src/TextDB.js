@@ -1,41 +1,34 @@
 export const CommunityDB = [
   {
     id: 0,
-    title: "다이슨 리뷰 이벤트",
-    date: "2022년 8월 1일",
-    bgimg: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/campaigns/summer-2022/M2_CampaignPage_Module8.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=1025`,
-    text: "지금 다이슨 리뷰 이벤트에 참여하시면 '참여자 전원' 액세서리 바우처를 증정합니다.",
-  },
-  {
-    id: 1,
     title: "무더운 여름철 쾌적한 실내환경을 유지하는 방법",
     date: "2022년 7월 25일",
     bgimg: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/campaigns/summer-2022/M2_CampaignPage_Module8.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=1025`,
     text: "다이슨 환경제어 부문 총괄 엔지니어 에반 스티븐스(Evan Stevens)가 여름철 시원하게 실내를 유지하는 방법에 대한 팁을 소개합니다.",
   },
   {
-    id: 2,
+    id: 1,
     title: "반려동물의 털과 알레르기 유발 물질의 진실",
     date: "2022년 6월 15일",
     bgimg: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/markets/korea/campaigns/pet-science/Pet_Science_Stills_Imagery.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=1025`,
     text: "다이슨의 미생물학팀은 첨단 연구 시설에서 반려동물의 털과 비듬, 그리고 알레르기 유발 물질이 어떻게 우리와 우리의 주변 환경에 영향을 미치는지 매우 오랜 시간동안 연구해 왔습니다. 다이슨 미생물학 팀이 발견한 사실을 자세히 알아보세요.",
   },
   {
-    id: 3,
+    id: 2,
     title: "New ‘다이슨 에어랩™ 멀티 스타일러’ 출시",
     date: "2022년 6월 8일",
     bgimg: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/personal-care/308c/pdp/gallery/Gallery-5-Dryer-Smooth.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=1025`,
     text: "다이슨이 과도한 열 없이 더욱 쉽고 빠르게 스타일링 하도록 재탄생한 ‘다이슨 에어랩™ 멀티 스타일러’를 국내 출시했습니다.",
   },
   {
-    id: 4,
+    id: 3,
     title: "",
     date: "2022년 7월 15일",
     bgimg: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/apac-newsroom/korea/gresham/JDbyOB4.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=1025`,
     text: "제임스 다이슨이 다이슨 STEAM(융합교육)센터 공식 개관 및 그레샴스 학교(Gresham’s School) 연설의 날을 맞아 2022년 졸업생을 대상으로 축사 연설을 진행했습니다",
   },
   {
-    id: 5,
+    id: 4,
     title:
       "제임스 다이슨 어워드 2022: 다이슨에서 젊은 인재들의 아이디어를 기다립니다.",
     date: "2022년 3월 16일",
@@ -43,21 +36,21 @@ export const CommunityDB = [
     text: "올해로 국내에서 7회째를 맞는 국제 엔지니어링 및 디자인 공모전 제임스 다이슨 어워드가 국내 참가자를 모집합니다.",
   },
   {
-    id: 6,
+    id: 5,
     title: "다이슨의 공간",
     date: "2022년 5월 10일",
     bgimg: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/apac-newsroom/sjps/new/Dyson-StJames-5.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=1025`,
     text: "다이슨의 새로운 공간, 세인트 제임스 파워 스테이션을 소개합니다.",
   },
   {
-    id: 7,
+    id: 6,
     title: "다이슨이 그리는 가정용 로봇의 미래, 일부를 살펴보세요",
     date: "2022년 5월 25일",
     bgimg: `https://dyson-h.assetsadobe2.com/is/image//content/dam/dyson/global-newsroom/singapore-/global-robotics/Robotics_Dyson%201.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=1025`,
     text: "다이슨에서 개발 중인 가사 노동을 돕는 로봇 시제품 일부를 공개하고 전 세계 우수 로보틱스 전문가 채용에 나섰습니다",
   },
   {
-    id: 8,
+    id: 7,
     title:
       "다이슨 데모 VR: 제품 개발 과정에 활용된 기술로 새로운 가상 매장을 선보입니다.",
     date: "2021년 11월 23일",
@@ -65,28 +58,28 @@ export const CommunityDB = [
     text: "다이슨은 VR헤드셋을 활용해 고객이 집에서 다이슨의 기술을 직접 경험하고 시연해볼 수 있는 VR 기술을 공개했습니다.",
   },
   {
-    id: 9,
+    id: 8,
     title: "다이슨의 글로벌 먼지 연구 2022",
     date: "2022년 2월 7일",
     bgimg: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/apac-newsroom/newsroom-accessories-v2.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=1025`,
     text: "다이슨에서는 해결 방안을 고민하기 전에 문제를 진정으로 이해하려고 합니다. 가정의 먼지도 그런 문제 중 하나입니다. 먼지는 세계의 모든 가정에 존재하지만 이에 대한 사람들의 관심은 생각보다 크지 않습니다.",
   },
   {
-    id: 10,
+    id: 9,
     title: "다이슨 데모 스토어 스타필드 하남을 오픈 했습니다.",
     date: "2022년 3월 02일",
     bgimg: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/apac-newsroom/korea/demo-store/dyson3_7381.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=1025`,
     text: "다이슨 코리아가 스타필드 하남에 국내 두 번째 데모 스토어 ‘다이슨 데모 스토어 스타필드 하남’을 오픈했습니다. 2021년 1월 여의도 IFC 몰에 국내 첫 데모 스토어를 오픈한지 약 1년 만입니다.",
   },
   {
-    id: 11,
+    id: 10,
     title: "쿨한 여름을 위한 쿨한 헤어스타일",
     date: "2021년 4월 24일",
     bgimg: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/global-newsroom/singapore-/new-air-purification/mothers-day/556mainpage.png?$responsive$&cropPathE=tablet&fit=stretch,1&wid=1025`,
     text: "당신의 헤어 타입에 맞는 최신 헤어스타일과 다이슨의 헤어 케어 기술을 이용하여 가정에서 스타일링하는 법을 알아보세요.",
   },
   {
-    id: 12,
+    id: 11,
     title:
       "다이슨 슈퍼소닉™ 헤어드라이어의 새로운 플라이어웨이 노즐을 소개합니다.",
     date: "2021년 8월 12일",
@@ -94,7 +87,7 @@ export const CommunityDB = [
     text: "다이슨은 새로운 플라이어에위 노즐을 출시했습니다. 새로운 스타일링 노즐은 집에서도 살롱에서처럼 매끄럽고 윤기 있게 마무리해 줍니다.",
   },
   {
-    id: 13,
+    id: 12,
     title:
       "제임스 다이슨 어워드 2021 국제전 우승 후보작 TOP20가 발표되었습니다.",
     date: "2021년 10월 13일",
