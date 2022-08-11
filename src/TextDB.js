@@ -362,8 +362,8 @@ export const ProductDB = [
     },
     imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/ec/438e/lifestyle/438E_WHSIL_Lifestyle-desk-purifier.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
     desc: {
-      // 0: "공기 정화와 냉풍 기능을 하나로",
-      // 1: "0.1마이크론 크기의 작은 미세먼지를 99.95% 제거합니다.",
+      0: "공기 정화와 냉풍 기능을 하나로",
+      1: "0.1마이크론 크기의 작은 미세먼지를 99.95% 제거합니다.",
       2: "HEPA H13 공기청정기 겸 선풍기",
       3: "공기 품질을 실시간으로 자동 감지 및 보고",
       4: "넓은 공간을 위한 방안 전체 공기 정화",
@@ -549,6 +549,268 @@ export const HairDry = [
       2: "새로운 플라이어웨이 노즐 포함.",
       3: "지능형 열제어 시스템.",
       4: "강력한 다이슨 디지털 모터 V9 탑재.",
+    },
+  },
+];
+export const Vacuums = [
+  {
+    key: 0,
+    id: 0,
+    title: "다이슨 V15 디텍트™ 컴플리트",
+    price: "1,290,000",
+    color: {
+      0: "골드/골드",
+      1: "옐로/니켈",
+    },
+    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/products/cord-free-vacuums/sticks/range-reset-2022/v15/pdp/irsgldirgld/dynamic-media/lifestyle/Lifestyle_V15_IRSGLDIRGLD_HEPA_SB_DblCuff.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=576`,
+    desc: {
+      0: "헤파 필터레이션이 적용된 다이슨의 강력한 무선 청소기",
+      1: "레이저 슬림 플러피™ 클리너 헤드와 함께 사용 가능.",
+      2: "강력한 청소 성능의 과학적 근거",
+      3: "헤어 스크류 툴로 긴 머리카락과 반려동물의 털을 빠르게 청소",
+    },
+  },
+
+  {
+    key: 1,
+    id: 1,
+    title: "다이슨 V12 디텍트 슬림™ 컴플리트",
+    price: "1,090,000",
+    color: {
+      0: "골드/골드",
+      1: "옐로/니켈",
+    },
+    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floorcare/sticks/v12-detected-slim/pdp/lifestyle/gold/Gold.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
+    desc: {
+      0: "다이슨의 강력하고 가벼운 무선 청소기",
+      1: "레이저 슬림 플러피™ 클리너 헤드와 함께 사용 가능.",
+      2: "강력한 청소 성능의 과학적 근거",
+      3: "헤어 스크류 툴로 긴 머리카락과 반려동물의 털을 빠르게 청소",
+    },
+  },
+
+  {
+    key: 2,
+    id: 2,
+    title: "다이슨 V11 앱솔루트",
+    price: "1,090,000",
+    color: {},
+    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/markets/korea/products/floorcare/sticks/v11-2022/Lifestyle_248L_IRSNKIRCO_SB_MTB.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
+    desc: {
+      0: "집 안 구석구석을 깊숙이 청소하기 위한 설계",
+      1: "강력한 파워로 깊숙한 곳의 먼지까지",
+      2: "지능적인 실시간 디스플레이",
+    },
+  },
+  {
+    key: 3,
+    id: 3,
+    title: "다이슨 싸이클론 V10 앱솔루트",
+    price: "899,000",
+    color: {},
+    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/newzealand/floorcare/cord-free/sticks/v10/features/nz-only-V10-Copper-Trade-Up.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
+    desc: {
+      0: "카펫과 마룻바닥 어디든 깊숙하게 청소 가능",
+      1: "다이슨 V10 디지털 모터로 작동",
+      2: "엉킴 방지 클리너 헤드 탑재",
+    },
+  },
+  {
+    key: 4,
+    id: 4,
+    title: "다이슨 싸이클론 V10 플러피 오리진",
+    price: "799,000",
+    color: {},
+    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/230306-01.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
+    desc: {
+      0: "완벽한 바닥 청소하기 위한 설계",
+      1: "다이슨 V10 디지털 모터로 작동",
+    },
+  },
+  {
+    key: 5,
+    id: 5,
+    title: "다이슨 옴니-글라이드™ 컴플리트",
+    price: "699,000",
+    color: {
+      0: "골드/니켈",
+      1: "퍼플/니켈",
+    },
+    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/markets/singapore/products/floorcare/sticks/674-gold-tool.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
+    desc: {
+      0: "방향 조정이 쉬운 무선 청소기.",
+      1: "1.9kg 가벼운 무게",
+      2: "라이트 파이프 크레비스 툴 포함(어둡고 좁은 공간 청소용)",
+    },
+  },
+  {
+    key: 6,
+    id: 6,
+    title: "다이슨 마이크로 1.5kg™",
+    price: "699,000",
+    color: {},
+    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floorcare/sticks/547-micro/gold-variant/N547_Lifestyle-GOLD_800X388_Image.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
+    desc: {
+      0: "1.5kg 경량 설계1에 담은 다이슨의 무선 청소기 테크놀로지.",
+      1: "제품 전체에 적용된 5단계 필터레이션",
+    },
+  },
+  {
+    key: 7,
+    id: 7,
+    title: "다이슨 디지털 슬림™ 컴플리트",
+    price: "899,000",
+    color: {},
+    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/markets/hong-kong/floorcare/sticks/digital-slim/tuc_620Nickel.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
+    desc: {
+      0: "청소 성능은 그대로 어디서나 강력한 청소.",
+      1: "1.9kg 가벼운 무게.",
+      2: "지능적인 실시간 LCD 디스플레이.",
+      3: "스탠딩 거치대 포함",
+    },
+  },
+  {
+    key: 8,
+    id: 8,
+    title: "다이슨 디지털 슬림™",
+    price: "799,000",
+    color: {},
+    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/markets/hong-kong/floorcare/sticks/digital-slim/tuc_620Nickel.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
+    desc: {
+      0: "청소 성능은 그대로 어디서나 강력한 청소.",
+      1: "1.9kg 가벼운 무게.",
+      2: "지능적인 실시간 LCD 디스플레이.",
+    },
+  },
+  {
+    key: 9,
+    id: 9,
+    title: "다이슨 아웃사이즈™",
+    price: "1,290,000",
+    color: {},
+    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/vacuums/sticks/248-l-j/lifestyle/lifestyle-red-outsize.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
+    desc: {
+      0: "25% 더 넓어진 클리너 헤드.",
+      1: "150% 더 커진 먼지통.",
+      2: "레이저 슬림 플러피™ 클리너 헤드와 함께 사용 가능.",
+      3: "엉킴방지 헤어 스크류 툴",
+    },
+  },
+];
+
+export const Air = [
+  {
+    key: 0,
+    id: 17,
+    title: "다이슨 쿨 공기청정기",
+    price: "899,000",
+    color: {
+      0: "화이트/실버",
+
+      1: "블랙/니켈",
+    },
+    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/ec/438e/lifestyle/438E_WHSIL_Lifestyle-desk-purifier.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
+    desc: {
+      0: "공기 정화와 냉풍 기능을 하나로",
+      1: "0.1마이크론 크기의 작은 미세먼지를 99.95% 제거합니다.",
+      2: "HEPA H13 공기청정기 겸 선풍기",
+      3: "공기 품질을 실시간으로 자동 감지 및 보고",
+      4: "넓은 공간을 위한 방안 전체 공기 정화",
+      5: "다이슨 링크 앱을 이용한 컨트롤",
+    },
+  },
+  {
+    key: 1,
+    id: 18,
+    title: "다이슨 쿨™ 선풍기 타워형",
+    price: "598,000",
+    color: {
+      0: "화이트/실버",
+
+      1: "니켈/블랙",
+    },
+    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/300910-01.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
+    desc: {
+      0: "날개 없는 선풍기의 강력한 바람",
+      1: "강력한 풍량.",
+      2: "회전 제어.",
+      3: "빠르게 회전하는 날개없이 안전하게.",
+      4: "편리한 청소.",
+    },
+  },
+
+  {
+    key: 2,
+    id: 19,
+    title: "다이슨 쿨 포름알데히드 공기청정기",
+    price: "999,000",
+    color: {
+      0: "화이트/골드",
+
+      1: "니켈/골드",
+    },
+    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/ec/438e/variants/438E_WHSGLD_Lifestyle-desk-purifier.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
+    desc: {
+      0: "HEPA H13 공기청정기 겸 선풍기",
+      1: "포름알데히드 감지 및 파괴. ",
+      2: "공기 품질을 실시간으로 자동 감지 및 보고",
+      3: "넓은 공간을 위한 방안 전체 공기 정화",
+      4: "다이슨 링크 앱을 이용한 컨트롤",
+    },
+  },
+
+  {
+    key: 3,
+    id: 20,
+    title: "다이슨 휴미디파이+쿨 포름알데히드 가습 공기청정기",
+    price: "1,290,000",
+    color: {
+      0: "화이트/골드",
+
+      1: "니켈/골드",
+    },
+    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/ec/358e/sco/lifestyle/lifestyle_machine_PH04_WHSGLD.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
+    desc: {
+      0: "포름알데히드 감지 및 파괴합니다",
+      1: "방 안 전체를 정화하고 가습합니다",
+      2: "반영구적 고체 포름알데히드 센서",
+      3: "초미세먼지를 99.95% 제거합니다",
+    },
+  },
+  {
+    key: 4,
+    id: 21,
+    title: "다이슨 핫앤쿨 포름알데히드 공기청정기(화이트/골드)",
+    price: "1,090,000",
+    color: {
+      0: "화이트/골드",
+
+      1: "니켈/골드",
+    },
+    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/ec/527e/lifestyle/HP09_WHSGLD_Lifestyle_Machine_800X388.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
+    desc: {
+      0: "HEPA H13 공기청정기, 선풍기 겸 온풍기.",
+      1: "포름알데히드 감지 및 파괴. ",
+      2: "공기 품질을 실시간으로 자동 감지 및 보고.",
+      3: "넓은 공간을 위한 방안 전체 공기 정화.",
+      4: "다이슨 링크 앱 및 호환 가능한 음성 서비스를 이용한 컨트롤",
+    },
+  },
+];
+
+export const Humid = [
+  {
+    key: 0,
+    id: 22,
+    title: "다이슨 가습기",
+    price: "659,000",
+    color: {
+      0: "화이트/실버",
+    },
+    imgUrl: `https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/303124-01.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=310`,
+    desc: {
+      0: "더 건강한 실내 환경을 위한 위생적인 가습.",
+      1: "다이슨 가습기는 특허받은 에어 멀티플라이어™ 기술로 미세한 수분을 분사합니다.",
     },
   },
 ];
