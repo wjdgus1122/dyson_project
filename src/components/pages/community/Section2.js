@@ -112,69 +112,39 @@ const Btn = styled.button`
 `;
 
 export const Section2 = () => {
-  const [event, setEvent] = useState();
-  const [newEl, setNewEl] = useState();
-
-  useEffect(() => {
-    const eventEl = CommunityDB.shift();
-    setEvent(eventEl);
-
-    const newEl = CommunityDB.shift();
-    setNewEl(newEl);
-  }, []);
-
-  console.log(newEl);
-
   return (
     <Container>
       <Wrap>
-        {event && (
-          <>
-            <ConWrap>
-              <Con
-                className="eventBox"
-                style={{
-                  background: `url(${event.bgimg}) no-repeat center/cover`,
-                }}
-              ></Con>
-              <Title>{event.title}</Title>
-              <Date>{event.date}</Date>
-              <Desc>{event.text.slice(0, 50) + "..."}</Desc>
-              <Btn>
-                더보기
-                <FontAwesomeIcon icon={faCaretRight} />
-              </Btn>
-            </ConWrap>
-          </>
-        )}
-        {newEl && (
-          <>
-            <ConWrap>
-              <Con
-                className="newBox"
-                style={{
-                  background: `url(${newEl.bgimg}) no-repeat center/cover`,
-                }}
-              ></Con>
-              <Title>{newEl.title}</Title>
-              <Date>{newEl.date}</Date>
-              <Desc>{newEl.text.slice(0, 50) + "..."}</Desc>
-              <Btn>
-                더보기
-                <FontAwesomeIcon icon={faCaretRight} />
-              </Btn>
-            </ConWrap>
-          </>
-        )}
+        <ConWrap>
+          <Con
+            className="eventBox"
+            style={{
+              background: `url(https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/campaigns/summer-2022/M2_CampaignPage_Module8.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=1025) no-repeat center /cover`,
+            }}
+          ></Con>
+
+          <Title>다이슨 리뷰 이벤트</Title>
+          <Date>2022년 8월 1일</Date>
+          <Desc>
+            지금 다이슨 리뷰 이벤트에 참여하시면 '참여자 전원' 액세서리 바우처를
+            증정합니다.
+          </Desc>
+          <Btn>
+            더보기
+            <FontAwesomeIcon icon={faCaretRight} />
+          </Btn>
+        </ConWrap>
         {CommunityDB && (
           <>
             {CommunityDB.map((con) => (
               <ConWrap key={con.id}>
                 <Con
+                  className={con.id === 0 ? "newBox" : ""}
                   style={{
                     background: `url(${con.bgimg}) no-repeat center/cover`,
                   }}
                 ></Con>
+
                 <Title>{con.title}</Title>
                 <Date>{con.date}</Date>
                 <Desc>{con.text.slice(0, 50) + "..."}</Desc>
