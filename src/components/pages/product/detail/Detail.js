@@ -1,3 +1,5 @@
+import { PageTitle } from "../../../../PageTitle";
+import { ScrlTop } from "../../../../ScrlTop";
 import { FooterImg } from "./FooterImg";
 import { Section1 } from "./Section1";
 import { Section2 } from "./Section2";
@@ -9,6 +11,9 @@ import { Section6 } from "./Section6";
 export const Detail = () => {
   return (
     <>
+      <PageTitle title={"ProductDetail"} />
+      <ScrlTop />
+
       <Section1 />
       <Section2 />
       <Section3 />

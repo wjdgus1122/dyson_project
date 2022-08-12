@@ -552,7 +552,7 @@ export const HairDry = [
     },
   },
 ];
-export const Vacuums = [
+export const VacuumsVseries = [
   {
     key: 0,
     id: 0,
@@ -627,8 +627,11 @@ export const Vacuums = [
       1: "다이슨 V10 디지털 모터로 작동",
     },
   },
+];
+
+export const Vacuums = [
   {
-    key: 5,
+    key: 0,
     id: 5,
     title: "다이슨 옴니-글라이드™ 컴플리트",
     price: "699,000",
@@ -644,7 +647,7 @@ export const Vacuums = [
     },
   },
   {
-    key: 6,
+    key: 1,
     id: 6,
     title: "다이슨 마이크로 1.5kg™",
     price: "699,000",
@@ -656,7 +659,7 @@ export const Vacuums = [
     },
   },
   {
-    key: 7,
+    key: 2,
     id: 7,
     title: "다이슨 디지털 슬림™ 컴플리트",
     price: "899,000",
@@ -670,7 +673,7 @@ export const Vacuums = [
     },
   },
   {
-    key: 8,
+    key: 3,
     id: 8,
     title: "다이슨 디지털 슬림™",
     price: "799,000",
@@ -683,7 +686,7 @@ export const Vacuums = [
     },
   },
   {
-    key: 9,
+    key: 4,
     id: 9,
     title: "다이슨 아웃사이즈™",
     price: "1,290,000",
