@@ -1,4 +1,5 @@
 import { PageTitle } from "../../../PageTitle";
+import { ScrlTop } from "../../../ScrlTop";
 import { MainBanner } from "./MainBanner";
 import { Section1 } from "./Section1";
 import { Section2 } from "./Section2";
@@ -10,6 +11,8 @@ export const Service = () => {
   return (
     <>
       <PageTitle title="Service" />
+      <ScrlTop />
+
       <MainBanner />
       <Section1 />
       <Section2 />
