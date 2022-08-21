@@ -15,10 +15,10 @@ const Section = styled.div`
   }
 `;
 const MainImg = styled.div`
-  width: 1585px;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   position: absolute;
-  top: 0;
+  top: 200px;
   left: 0;
   @media screen and (max-width: 500px) {
     width: 100%;
@@ -41,9 +41,7 @@ const TextWrap = styled.div`
   z-index: 99;
   @media screen and (max-width: 500px) {
     height: 50%;
-    position: absolute;
-    top: 0;
-    right: 50px;
+    position: unset;
     justify-content: center;
     align-items: center;
   }
