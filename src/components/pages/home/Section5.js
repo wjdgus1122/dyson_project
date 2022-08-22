@@ -12,7 +12,7 @@ const Wrap = styled.div`
   margin-bottom: 200px;
   @media screen and (max-width: 500px) {
     height: auto;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
   }
 `;
 const BgCircle = styled.div`
@@ -35,9 +35,9 @@ const TitleWrap = styled.div`
   padding-top: 285px;
   position: relative;
   z-index: 9;
+  display: flex;
   @media screen and (max-width: 500px) {
-    display: flex;
-    padding-top: 160px;
+    padding-top: 200px;
     margin-bottom: 0;
   }
 `;
@@ -47,27 +47,29 @@ const Title = styled.div`
   font-weight: 900;
   color: ${mainStyle.fontColor};
   @media screen and (max-width: 500px) {
-    font-size: 47px;
+    font-size: 55px;
   }
 `;
 const STitle = styled.div`
-  font-size: 55px;
+  font-size: 45px;
   font-weight: 100;
   color: ${mainStyle.fontColor};
-  margin-top: 20px;
+  margin-top: 35px;
+  margin-left: 20px;
   @media screen and (max-width: 500px) {
-    font-size: 17px;
-    margin-left: 20px;
+    font-size: 25px;
+
+    margin-top: 20px;
   }
 `;
 const TextWrap = styled.div`
-  width: 555px;
+  width: 100%;
   color: ${mainStyle.blackColor};
-  margin-top: 70px;
+  margin-top: 60px;
   position: relative;
   z-index: 9;
   @media screen and (max-width: 500px) {
-    width: 170px;
+    width: 100%;
     margin-top: 20px;
   }
 `;
@@ -76,28 +78,34 @@ const Text = styled.div`
   font-weight: 500;
   line-height: 60px;
   @media screen and (max-width: 500px) {
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 18px;
+    line-height: 20px;
   }
 `;
 const TextBtn = styled.div`
+  width: 15%;
   font-size: 17px;
   font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 215px;
-  height: 50px;
+  padding: 10px 20px;
   border-radius: 25px;
   border: 1px solid ${mainStyle.blackColor};
   margin-top: 50px;
+  &:hover {
+    background-color: ${mainStyle.blackColor};
+    color: white;
+    transition: 0.5s;
+    border: 1px solid ${mainStyle.blackColor};
+  }
   @media screen and (max-width: 500px) {
-    width: 80px;
-    height: 20px;
-    border-radius: 10px;
-    font-size: 5px;
+    width: 30%;
+    padding: 10px 10px;
+    border-radius: 50px;
+    font-size: 15px;
     font-weight: 700;
-    margin-top: 20px;
+    margin-top: 30px;
   }
 `;
 const ProductImg = styled.div`
@@ -113,7 +121,7 @@ const ProductImg = styled.div`
 `;
 const BoxWrap = styled.div`
   width: 100%;
-  margin-top: 70px;
+  margin-top: 100px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -134,7 +142,7 @@ const SCon = styled.div`
   }
 `;
 const BCon = styled.div`
-  width: 655px;
+  width: 40%;
   height: 310px;
   border: 1px solid ${mainStyle.mainColor};
   position: relative;
@@ -142,16 +150,17 @@ const BCon = styled.div`
   justify-content: center;
   align-items: center;
   @media screen and (max-width: 500px) {
-    width: 270px;
-    height: 105px;
+    width: 95%;
+    height: 170px;
+    padding: 0 15px;
   }
 `;
 const Box = styled.div`
   width: 630px;
   height: 200px;
   @media screen and (max-width: 500px) {
-    width: 265px;
-    height: 85px;
+    width: 100%;
+    height: 75%;
   }
 `;
 const SBox = styled.div`
@@ -159,8 +168,7 @@ const SBox = styled.div`
   height: 150px;
 `;
 const Best = styled.div`
-  width: 135px;
-  height: 55px;
+  padding: 10px 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -172,11 +180,9 @@ const Best = styled.div`
   right: -20px;
   top: -30px;
   @media screen and (max-width: 500px) {
-    width: 35px;
-    height: 20px;
-    font-size: 6px;
-    top: -10px;
-    right: -17px;
+    font-size: 16px;
+    top: -20px;
+    right: -15px;
   }
 `;
 
@@ -191,7 +197,8 @@ export const Section5 = () => {
         </TitleWrap>
         <TextWrap>
           <Text>
-            지금 다이슨 리뷰 이벤트 참여하면 참여자 전원 액세서리 바우처 증정
+            지금 다이슨 리뷰 이벤트 참여하면 <br /> 참여자 전원 액세서리 바우처
+            증정
           </Text>
           <Link to={"/community"}>
             <TextBtn>리뷰 작성하러 가기</TextBtn>

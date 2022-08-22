@@ -151,8 +151,9 @@ const Icon = styled.div`
     cursor: pointer;
   }
   @media screen and (max-width: 500px) {
+    width: 100%;
     position: absolute;
-    left: 30%;
+    left: 3%;
     span {
       font-size: 30px;
     }

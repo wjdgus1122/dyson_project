@@ -88,10 +88,10 @@ const ProductBtn = styled.div`
   }
 `;
 const ProductImg = styled.img`
-  width: 535px;
+  width: 540px;
   height: 970px;
   position: absolute;
-  top: 40px;
+  top: 0;
   right: 200px;
   @media screen and (max-width: 500px) {
     width: 450px;
