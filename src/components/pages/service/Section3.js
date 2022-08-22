@@ -51,7 +51,7 @@ const PhoneImg = styled.div`
   height: 280px;
   @media screen and (max-width: 500px) {
     width: 100%;
-    height: 200px;
+    height: 300px;
   }
 `;
 

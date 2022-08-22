@@ -6,6 +6,7 @@ import { Container } from "../../Container";
 
 const MainBannerWrap = styled.div`
   width: 100%;
+  height: 60%;
 `;
 
 const WebMainBanner = styled.div`
@@ -24,6 +25,8 @@ const MobileBanner = styled.div`
   @media screen and (max-width: 500px) {
     width: 100%;
     display: block;
+    height: 550px;
+    margin-top: -30px;
   }
 `;
 
