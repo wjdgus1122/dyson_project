@@ -37,7 +37,7 @@ const TextWrap = styled.div`
     width: 50%;
     top: auto;
     left: 20px;
-    bottom: 260px;
+    bottom: 340px;
     align-items: flex-start;
   }
 `;
@@ -68,8 +68,8 @@ const Title = styled.h1`
     color: ${mainStyle.fontColor};
   }
   @media screen and (max-width: 500px) {
-    font-size: 40px;
-    line-height: 41px;
+    font-size: 45px;
+    line-height: 46px;
     margin-bottom: 60px;
     span {
       color: ${mainStyle.mainColor};

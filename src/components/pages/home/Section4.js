@@ -127,7 +127,7 @@ const ProcutImg = styled.img`
   width: 100%;
   height: 100%;
   @media screen and (max-width: 500px) {
-    width: 50%;
+    width: 35%;
     height: 100%;
   }
 `;
@@ -247,6 +247,9 @@ const MoCon = styled.div`
     background: linear-gradient(#e6e6e6, #fff);
     margin-bottom: 10px;
     position: relative;
+    &:hover .box {
+      display: flex;
+    }
   }
 `;
 
