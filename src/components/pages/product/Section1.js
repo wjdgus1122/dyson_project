@@ -1,3 +1,4 @@
+import { useRef, useState } from "react";
 import styled from "styled-components";
 import { mainStyle } from "../../../styles/Globalstyle";
 import banner1 from "./Image/banner1.png";
@@ -31,6 +32,7 @@ const SvgWrap = styled.div`
   justify-content: space-around;
   align-items: flex-end;
   position: relative;
+  margin-top: 20px;
   svg {
     cursor: pointer;
     fill-opacity: 0;
@@ -40,15 +42,14 @@ const SvgWrap = styled.div`
         display: block;
       } */
     }
-    /* &:hover div {
-      display: block;
-    } */
+    .title:hover {
+    }
   }
 `;
 
 const Desc = styled.h4`
   position: absolute;
-  top: 60px;
+  top: 30px;
   left: 47%;
   font-size: 40px;
   font-weight: 600;
@@ -62,7 +63,7 @@ const Category = styled.div`
   font-size: 25px;
   font-weight: 600;
   text-align: end;
-  /* display: none; */
+  display: ${(props) => props.show};
   p {
     margin-bottom: 10px;
   }
@@ -72,6 +73,17 @@ const Category = styled.div`
 `;
 
 export const Section1 = () => {
+  const [show, setShow] = useState("none");
+  const showRef = useRef(null);
+
+  const onMouse = () => {
+    setShow("block");
+  };
+
+  const onMouseOut = () => {
+    setShow("none");
+  };
+
   return (
     <Wrap>
       <Half>
@@ -97,12 +109,23 @@ export const Section1 = () => {
               font-family="HoratioD-Medi, Horatio D"
               letter-spacing="-0.002em"
             >
-              <tspan x="-328.3" y="0">
+              <tspan
+                onMouseOver={onMouse}
+                onMouseOut={onMouseOut}
+                className="title"
+                x="-328.3"
+                y="0"
+              >
                 hair care
               </tspan>
             </text>
           </svg>
-          <Category style={{ color: "#ff5555" }}>
+          <Category
+            style={{
+              color: "#ff5555",
+            }}
+            show={show}
+          >
             <p>멀티 스타일러</p>
             <p>헤어 스트레이트너</p>
             <p>헤어 드라이어</p>
@@ -127,12 +150,18 @@ export const Section1 = () => {
               font-family="HoratioD-Medi, Horatio D"
               letter-spacing="-0.002em"
             >
-              <tspan x="-612.7" y="0">
+              <tspan
+                onMouseOver={onMouse}
+                onMouseOut={onMouseOut}
+                className="title"
+                x="-612.7"
+                y="0"
+              >
                 vacuum cleaners
               </tspan>
             </text>
           </svg>
-          <Category style={{ color: "#40b109" }}>
+          <Category style={{ color: "#40b109" }} show={show}>
             <p>v15 | v12 | v11 | v10</p>
             <p>옴니-글라이드™</p>
             <p>마이크로 1.5kg™</p>
@@ -159,12 +188,18 @@ export const Section1 = () => {
               font-family="HoratioD-Medi, Horatio D"
               letter-spacing="-0.002em"
             >
-              <tspan x="-488.2" y="0">
+              <tspan
+                onMouseOver={onMouse}
+                onMouseOut={onMouseOut}
+                className="title"
+                x="-488.2"
+                y="0"
+              >
                 air treatment
               </tspan>
             </text>
           </svg>
-          <Category style={{ color: "#0087f5" }}>
+          <Category style={{ color: "#0087f5" }} show={show}>
             <p>공기청정기</p>
             <p>가습기</p>
           </Category>
@@ -187,12 +222,18 @@ export const Section1 = () => {
               font-family="HoratioD-Medi, Horatio D"
               letter-spacing="-0.002em"
             >
-              <tspan x="-285.7" y="0">
+              <tspan
+                onMouseOver={onMouse}
+                onMouseOut={onMouseOut}
+                className="title"
+                x="-285.7"
+                y="0"
+              >
                 lighting
               </tspan>
             </text>
           </svg>
-          <Category style={{ color: "#fca000" }}>
+          <Category tyle={{ color: "#fca000" }} show={show}>
             <p>데스크형</p>
             <p>플로어스탠드형</p>
           </Category>
@@ -215,12 +256,18 @@ export const Section1 = () => {
               font-family="HoratioD-Medi, Horatio D"
               letter-spacing="-0.002em"
             >
-              <tspan x="-420.2" y="0">
+              <tspan
+                onMouseOver={onMouse}
+                onMouseOut={onMouseOut}
+                className="title"
+                x="-420.2"
+                y="0"
+              >
                 accessories
               </tspan>
             </text>
           </svg>
-          <Category style={{ color: "#ccc" }}>
+          <Category style={{ color: "#ccc" }} show={show}>
             <p>헤어케어</p>
             <p>무선청소기</p>
             <p>공기청정기</p>

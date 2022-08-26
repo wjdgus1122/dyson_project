@@ -5,6 +5,7 @@ import { Section2 } from "./Section2";
 import { Section3 } from "./Section3";
 import { FooterImg } from "./FooterImg";
 import { ScrlTop } from "../../../ScrlTop";
+import { Section11 } from "./Section11";
 
 const Wrap = styled.div`
   width: 100%;
@@ -17,7 +18,8 @@ export const Product = () => {
       <ScrlTop />
       <Wrap>
         <PageTitle title="Product" />
-        <Section1 />
+        {/* <Section1 /> */}
+        <Section11 />
         <Section2 />
         <Section3 />
         <FooterImg />
