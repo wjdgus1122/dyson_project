@@ -7,6 +7,8 @@ import responcs from "./Image/responcs.png";
 import webbanner from "./Image/section3.png";
 
 const Section3Wrap = styled.div`
+  overflow: hidden;
+
   margin-top: 130px;
   @media screen and (max-width: 500px) {
     width: 100%;
@@ -51,7 +53,7 @@ const PhoneImg = styled.div`
   height: 280px;
   @media screen and (max-width: 500px) {
     width: 100%;
-    height: 200px;
+    height: 300px;
   }
 `;
 
@@ -249,22 +251,27 @@ const InputCategory = styled.div`
     margin-top: 11px;
   }
   @media screen and (max-width: 500px) {
-    width: 82.5%;
-    flex-wrap: wrap;
-    padding: ${mainStyle.mopadding};
-    input {
-      margin-left: 5px;
-    }
+    flex-direction: column;
+    align-items: flex-start;
+    width: 84%;
+    /* flex-wrap: wrap; */
+    padding: 10px 20px;
+
     h3 {
       margin-left: -10px;
     }
-    .check {
-      :nth-child(2) {
-        margin-left: 14px;
-      }
-      :nth-child(6) {
-        margin-left: 60px;
-      }
+  }
+`;
+
+const Input = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  @media screen and (max-width: 500px) {
+    margin-right: 20px;
+    input {
+      margin-left: 10px;
     }
   }
 `;
@@ -273,6 +280,7 @@ const AgreeBtn = styled.div`
   margin-top: 60px;
   display: flex;
   justify-content: space-between;
+
   .agree {
     margin-right: -220px;
   }
@@ -288,20 +296,26 @@ const AgreeBtn = styled.div`
   }
   @media screen and (max-width: 500px) {
     width: 100%;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
+    justify-content: space-between;
+    align-items: flex-start;
     margin-bottom: 50px;
     font-size: 14px;
     .agree {
-      margin-right: 5px;
+      margin-right: -40px;
       padding-left: 15px;
     }
     .sendBtn {
       width: 140px;
       height: 40px;
-      margin-right: 20px;
+      margin-right: 25px;
     }
   }
 `;
+
+// const Agree = styled.div`
+//   display: flex;
+// `;
 
 export const Section3 = () => {
   return (
@@ -379,51 +393,53 @@ export const Section3 = () => {
                     <br />
                     <InputCategory>
                       <h3>카테고리</h3>
-                      <input
-                        type="checkbox"
-                        name="카테고리"
-                        id="헤어케어"
-                        className="check"
-                      />
-                      <label for="헤어케어" className="product">
-                        헤어케어
-                      </label>
-                      <input
-                        type="checkbox"
-                        name="청소기"
-                        id="청소기"
-                        className="check"
-                      />
-                      <label for="청소기" className="product">
-                        청소기
-                      </label>
-                      <input
-                        type="checkbox"
-                        name="공기청정기"
-                        id="공기청정기"
-                        className="check"
-                      />
-                      <label for="공기청정기" className="product">
-                        공기청정기
-                      </label>
-                      <input
-                        type="checkbox"
-                        name="조명"
-                        id="조명"
-                        className="check"
-                      />
-                      <label for="조명" className="product">
-                        조명
-                      </label>
-                      <input
-                        type="checkbox"
-                        name="부품"
-                        id="부품"
-                        className="check"
-                      />
-                      <label for="부품" className="product">
-                        부품
-                      </label>
+                      <Input>
+                        <input
+                          type="checkbox"
+                          name="카테고리"
+                          id="헤어케어"
+                          className="check"
+                        />
+                        <label for="헤어케어" className="product">
+                          헤어케어
+                        </label>
+                        <input
+                          type="checkbox"
+                          name="청소기"
+                          id="청소기"
+                          className="check"
+                        />
+                        <label for="청소기" className="product">
+                          청소기
+                        </label>
+                        <input
+                          type="checkbox"
+                          name="공기청정기"
+                          id="공기청정기"
+                          className="check"
+                        />
+                        <label for="공기청정기" className="product">
+                          공기청정기
+                        </label>
+                        <input
+                          type="checkbox"
+                          name="조명"
+                          id="조명"
+                          className="check"
+                        />
+                        <label for="조명" className="product">
+                          조명
+                        </label>
+                        <input
+                          type="checkbox"
+                          name="부품"
+                          id="부품"
+                          className="check"
+                        />
+                        <label for="부품" className="product">
+                          부품
+                        </label>
+                      </Input>
                     </InputCategory>
                     <textarea
                       type="text"

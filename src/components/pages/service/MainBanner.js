@@ -6,6 +6,7 @@ import { Container } from "../../Container";
 
 const MainBannerWrap = styled.div`
   width: 100%;
+  height: 60%;
 `;
 
 const WebMainBanner = styled.div`
@@ -24,6 +25,8 @@ const MobileBanner = styled.div`
   @media screen and (max-width: 500px) {
     width: 100%;
     display: block;
+    height: 550px;
+    margin-top: -30px;
   }
 `;
 
@@ -143,7 +146,7 @@ export const MainBanner = () => {
           <Box onClick={handleCenter}>
             <BoxCon>
               <span>
-                <i class="fa-solid fa-warehouse"></i>
+                <i className="fa-solid fa-warehouse"></i>
               </span>
               <h3>다이슨 서비스센터</h3>
               <h5>
@@ -155,7 +158,7 @@ export const MainBanner = () => {
           <Box onClick={handleAS}>
             <BoxCon>
               <span>
-                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <i className="fa-solid fa-screwdriver-wrench"></i>
               </span>
               <h3>다이슨 수리 서비스</h3>
               <h5>전국 어디서나 택배를 이용해 편리하게 수리 받으세요.</h5>
@@ -164,7 +167,7 @@ export const MainBanner = () => {
           <Box onClick={handleCS}>
             <BoxCon>
               <span>
-                <i class="fa-solid fa-mobile-screen"></i>
+                <i className="fa-solid fa-mobile-screen"></i>
               </span>
               <h3>제품상담</h3>
               <h5>보이는 ARS 서비스 또는 제품기술지원</h5>
@@ -173,7 +176,7 @@ export const MainBanner = () => {
           <Box onClick={handleTell}>
             <BoxCon>
               <span>
-                <i class="fa-solid fa-credit-card"></i>
+                <i className="fa-solid fa-credit-card"></i>
               </span>
               <h3>고객센터 연락처</h3>
               <h5>전화, 이메일, 카카오</h5>

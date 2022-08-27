@@ -29,7 +29,7 @@ const Title = styled.div`
   font-family: ${mainStyle.fontType};
   color: ${mainStyle.fontColor};
   @media screen and (max-width: 500px) {
-    font-size: 36px;
+    font-size: 55px;
   }
 `;
 const STitle = styled.div`
@@ -37,8 +37,8 @@ const STitle = styled.div`
   font-weight: 100;
   color: ${mainStyle.fontColor};
   @media screen and (max-width: 500px) {
-    font-size: 20px;
-    margin-top: 13px;
+    font-size: 25px;
+    margin-top: 20px;
     margin-left: 10px;
   }
 `;
@@ -159,6 +159,7 @@ const Box = styled.div`
   position: absolute;
   top: 0;
   left: 0;
+  backdrop-filter: blur(10px);
 `;
 const ViewBtn = styled.div`
   width: 225px;
@@ -172,6 +173,9 @@ const ViewBtn = styled.div`
   border: 1px solid white;
   span {
     margin-left: 10px;
+  }
+  @media screen and (max-width: 500px) {
+    border: none;
   }
 `;
 const CenterCon = styled.div`
