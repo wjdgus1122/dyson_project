@@ -1,15 +1,6 @@
 import styled from "styled-components";
 import { mainStyle } from "../../../styles/Globalstyle";
-import {
-  Air,
-  HairDry,
-  HairMulti,
-  HairStraight,
-  Humid,
-  Vacuums,
-  VacuumsVseries,
-} from "../../../TextDB";
-import { Container } from "../../Container";
+import { HairDry, HairMulti, HairStraight } from "../../../TextDB";
 import { Link } from "react-router-dom";
 
 const TitleWrap = styled.div`
@@ -134,10 +125,10 @@ const Btn = styled.div`
   }
 `;
 
-export const Section2 = () => {
+export const Hair = () => {
   return (
-    <Container>
-      <TitleWrap style={{ color: "#ff5555" }} id="hair">
+    <>
+      <TitleWrap style={{ color: "#ff5555" }}>
         <Title>
           <span>hair care</span>다이슨 헤어케어
         </Title>
@@ -155,8 +146,8 @@ export const Section2 = () => {
                 <PrdctTitle>{con.title}</PrdctTitle>
                 <PrdctDesc>{con.desc[0]}</PrdctDesc>
                 {/* {con.color.map((color) => (
-                <PrdctColor>{}</PrdctColor>
-              ))} */}
+            <PrdctColor>{}</PrdctColor>
+          ))} */}
                 <PrdctPrice>₩ {con.price}</PrdctPrice>
                 <Link to="#">
                   <Btn>더 알아보기</Btn>
@@ -178,8 +169,8 @@ export const Section2 = () => {
                 <PrdctTitle>{con.title}</PrdctTitle>
                 <PrdctDesc>{con.desc[0]}</PrdctDesc>
                 {/* {con.color.map((color) => (
-                <PrdctColor>{}</PrdctColor>
-              ))} */}
+            <PrdctColor>{}</PrdctColor>
+          ))} */}
                 <PrdctPrice>₩ {con.price}</PrdctPrice>
                 <Btn>더 알아보기</Btn>
               </PrdctDescWrap>
@@ -199,8 +190,8 @@ export const Section2 = () => {
                 <PrdctTitle>{con.title}</PrdctTitle>
                 <PrdctDesc>{con.desc[0]}</PrdctDesc>
                 {/* {con.color.map((color) => (
-                <PrdctColor>{}</PrdctColor>
-              ))} */}
+            <PrdctColor>{}</PrdctColor>
+          ))} */}
                 <PrdctPrice>₩ {con.price}</PrdctPrice>
                 <Btn>더 알아보기</Btn>
               </PrdctDescWrap>
@@ -209,106 +200,6 @@ export const Section2 = () => {
         ))}
       </ConWrap>
       {/* hair */}
-
-      <TitleWrap style={{ color: "#40b109" }} id="vacuum">
-        <Title>
-          <span>vacuums</span>다이슨 무선청소기
-        </Title>
-        <Desc>당신의 간편한 일상을 위한 선택</Desc>
-      </TitleWrap>
-      <Category>v시리즈</Category>
-      <ConWrap>
-        {VacuumsVseries.map((con) => (
-          <Con key={con.id}>
-            <Link to="/product/detail">
-              <PrdctImg>
-                <img src={con.imgUrl} />
-              </PrdctImg>
-              <PrdctDescWrap>
-                <PrdctTitle>{con.title}</PrdctTitle>
-                <PrdctDesc>{con.desc[0]}</PrdctDesc>
-                {/* {con.color.map((color) => (
-                <PrdctColor>{}</PrdctColor>
-              ))} */}
-                <PrdctPrice>₩ {con.price}</PrdctPrice>
-                <Btn>더 알아보기</Btn>
-              </PrdctDescWrap>
-            </Link>
-          </Con>
-        ))}
-      </ConWrap>
-      <Category>기타</Category>
-      <ConWrap>
-        {Vacuums.map((con) => (
-          <Con key={con.id}>
-            <Link to="/product/detail">
-              <PrdctImg>
-                <img src={con.imgUrl} />
-              </PrdctImg>
-              <PrdctDescWrap>
-                <PrdctTitle>{con.title}</PrdctTitle>
-                <PrdctDesc>{con.desc[0]}</PrdctDesc>
-                {/* {con.color.map((color) => (
-                <PrdctColor>{}</PrdctColor>
-              ))} */}
-                <PrdctPrice>₩ {con.price}</PrdctPrice>
-                <Btn>더 알아보기</Btn>
-              </PrdctDescWrap>
-            </Link>
-          </Con>
-        ))}
-      </ConWrap>
-      {/* vacuums */}
-
-      <TitleWrap style={{ color: "#0087f5" }} id="air">
-        <Title>
-          <span>air purifiers</span>다이슨 공기청정기
-        </Title>
-        <Desc>공기를 정화하고 시원하게</Desc>
-      </TitleWrap>
-      <Category>공기청정기</Category>
-      <ConWrap>
-        {Air.map((con) => (
-          <Con key={con.id}>
-            <Link to="/product/detail">
-              <PrdctImg>
-                <img src={con.imgUrl} />
-              </PrdctImg>
-              <PrdctDescWrap>
-                <PrdctTitle>{con.title}</PrdctTitle>
-                <PrdctDesc>{con.desc[0]}</PrdctDesc>
-                {/* {con.color.map((color) => (
-                <PrdctColor>{}</PrdctColor>
-              ))} */}
-                <PrdctPrice>₩ {con.price}</PrdctPrice>
-                <Btn>더 알아보기</Btn>
-              </PrdctDescWrap>
-            </Link>
-          </Con>
-        ))}
-      </ConWrap>
-      <Category>가습기</Category>
-      <ConWrap>
-        {Humid.map((con) => (
-          <Con key={con.id}>
-            <Link to="/product/detail">
-              <PrdctImg>
-                <img src={con.imgUrl} />
-              </PrdctImg>
-              <PrdctDescWrap>
-                <PrdctTitle>{con.title}</PrdctTitle>
-                <PrdctDesc>{con.desc[0]}</PrdctDesc>
-                {/* {con.color.map((color) => (
-                <PrdctColor>{}</PrdctColor>
-              ))} */}
-                <PrdctPrice>₩ {con.price}</PrdctPrice>
-                <Btn>더 알아보기</Btn>
-              </PrdctDescWrap>
-            </Link>
-          </Con>
-        ))}
-      </ConWrap>
-      {/* air */}
-    </Container>
+    </>
   );
 };

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import mainbanner from "./Image/mainbanner.png";
+import { Link } from "react-scroll";
 
 const Wrap = styled.div`
   width: 100%;
@@ -78,97 +79,109 @@ export const Section1 = () => {
           정교한 스타일링
         </Desc>
         <TextWrap>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="333"
-            height="118"
-            viewBox="0 0 333 118"
-          >
-            <text
-              id="hair_care"
-              data-name="hair care"
-              transform="translate(331 92)"
-              fill="#f55"
-              stroke="#f55"
-              stroke-width="2"
-              font-size="100"
-              font-family="HoratioD-Medi, Horatio D"
-              letter-spacing="-0.002em"
+          <Link to="hair" spy={true} smooth={true}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="333"
+              height="118"
+              viewBox="0 0 333 118"
             >
-              <tspan x="-328.3" y="0">
-                hair care
-              </tspan>
-            </text>
-          </svg>
-          <Category style={{ color: "#ff5555" }}>
-            <p>멀티 스타일러</p>
-            <p>헤어 스트레이트너</p>
-            <p>헤어 드라이어</p>
-          </Category>
+              <text
+                id="hair_care"
+                data-name="hair care"
+                transform="translate(331 92)"
+                fill="#f55"
+                stroke="#f55"
+                stroke-width="2"
+                font-size="100"
+                font-family="HoratioD-Medi, Horatio D"
+                letter-spacing="-0.002em"
+              >
+                <tspan x="-328.3" y="0">
+                  hair care
+                </tspan>
+              </text>
+            </svg>
+
+            <Category style={{ color: "#ff5555" }}>
+              <p>멀티 스타일러</p>
+              <p>헤어 스트레이트너</p>
+              <p>헤어 드라이어</p>
+            </Category>
+          </Link>
         </TextWrap>
+
         <TextWrap>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="617"
-            height="118"
-            viewBox="0 0 617 118"
-          >
-            <text
-              id="vacuum_cleaners"
-              data-name="vacuum cleaners"
-              transform="translate(615 92)"
-              fill="#40b109"
-              stroke="#40b109"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              font-size="100"
-              font-family="HoratioD-Medi, Horatio D"
-              letter-spacing="-0.002em"
+          <Link to="hair" spy={true} smooth={true}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="617"
+              height="118"
+              viewBox="0 0 617 118"
             >
-              <tspan x="-612.7" y="0">
-                vacuum cleaners
-              </tspan>
-            </text>
-          </svg>
-          <Category style={{ color: "#40b109" }}>
-            <p>v15 | v12 | v11 | v10</p>
-            <p>옴니-글라이드™</p>
-            <p>마이크로 1.5kg™</p>
-            <p>디지털 슬림™</p>
-            <p>아웃사이즈™</p>
-          </Category>
+              <text
+                id="vacuum_cleaners"
+                data-name="vacuum cleaners"
+                transform="translate(615 92)"
+                fill="#40b109"
+                stroke="#40b109"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                font-size="100"
+                font-family="HoratioD-Medi, Horatio D"
+                letter-spacing="-0.002em"
+              >
+                <tspan x="-612.7" y="0">
+                  vacuum cleaners
+                </tspan>
+              </text>
+            </svg>
+
+            <Category style={{ color: "#40b109" }}>
+              <p>v15 | v12 | v11 | v10</p>
+              <p>옴니-글라이드™</p>
+              <p>마이크로 1.5kg™</p>
+              <p>디지털 슬림™</p>
+              <p>아웃사이즈™</p>
+            </Category>
+          </Link>
         </TextWrap>
+
         <TextWrap>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="493"
-            height="118"
-            viewBox="0 0 493 118"
-          >
-            <text
-              id="air_treatment"
-              data-name="air treatment"
-              transform="translate(491 92)"
-              fill="#0087f5"
-              stroke="#0087f5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              font-size="100"
-              font-family="HoratioD-Medi, Horatio D"
-              letter-spacing="-0.002em"
+          <Link to="hair" spy={true} smooth={true}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="493"
+              height="118"
+              viewBox="0 0 493 118"
             >
-              <tspan x="-488.2" y="0">
-                air treatment
-              </tspan>
-            </text>
-          </svg>
-          <Category style={{ color: "#0087f5" }}>
-            <p>공기청정기</p>
-            <p>가습기</p>
-          </Category>
+              <text
+                id="air_treatment"
+                data-name="air treatment"
+                transform="translate(491 92)"
+                fill="#0087f5"
+                stroke="#0087f5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                font-size="100"
+                font-family="HoratioD-Medi, Horatio D"
+                letter-spacing="-0.002em"
+              >
+                <tspan x="-488.2" y="0">
+                  air treatment
+                </tspan>
+              </text>
+            </svg>
+
+            <Category style={{ color: "#0087f5" }}>
+              <p>공기청정기</p>
+              <p>가습기</p>
+            </Category>
+          </Link>
         </TextWrap>
+
         <TextWrap>
           <svg
             xmlns="http://www.w3.org/2000/svg"
