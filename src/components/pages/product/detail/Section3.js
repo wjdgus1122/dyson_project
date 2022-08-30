@@ -8,6 +8,10 @@ const Wrap = styled.div`
 `;
 
 const Img = styled.div`
+  width: 100%;
+  img {
+    width: 100%;
+  }
   @media screen and (max-width: 500px) {
     display: none;
   }

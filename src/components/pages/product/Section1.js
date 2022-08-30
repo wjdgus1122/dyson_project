@@ -1,13 +1,17 @@
 import styled from "styled-components";
 import mainbanner from "./Image/mainbanner.png";
+import product_main from "./Image/product_main.png";
+
 import { Link } from "react-scroll";
+import { mainStyle } from "../../../styles/Globalstyle";
 
 const Wrap = styled.div`
   width: 100%;
   height: 100vh;
   background: url(${mainbanner}) no-repeat center / cover;
   @media screen and (max-width: 500px) {
-    background: url(${mainbanner}) no-repeat bottom / contain;
+    background: url(${product_main}) no-repeat bottom / contain;
+    background-color: ${mainStyle.fontColor};
   }
 `;
 
@@ -25,13 +29,27 @@ const SvgWrap = styled.div`
     fill-opacity: 0;
     &:hover {
       fill-opacity: 1;
-      /* div {
-        display: block;
-      } */
     }
-    /* &:hover div {
-      display: block;
-    } */
+  }
+  @media screen and (max-width: 500px) {
+    top: 50px;
+    svg {
+      &.hair_care {
+        width: 250px;
+      }
+      &.vacuum_cleaners {
+        width: 440px;
+      }
+      &.air_treatment {
+        width: 350px;
+      }
+      &.lighting {
+        width: 203px;
+      }
+      &.accessories {
+        width: 301px;
+      }
+    }
   }
 `;
 
@@ -46,10 +64,10 @@ const Desc = styled.h4`
     display: none;
   }
 `;
+
 const TextWrap = styled.div`
   &:hover {
     div {
-      /* opacity: 1; */
       display: flex;
       flex-direction: column;
     }
@@ -61,7 +79,6 @@ const Category = styled.div`
   font-weight: 600;
   text-align: end;
   display: none;
-  /* opacity: 0; */
   p {
     margin-bottom: 10px;
   }
@@ -85,6 +102,7 @@ export const Section1 = () => {
               width="333"
               height="118"
               viewBox="0 0 333 118"
+              className="hair_care"
             >
               <text
                 id="hair_care"
@@ -118,6 +136,7 @@ export const Section1 = () => {
               width="617"
               height="118"
               viewBox="0 0 617 118"
+              className="vacuum_cleaners"
             >
               <text
                 id="vacuum_cleaners"
@@ -149,12 +168,13 @@ export const Section1 = () => {
         </TextWrap>
 
         <TextWrap>
-          <Link to="hair" spy={true} smooth={true}>
+          <Link to="air" spy={true} smooth={true}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="493"
               height="118"
               viewBox="0 0 493 118"
+              className="air_treatment"
             >
               <text
                 id="air_treatment"
@@ -188,6 +208,7 @@ export const Section1 = () => {
             width="290"
             height="119"
             viewBox="0 0 290 119"
+            className="lighting"
           >
             <text
               id="lighting"
@@ -212,34 +233,37 @@ export const Section1 = () => {
           </Category>
         </TextWrap>
 
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="425"
-          height="118"
-          viewBox="0 0 425 118"
-        >
-          <text
-            id="accessories"
-            transform="translate(423 92)"
-            fill="#ccc"
-            stroke="#ccc"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            font-size="100"
-            font-family="HoratioD-Medi, Horatio D"
-            letter-spacing="-0.002em"
+        <TextWrap>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="425"
+            height="118"
+            viewBox="0 0 425 118"
+            className="accessories"
           >
-            <tspan x="-420.2" y="0">
-              accessories
-            </tspan>
-          </text>
-        </svg>
-        <Category style={{ color: "#ccc" }}>
-          <p>헤어케어</p>
-          <p>무선청소기</p>
-          <p>공기청정기</p>
-        </Category>
+            <text
+              id="accessories"
+              transform="translate(423 92)"
+              fill="#ccc"
+              stroke="#ccc"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              font-size="100"
+              font-family="HoratioD-Medi, Horatio D"
+              letter-spacing="-0.002em"
+            >
+              <tspan x="-420.2" y="0">
+                accessories
+              </tspan>
+            </text>
+          </svg>
+          <Category style={{ color: "#ccc" }}>
+            <p>헤어케어</p>
+            <p>무선청소기</p>
+            <p>공기청정기</p>
+          </Category>
+        </TextWrap>
       </SvgWrap>
     </Wrap>
   );

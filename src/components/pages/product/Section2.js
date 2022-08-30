@@ -14,9 +14,10 @@ import { Link } from "react-router-dom";
 
 const TitleWrap = styled.div`
   margin-top: 200px;
+  margin-bottom: 100px;
   /* color: #ff5555; */
   @media screen and (max-width: 500px) {
-    margin-top: 50px;
+    margin-top: 150px;
   }
 `;
 
@@ -52,10 +53,11 @@ const Desc = styled.div`
 const Category = styled.h3`
   font-size: 20px;
   color: #808080;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   @media screen and (max-width: 500px) {
-    margin-top: 30px;
+    margin-top: 100px;
+    margin-bottom: 50px;
   }
 `;
 
@@ -66,13 +68,14 @@ const ConWrap = styled.div`
   row-gap: 30px;
   @media screen and (max-width: 500px) {
     grid-template-columns: repeat(1, 1fr);
+    row-gap: 60px;
   }
 `;
 
 const Con = styled.div`
   width: 500px;
   @media screen and (max-width: 500px) {
-    width: 90vw;
+    width: 89vw;
   }
 `;
 
@@ -101,10 +104,13 @@ const PrdctTitle = styled.div`
 `;
 
 const PrdctDesc = styled.div`
-  height: 120px;
+  padding-bottom: 120px;
   border-bottom: 1px solid ${mainStyle.fontColor};
   opacity: 0.5;
   font-size: 18px;
+  @media screen and (max-width: 500px) {
+    padding-bottom: 60px;
+  }
 `;
 
 const PrdctPrice = styled.div`
@@ -143,7 +149,9 @@ export const Section2 = () => {
         </Title>
         <Desc>스타일 타협 없이, 정교한 스타일링</Desc>
       </TitleWrap>
-      <Category>멀티 스타일러</Category>
+      <Category style={{ color: "#ff5555", opacity: "0.7" }}>
+        멀티 스타일러
+      </Category>
       <ConWrap>
         {HairMulti.map((con) => (
           <Con key={con.id}>
@@ -166,7 +174,9 @@ export const Section2 = () => {
           </Con>
         ))}
       </ConWrap>
-      <Category>헤어 스트레이트너</Category>
+      <Category style={{ color: "#ff5555", opacity: "0.7" }}>
+        헤어 스트레이트너
+      </Category>
       <ConWrap>
         {HairStraight.map((con) => (
           <Con key={con.id}>
@@ -187,7 +197,9 @@ export const Section2 = () => {
           </Con>
         ))}
       </ConWrap>
-      <Category>헤어 드라이어</Category>
+      <Category style={{ color: "#ff5555", opacity: "0.7" }}>
+        헤어 드라이어
+      </Category>
       <ConWrap>
         {HairDry.map((con) => (
           <Con key={con.id}>
@@ -216,7 +228,7 @@ export const Section2 = () => {
         </Title>
         <Desc>당신의 간편한 일상을 위한 선택</Desc>
       </TitleWrap>
-      <Category>v시리즈</Category>
+      <Category style={{ color: "#40b109", opacity: "0.7" }}>v시리즈</Category>
       <ConWrap>
         {VacuumsVseries.map((con) => (
           <Con key={con.id}>
@@ -237,7 +249,7 @@ export const Section2 = () => {
           </Con>
         ))}
       </ConWrap>
-      <Category>기타</Category>
+      <Category style={{ color: "#40b109", opacity: "0.7" }}>기타</Category>
       <ConWrap>
         {Vacuums.map((con) => (
           <Con key={con.id}>
@@ -266,7 +278,9 @@ export const Section2 = () => {
         </Title>
         <Desc>공기를 정화하고 시원하게</Desc>
       </TitleWrap>
-      <Category>공기청정기</Category>
+      <Category style={{ color: "#0087f5", opacity: "0.7" }}>
+        공기청정기
+      </Category>
       <ConWrap>
         {Air.map((con) => (
           <Con key={con.id}>
@@ -287,7 +301,7 @@ export const Section2 = () => {
           </Con>
         ))}
       </ConWrap>
-      <Category>가습기</Category>
+      <Category style={{ color: "#0087f5", opacity: "0.7" }}>가습기</Category>
       <ConWrap>
         {Humid.map((con) => (
           <Con key={con.id}>

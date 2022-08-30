@@ -8,6 +8,7 @@ import { Logo } from "./Image/Logo";
 const Title = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   font-size: 50px;
   font-weight: 900;
   width: 35%;
