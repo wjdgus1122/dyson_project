@@ -15,7 +15,7 @@ const Wrap = styled.div`
   justify-content: space-between;
   position: relative;
   @media screen and (max-width: 500px) {
-    display: block;
+    /* display: block; */
   }
 `;
 
@@ -77,19 +77,33 @@ const Desc1 = styled.div`
 `;
 
 const Img = styled.div`
-  &.show {
+  /* &.show {
     width: ${(props) => props.show};
   }
   &.sshow {
     width: ${(props) => props.sshow};
+  } */
+  width: 600px;
+  &.show {
+    display: ${(props) => props.show};
+  }
+  &.sshow {
+    display: ${(props) => props.sshow};
   }
   height: 90vh;
   position: absolute;
   top: 0;
   left: 350px;
   @media screen and (max-width: 500px) {
-    width: 250px;
-    height: 80vh;
+    /* width: 200px; */
+    /* height: 80vh; */
+    /* &.show {
+    width: ${(props) => props.show};
+  }
+  &.sshow {
+    width: ${(props) => props.sshow};
+  } */
+    width: 400px;
     top: -40px;
     left: 60px;
   }
@@ -230,10 +244,11 @@ const ThumbnailImg = styled.div`
     margin-bottom: 20px;
   }
   @media screen and (max-width: 500px) {
-    width: 20%;
+    /* width: 20%;
     position: absolute;
     bottom: 250px;
-    right: 0;
+    right: 0; */
+    display: none;
   }
 `;
 
@@ -271,21 +286,23 @@ const SImg = styled.div`
 `;
 
 export const Section1 = () => {
-  const [show, setShow] = useState("600px");
-  const [sshow, setSshow] = useState("0");
+  // const [show, setShow] = useState("600px");
+  // const [sshow, setSshow] = useState("0");
+  const [show, setShow] = useState("block");
+  const [sshow, setSshow] = useState("none");
   const [yell, setYell] = useState("block");
   const [go, setGo] = useState("none");
 
   const handleClick = () => {
-    setShow("600px");
-    setSshow("0");
+    setShow("block");
+    setSshow("none");
     setYell("block");
     setGo("none");
   };
 
   const ClickHandle = () => {
-    setShow("0");
-    setSshow("600px");
+    setShow("none");
+    setSshow("block");
     setYell("none");
     setGo("block");
   };
@@ -308,6 +325,7 @@ export const Section1 = () => {
           show={show}
           style={{
             background: `url(${product}) no-repeat center / cover`,
+            // width: `${show === "600px" ? "":""}`
           }}
         />
         <Img

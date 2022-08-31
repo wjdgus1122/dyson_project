@@ -1,6 +1,8 @@
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { ScrlTop } from "../../../../ScrlTop";
 import { mainStyle } from "../../../../styles/Globalstyle";
 import { Container } from "../../../Container";
 import { Logo } from "./Image/Logo";
@@ -12,6 +14,7 @@ const Title = styled.div`
   font-size: 50px;
   font-weight: 900;
   width: 35%;
+  margin-left: 120px;
   svg {
     margin: 20px;
   }
@@ -150,7 +153,9 @@ export const Section4 = () => {
           <Name className="new">v15 detect</Name>
           <Desc>가장 강력한 흡입력</Desc>
           <Btn>
-            더 알아보기 <FontAwesomeIcon icon={faAngleRight} />
+            <Link to="/product/detail">
+              더 알아보기 <FontAwesomeIcon icon={faAngleRight} />
+            </Link>
           </Btn>
           <Line />
           <Spec>240 AW</Spec>

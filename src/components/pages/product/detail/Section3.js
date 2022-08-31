@@ -22,6 +22,10 @@ const MoImg = styled.div`
   display: none;
   @media screen and (max-width: 500px) {
     display: block;
+    width: 100%;
+    img {
+      width: 100%;
+    }
   }
 `;
 
