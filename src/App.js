@@ -6,6 +6,7 @@ import { Community } from "./components/pages/community/Community";
 import { Home } from "./components/pages/home/Home";
 import { Detail } from "./components/pages/product/detail/Detail";
 import { Product } from "./components/pages/product/Product";
+import { Search } from "./components/pages/search/Search";
 import { Service } from "./components/pages/service/Service";
 import { Globalstyle } from "./styles/Globalstyle";
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/product/detail" element={<Detail />} />
           <Route path="/service" element={<Service />} />
           <Route path="/community" element={<Community />} />
+          <Route path="/search" element={<Search />} />
         </Routes>
         <Footer />
       </Router>
