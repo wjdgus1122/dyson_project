@@ -23,6 +23,8 @@ const Title = styled.div`
     font-weight: 100;
   }
   @media screen and (max-width: 500px) {
+    margin-left: 0;
+    margin-bottom: 30px;
     width: 80%;
     font-size: 25px;
     svg {

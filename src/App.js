@@ -8,6 +8,7 @@ import { Detail } from "./components/pages/product/detail/Detail";
 import { Product } from "./components/pages/product/Product";
 import { Search } from "./components/pages/search/Search";
 import { Service } from "./components/pages/service/Service";
+import { ScrollBtn } from "./components/ScrollBtn";
 import { Globalstyle } from "./styles/Globalstyle";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/community" element={<Community />} />
           <Route path="/search" element={<Search />} />
         </Routes>
+        <ScrollBtn />
         <Footer />
       </Router>
     </HelmetProvider>
