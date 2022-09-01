@@ -370,7 +370,9 @@ export const Header = () => {
             <Link to={"/community"}>커뮤니티</Link>
           </Menu>
           <Menu iconcolor={svgcolor}>
-            <FontAwesomeIcon icon={faMagnifyingGlass} />
+            <Link to={"/search"}>
+              <FontAwesomeIcon icon={faMagnifyingGlass} />
+            </Link>
           </Menu>
           <Menu iconcolor={svgcolor}>
             <FontAwesomeIcon icon={faBagShopping} />
