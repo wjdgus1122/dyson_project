@@ -3,6 +3,7 @@ import { mainStyle } from "../styles/Globalstyle";
 
 const SContainer = styled.div`
   padding: ${mainStyle.padding};
+  box-sizing: border-box;
   @media screen and (max-width: 500px) {
     padding: ${mainStyle.mopadding};
   }

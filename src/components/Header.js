@@ -166,9 +166,9 @@ const MoMenuBtn = styled.div`
   }
 `;
 const CloseBtn = styled.div`
-  font-size: 30px;
+  font-size: 25px;
   position: absolute;
-  top: 20px;
+  top: 10px;
   right: 20px;
 `;
 

@@ -552,6 +552,7 @@ export const HairDry = [
     },
   },
 ];
+
 export const VacuumsVseries = [
   {
     key: 0,

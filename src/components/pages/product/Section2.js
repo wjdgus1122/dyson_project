@@ -6,7 +6,6 @@ import {
   HairMulti,
   HairStraight,
   Humid,
-  ProductDB,
   Vacuums,
   VacuumsVseries,
 } from "../../../TextDB";
@@ -15,9 +14,10 @@ import { Link } from "react-router-dom";
 
 const TitleWrap = styled.div`
   margin-top: 200px;
-  color: #ff5555;
+  margin-bottom: 100px;
+  /* color: #ff5555; */
   @media screen and (max-width: 500px) {
-    margin-top: 50px;
+    margin-top: 150px;
   }
 `;
 
@@ -53,32 +53,35 @@ const Desc = styled.div`
 const Category = styled.h3`
   font-size: 20px;
   color: #808080;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   @media screen and (max-width: 500px) {
-    margin-top: 30px;
+    margin-top: 100px;
+    margin-bottom: 50px;
   }
 `;
 
 const ConWrap = styled.div`
-  width: 100vw;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  column-gap: 50px;
+  row-gap: 30px;
   @media screen and (max-width: 500px) {
     grid-template-columns: repeat(1, 1fr);
+    row-gap: 60px;
   }
 `;
 
 const Con = styled.div`
   width: 500px;
   @media screen and (max-width: 500px) {
-    width: 90vw;
+    width: 89vw;
   }
 `;
 
 const PrdctImg = styled.div`
   width: 100%;
-  height: 400px;
+  height: 300px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -89,26 +92,31 @@ const PrdctImg = styled.div`
 `;
 
 const PrdctDescWrap = styled.div`
-  padding: 15px;
+  padding: 15px 0;
+  color: ${mainStyle.fontColor};
+  /* width: 500px; */
 `;
 
 const PrdctTitle = styled.div`
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: 700;
   margin-bottom: 15px;
 `;
 
 const PrdctDesc = styled.div`
-  height: 120px;
-  border-bottom: 1px solid #808080;
-  font-size: 12px;
+  padding-bottom: 120px;
+  border-bottom: 1px solid ${mainStyle.fontColor};
+  opacity: 0.5;
+  font-size: 18px;
+  @media screen and (max-width: 500px) {
+    padding-bottom: 60px;
+  }
 `;
-
-const PrdctColor = styled.div``;
 
 const PrdctPrice = styled.div`
   font-size: 20px;
-  font-weight: 900;
-  color: #808080;
+  font-weight: 700;
+  color: ${mainStyle.fontColor};
   margin-top: 50px;
   margin-bottom: 10px;
 `;
@@ -116,16 +124,16 @@ const PrdctPrice = styled.div`
 const Btn = styled.div`
   width: 50%;
   height: 50px;
-  background-color: ${mainStyle.mainColor};
+  background-color: rgba(${mainStyle.mainRgbColor}, 0.3);
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0.5;
+  /* opacity: 0.5; */
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 50px;
   &:hover {
-    opacity: 1;
+    background-color: rgba(${mainStyle.mainRgbColor}, 1);
   }
   @media screen and (max-width: 500px) {
     margin-bottom: 30px;
@@ -135,186 +143,182 @@ const Btn = styled.div`
 export const Section2 = () => {
   return (
     <Container>
-      <TitleWrap>
+      <TitleWrap style={{ color: "#ff5555" }} id="hair">
         <Title>
           <span>hair care</span>다이슨 헤어케어
         </Title>
         <Desc>스타일 타협 없이, 정교한 스타일링</Desc>
       </TitleWrap>
-      <Category>멀티 스타일러</Category>
+      <Category style={{ color: "#ff5555", opacity: "0.7" }}>
+        멀티 스타일러
+      </Category>
       <ConWrap>
         {HairMulti.map((con) => (
           <Con key={con.id}>
-            <Link to="#">
+            <Link to="/product/detail">
               <PrdctImg>
                 <img src={con.imgUrl} />
               </PrdctImg>
-            </Link>
-            <PrdctDescWrap>
-              <PrdctTitle>{con.title}</PrdctTitle>
-              <PrdctDesc>{con.desc[0]}</PrdctDesc>
-              {/* {con.color.map((color) => (
+              <PrdctDescWrap>
+                <PrdctTitle>{con.title}</PrdctTitle>
+                <PrdctDesc>{con.desc[0]}</PrdctDesc>
+                {/* {con.color.map((color) => (
                 <PrdctColor>{}</PrdctColor>
               ))} */}
-              <PrdctPrice>₩ {con.price}</PrdctPrice>
-              <Link to="#">
-                <Btn>더 알아보기</Btn>
-              </Link>
-            </PrdctDescWrap>
+                <PrdctPrice>₩ {con.price}</PrdctPrice>
+                <Link to="#">
+                  <Btn>더 알아보기</Btn>
+                </Link>
+              </PrdctDescWrap>
+            </Link>
           </Con>
         ))}
       </ConWrap>
-      <Category>헤어 스트레이트너</Category>
+      <Category style={{ color: "#ff5555", opacity: "0.7" }}>
+        헤어 스트레이트너
+      </Category>
       <ConWrap>
         {HairStraight.map((con) => (
           <Con key={con.id}>
-            <Link to="#">
+            <Link to="/product/detail">
               <PrdctImg>
                 <img src={con.imgUrl} />
               </PrdctImg>
-            </Link>
-            <PrdctDescWrap>
-              <PrdctTitle>{con.title}</PrdctTitle>
-              <PrdctDesc>{con.desc[0]}</PrdctDesc>
-              {/* {con.color.map((color) => (
+              <PrdctDescWrap>
+                <PrdctTitle>{con.title}</PrdctTitle>
+                <PrdctDesc>{con.desc[0]}</PrdctDesc>
+                {/* {con.color.map((color) => (
                 <PrdctColor>{}</PrdctColor>
               ))} */}
-              <PrdctPrice>₩ {con.price}</PrdctPrice>
-              <Link to="#">
+                <PrdctPrice>₩ {con.price}</PrdctPrice>
                 <Btn>더 알아보기</Btn>
-              </Link>
-            </PrdctDescWrap>
+              </PrdctDescWrap>
+            </Link>
           </Con>
         ))}
       </ConWrap>
-      <Category>헤어 드라이어</Category>
+      <Category style={{ color: "#ff5555", opacity: "0.7" }}>
+        헤어 드라이어
+      </Category>
       <ConWrap>
         {HairDry.map((con) => (
           <Con key={con.id}>
-            <Link to="#">
+            <Link to="/product/detail">
               <PrdctImg>
                 <img src={con.imgUrl} />
               </PrdctImg>
-            </Link>
-            <PrdctDescWrap>
-              <PrdctTitle>{con.title}</PrdctTitle>
-              <PrdctDesc>{con.desc[0]}</PrdctDesc>
-              {/* {con.color.map((color) => (
+              <PrdctDescWrap>
+                <PrdctTitle>{con.title}</PrdctTitle>
+                <PrdctDesc>{con.desc[0]}</PrdctDesc>
+                {/* {con.color.map((color) => (
                 <PrdctColor>{}</PrdctColor>
               ))} */}
-              <PrdctPrice>₩ {con.price}</PrdctPrice>
-              <Link to="#">
+                <PrdctPrice>₩ {con.price}</PrdctPrice>
                 <Btn>더 알아보기</Btn>
-              </Link>
-            </PrdctDescWrap>
+              </PrdctDescWrap>
+            </Link>
           </Con>
         ))}
       </ConWrap>
       {/* hair */}
 
-      <TitleWrap>
+      <TitleWrap style={{ color: "#40b109" }} id="vacuum">
         <Title>
           <span>vacuums</span>다이슨 무선청소기
         </Title>
         <Desc>당신의 간편한 일상을 위한 선택</Desc>
       </TitleWrap>
-      <Category>v시리즈</Category>
+      <Category style={{ color: "#40b109", opacity: "0.7" }}>v시리즈</Category>
       <ConWrap>
         {VacuumsVseries.map((con) => (
           <Con key={con.id}>
-            <Link to="#">
+            <Link to="/product/detail">
               <PrdctImg>
                 <img src={con.imgUrl} />
               </PrdctImg>
-            </Link>
-            <PrdctDescWrap>
-              <PrdctTitle>{con.title}</PrdctTitle>
-              <PrdctDesc>{con.desc[0]}</PrdctDesc>
-              {/* {con.color.map((color) => (
+              <PrdctDescWrap>
+                <PrdctTitle>{con.title}</PrdctTitle>
+                <PrdctDesc>{con.desc[0]}</PrdctDesc>
+                {/* {con.color.map((color) => (
                 <PrdctColor>{}</PrdctColor>
               ))} */}
-              <PrdctPrice>₩ {con.price}</PrdctPrice>
-              <Link to="#">
+                <PrdctPrice>₩ {con.price}</PrdctPrice>
                 <Btn>더 알아보기</Btn>
-              </Link>
-            </PrdctDescWrap>
+              </PrdctDescWrap>
+            </Link>
           </Con>
         ))}
       </ConWrap>
-      <Category>기타</Category>
+      <Category style={{ color: "#40b109", opacity: "0.7" }}>기타</Category>
       <ConWrap>
         {Vacuums.map((con) => (
           <Con key={con.id}>
-            <Link to="#">
+            <Link to="/product/detail">
               <PrdctImg>
                 <img src={con.imgUrl} />
               </PrdctImg>
-            </Link>
-            <PrdctDescWrap>
-              <PrdctTitle>{con.title}</PrdctTitle>
-              <PrdctDesc>{con.desc[0]}</PrdctDesc>
-              {/* {con.color.map((color) => (
+              <PrdctDescWrap>
+                <PrdctTitle>{con.title}</PrdctTitle>
+                <PrdctDesc>{con.desc[0]}</PrdctDesc>
+                {/* {con.color.map((color) => (
                 <PrdctColor>{}</PrdctColor>
               ))} */}
-              <PrdctPrice>₩ {con.price}</PrdctPrice>
-              <Link to="#">
+                <PrdctPrice>₩ {con.price}</PrdctPrice>
                 <Btn>더 알아보기</Btn>
-              </Link>
-            </PrdctDescWrap>
+              </PrdctDescWrap>
+            </Link>
           </Con>
         ))}
       </ConWrap>
       {/* vacuums */}
 
-      <TitleWrap>
+      <TitleWrap style={{ color: "#0087f5" }} id="air">
         <Title>
           <span>air purifiers</span>다이슨 공기청정기
         </Title>
         <Desc>공기를 정화하고 시원하게</Desc>
       </TitleWrap>
-      <Category>공기청정기</Category>
+      <Category style={{ color: "#0087f5", opacity: "0.7" }}>
+        공기청정기
+      </Category>
       <ConWrap>
         {Air.map((con) => (
           <Con key={con.id}>
-            <Link to="#">
+            <Link to="/product/detail">
               <PrdctImg>
                 <img src={con.imgUrl} />
               </PrdctImg>
-            </Link>
-            <PrdctDescWrap>
-              <PrdctTitle>{con.title}</PrdctTitle>
-              <PrdctDesc>{con.desc[0]}</PrdctDesc>
-              {/* {con.color.map((color) => (
+              <PrdctDescWrap>
+                <PrdctTitle>{con.title}</PrdctTitle>
+                <PrdctDesc>{con.desc[0]}</PrdctDesc>
+                {/* {con.color.map((color) => (
                 <PrdctColor>{}</PrdctColor>
               ))} */}
-              <PrdctPrice>₩ {con.price}</PrdctPrice>
-              <Link to="#">
+                <PrdctPrice>₩ {con.price}</PrdctPrice>
                 <Btn>더 알아보기</Btn>
-              </Link>
-            </PrdctDescWrap>
+              </PrdctDescWrap>
+            </Link>
           </Con>
         ))}
       </ConWrap>
-      <Category>가습기</Category>
+      <Category style={{ color: "#0087f5", opacity: "0.7" }}>가습기</Category>
       <ConWrap>
         {Humid.map((con) => (
           <Con key={con.id}>
-            <Link to="#">
+            <Link to="/product/detail">
               <PrdctImg>
                 <img src={con.imgUrl} />
               </PrdctImg>
-            </Link>
-            <PrdctDescWrap>
-              <PrdctTitle>{con.title}</PrdctTitle>
-              <PrdctDesc>{con.desc[0]}</PrdctDesc>
-              {/* {con.color.map((color) => (
+              <PrdctDescWrap>
+                <PrdctTitle>{con.title}</PrdctTitle>
+                <PrdctDesc>{con.desc[0]}</PrdctDesc>
+                {/* {con.color.map((color) => (
                 <PrdctColor>{}</PrdctColor>
               ))} */}
-              <PrdctPrice>₩ {con.price}</PrdctPrice>
-              <Link to="#">
+                <PrdctPrice>₩ {con.price}</PrdctPrice>
                 <Btn>더 알아보기</Btn>
-              </Link>
-            </PrdctDescWrap>
+              </PrdctDescWrap>
+            </Link>
           </Con>
         ))}
       </ConWrap>
