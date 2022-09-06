@@ -1,5 +1,3 @@
-import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/navigation";
@@ -20,24 +18,7 @@ const Title = styled.div`
   }
 `;
 
-const Wrap = styled.div`
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center;
-  svg {
-    font-size: 50px;
-    color: ${mainStyle.mainColor};
-    opacity: 0.5;
-    cursor: pointer;
-    @media screen and (max-width: 500px) {
-      display: none;
-    }
-  }
-  @media screen and (max-width: 500px) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  } */
-`;
+const Wrap = styled.div``;
 
 const CWrap = styled.div`
   width: 100%;
@@ -68,45 +49,8 @@ const ConWrap = styled.div`
 
 const Con = styled.div`
   height: 400px;
-
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  .new::before {
-    content: "New";
-    position: absolute;
-    font-size: 20px;
-    transform: translateY(-20px);
-    color: red;
-    @media screen and (max-width: 500px) {
-      font-size: 10px;
-      transform: translateY(-10px);
-    }
-  } */
   @media screen and (max-width: 500px) {
     height: 200px;
-  }
-`;
-
-const Img = styled.div`
-  width: 80%;
-  height: 300px;
-  background-color: gray;
-  @media screen and (max-width: 500px) {
-    width: 95px;
-    height: 150px;
-  }
-`;
-
-const Name = styled.h3`
-  font-size: 30px;
-  font-weight: 600;
-  margin-top: 30px;
-  @media screen and (max-width: 500px) {
-    height: 50px;
-    font-size: 16px;
-    margin-top: 15px;
   }
 `;
 
