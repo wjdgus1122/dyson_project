@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { mainStyle } from "../../../styles/Globalstyle";
 import { ProductDB } from "../../../TextDB";
@@ -73,9 +74,11 @@ export const Search = () => {
             return post;
           }
         }).map((post) => (
-          <DbBox key={post.id}>
-            <DbName>{post.title}</DbName>
-          </DbBox>
+          <Link to={"/product/detail"}>
+            <DbBox key={post.id}>
+              <DbName>{post.title}</DbName>
+            </DbBox>
+          </Link>
         ))}
       </ConWrap>
     </Wrap>
