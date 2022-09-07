@@ -81,7 +81,7 @@ export const Section3 = () => {
         <OnlineBoxWrap>
           <OnlineBox>
             <span>
-              <i class="fa-solid fa-cart-flatbed"></i>
+              <i className="fa-solid fa-cart-flatbed"></i>
             </span>
             <h3>무료배송</h3>
             <p>
@@ -91,7 +91,7 @@ export const Section3 = () => {
           </OnlineBox>
           <OnlineBox>
             <span>
-              <i class="fa-solid fa-screwdriver-wrench"></i>
+              <i className="fa-solid fa-screwdriver-wrench"></i>
             </span>
             <h3>무상 A/S 제공</h3>
             <p>
@@ -102,7 +102,7 @@ export const Section3 = () => {
           </OnlineBox>
           <OnlineBox>
             <span>
-              <i class="fa-solid fa-battery-full"></i>
+              <i className="fa-solid fa-battery-full"></i>
             </span>
             <h3>배터리 무상 보증</h3>
             <p>
@@ -114,7 +114,7 @@ export const Section3 = () => {
           </OnlineBox>
           <OnlineBox>
             <span>
-              <i class="fa-solid fa-credit-card"></i>
+              <i className="fa-solid fa-credit-card"></i>
             </span>
             <h3>카드 무이자 할부</h3>
             <p>7월 카드사 무이자 할부</p>

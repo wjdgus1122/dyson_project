@@ -110,10 +110,10 @@ export const Section1 = () => {
                 transform="translate(331 92)"
                 fill="#f55"
                 stroke="#f55"
-                stroke-width="2"
-                font-size="100"
-                font-family="HoratioD-Medi, Horatio D"
-                letter-spacing="-0.002em"
+                strokeWidth="2"
+                fontSize="100"
+                fontFamily="HoratioD-Medi, Horatio D"
+                letterSpacing="-0.002em"
               >
                 <tspan x="-328.3" y="0">
                   hair care
@@ -130,7 +130,7 @@ export const Section1 = () => {
         </TextWrap>
 
         <TextWrap>
-          <Link to="hair" spy={true} smooth={true}>
+          <Link to="vacuum" spy={true} smooth={true}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="617"
@@ -144,12 +144,10 @@ export const Section1 = () => {
                 transform="translate(615 92)"
                 fill="#40b109"
                 stroke="#40b109"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                font-size="100"
-                font-family="HoratioD-Medi, Horatio D"
-                letter-spacing="-0.002em"
+                strokeWidth="2"
+                fontSize="100"
+                fontFamily="HoratioD-Medi, Horatio D"
+                letterSpacing="-0.002em"
               >
                 <tspan x="-612.7" y="0">
                   vacuum cleaners
@@ -182,12 +180,10 @@ export const Section1 = () => {
                 transform="translate(491 92)"
                 fill="#0087f5"
                 stroke="#0087f5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                font-size="100"
-                font-family="HoratioD-Medi, Horatio D"
-                letter-spacing="-0.002em"
+                strokeWidth="2"
+                fontSize="100"
+                fontFamily="HoratioD-Medi, Horatio D"
+                letterSpacing="-0.002em"
               >
                 <tspan x="-488.2" y="0">
                   air treatment
@@ -215,12 +211,10 @@ export const Section1 = () => {
               transform="translate(288 92)"
               fill="#fca000"
               stroke="#fca000"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              font-size="100"
-              font-family="HoratioD-Medi, Horatio D"
-              letter-spacing="-0.002em"
+              strokeWidth="2"
+              fontSize="100"
+              fontFamily="HoratioD-Medi, Horatio D"
+              letterSpacing="-0.002em"
             >
               <tspan x="-285.7" y="0">
                 lighting
@@ -246,12 +240,10 @@ export const Section1 = () => {
               transform="translate(423 92)"
               fill="#ccc"
               stroke="#ccc"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              font-size="100"
-              font-family="HoratioD-Medi, Horatio D"
-              letter-spacing="-0.002em"
+              strokeWidth="2"
+              fontSize="100"
+              fontFamily="HoratioD-Medi, Horatio D"
+              letterSpacing="-0.002em"
             >
               <tspan x="-420.2" y="0">
                 accessories
