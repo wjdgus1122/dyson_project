@@ -125,7 +125,7 @@ const PrdtDesc = styled.div`
 const DescWrap = styled.div`
   margin-left: 100px;
   @media screen and (max-width: 500px) {
-    margin-left: 0;
+    display: none;
   }
 `;
 
@@ -145,10 +145,7 @@ const Desc2 = styled.div`
   font-weight: 400;
   opacity: 0.5;
   @media screen and (max-width: 500px) {
-    width: 90%;
-    position: absolute;
-    height: auto;
-    top: 90vh;
+    display: none;
   }
 `;
 
@@ -204,9 +201,7 @@ const Price = styled.div`
   font-weight: 900;
   margin-bottom: 30px;
   @media screen and (max-width: 500px) {
-    font-size: 20px;
-    position: absolute;
-    bottom: 130px;
+    display: none;
   }
 `;
 
@@ -230,9 +225,7 @@ const Btn = styled.div`
     opacity: 1;
   }
   @media screen and (max-width: 500px) {
-    position: absolute;
-    bottom: -50px;
-    width: 100%;
+    display: none;
   }
 `;
 
@@ -282,6 +275,80 @@ const SImg = styled.div`
       height: 50px;
       margin-right: 0;
     }
+  }
+`;
+
+// ==================mobile
+const MDescWrap = styled.div`
+  display: none;
+  @media screen and (max-width: 500px) {
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    padding-right: 20px;
+  }
+`;
+
+const Wrap1 = styled.div`
+  display: none;
+  @media screen and (max-width: 500px) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+`;
+
+const MPrice = styled.div`
+  display: none;
+  @media screen and (max-width: 500px) {
+    display: block;
+    font-size: 22px;
+    font-weight: 900;
+  }
+`;
+
+const MColor = styled.div`
+  display: none;
+  @media screen and (max-width: 500px) {
+    display: flex;
+
+    p {
+      margin-right: 10px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+`;
+
+const MBtn = styled.button`
+  display: none;
+  @media screen and (max-width: 500px) {
+    all: unset;
+    display: block;
+    background-color: ${mainStyle.mainColor};
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    svg {
+      margin-right: 10px;
+    }
+  }
+`;
+
+const MDesc2 = styled.div`
+  display: none;
+  @media screen and (max-width: 500px) {
+    display: block;
+    margin-top: 30px;
+    opacity: 0.7;
+    line-height: 22px;
   }
 `;
 
@@ -386,6 +453,30 @@ export const Section1 = () => {
             </SImg>
           </ThumbnailImg>
         </DescWrap>
+        <MDescWrap>
+          <Wrap1>
+            <MPrice>₩699,000</MPrice>
+            <MColor>
+              <p onClick={handleClick}>
+                옐로 / 니켈
+                <Line className="yellow" yell={yell} />
+              </p>
+              <p onClick={ClickHandle}>
+                골드 / 골드
+                <Line className="gold" go={go} />
+              </p>
+            </MColor>
+          </Wrap1>
+          <MBtn>
+            <FontAwesomeIcon icon={faShoppingBag} />
+            장바구니 담기
+          </MBtn>
+          <MDesc2>
+            레이저가 마룻바닥의 보이지 않던 먼지를 보여줍니다. 피조 센서가 먼지
+            입자의 크기와 양을 지속적으로 측정해 필요에 따라 자동으로 흡입력을
+            조절하며 LCD 스크린은 실시간으로 흡입되는 먼지를 보여줍니다.
+          </MDesc2>
+        </MDescWrap>
       </PrdtDesc>
     </Wrap>
   );

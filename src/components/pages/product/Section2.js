@@ -157,7 +157,7 @@ export const Section2 = () => {
           <Con key={con.id}>
             <Link to="/product/detail">
               <PrdctImg>
-                <img src={con.imgUrl} />
+                <img src={con.imgUrl} alt="멀티 스타일러" />
               </PrdctImg>
               <PrdctDescWrap>
                 <PrdctTitle>{con.title}</PrdctTitle>
@@ -180,7 +180,7 @@ export const Section2 = () => {
           <Con key={con.id}>
             <Link to="/product/detail">
               <PrdctImg>
-                <img src={con.imgUrl} />
+                <img src={con.imgUrl} alt="헤어 스트레이트너" />
               </PrdctImg>
               <PrdctDescWrap>
                 <PrdctTitle>{con.title}</PrdctTitle>
@@ -203,7 +203,7 @@ export const Section2 = () => {
           <Con key={con.id}>
             <Link to="/product/detail">
               <PrdctImg>
-                <img src={con.imgUrl} />
+                <img src={con.imgUrl} alt="헤어 드라이어" />
               </PrdctImg>
               <PrdctDescWrap>
                 <PrdctTitle>{con.title}</PrdctTitle>
@@ -232,7 +232,7 @@ export const Section2 = () => {
           <Con key={con.id}>
             <Link to="/product/detail">
               <PrdctImg>
-                <img src={con.imgUrl} />
+                <img src={con.imgUrl} alt="무선청소기" />
               </PrdctImg>
               <PrdctDescWrap>
                 <PrdctTitle>{con.title}</PrdctTitle>
@@ -253,7 +253,7 @@ export const Section2 = () => {
           <Con key={con.id}>
             <Link to="/product/detail">
               <PrdctImg>
-                <img src={con.imgUrl} />
+                <img src={con.imgUrl} alt="기타" />
               </PrdctImg>
               <PrdctDescWrap>
                 <PrdctTitle>{con.title}</PrdctTitle>
@@ -284,7 +284,7 @@ export const Section2 = () => {
           <Con key={con.id}>
             <Link to="/product/detail">
               <PrdctImg>
-                <img src={con.imgUrl} />
+                <img src={con.imgUrl} alt="공기청정기" />
               </PrdctImg>
               <PrdctDescWrap>
                 <PrdctTitle>{con.title}</PrdctTitle>
@@ -305,7 +305,7 @@ export const Section2 = () => {
           <Con key={con.id}>
             <Link to="/product/detail">
               <PrdctImg>
-                <img src={con.imgUrl} />
+                <img src={con.imgUrl} alt="가습기" />
               </PrdctImg>
               <PrdctDescWrap>
                 <PrdctTitle>{con.title}</PrdctTitle>
