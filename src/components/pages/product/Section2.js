@@ -166,9 +166,7 @@ export const Section2 = () => {
                 <PrdctColor>{}</PrdctColor>
               ))} */}
                 <PrdctPrice>₩ {con.price}</PrdctPrice>
-                <Link to="#">
-                  <Btn>더 알아보기</Btn>
-                </Link>
+                <Btn>더 알아보기</Btn>
               </PrdctDescWrap>
             </Link>
           </Con>
