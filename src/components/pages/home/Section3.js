@@ -83,6 +83,8 @@ const ProductBtn = styled.div`
   svg {
     color: ${mainStyle.mainColor};
   }
+  position: relative;
+  z-index: 99;
   @media screen and (max-width: 500px) {
     font-size: 20px;
   }
