@@ -6,7 +6,7 @@ import { ProductDB } from "../../../TextDB";
 
 const Wrap = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   box-sizing: border-box;
   padding: ${mainStyle.padding};
 `;
@@ -50,6 +50,8 @@ const DbBox = styled.div`
   justify-content: center;
   align-items: center;
   border: 1px solid ${mainStyle.boxColor};
+  text-align: center;
+  line-height: 23px;
 `;
 const DbName = styled.div`
   font-size: 20px;
@@ -58,6 +60,7 @@ const DbName = styled.div`
 
 export const Search = () => {
   const [sccon, setScCon] = useState(``);
+
   return (
     <Wrap>
       <SearchInput>
@@ -66,7 +69,7 @@ export const Search = () => {
           onChange={(event) => setScCon(event.target.value)}
         />
       </SearchInput>
-      <ConWrap>
+      <ConWrap className="conwrap">
         {ProductDB.filter((post) => {
           if (sccon === "") {
             return;
