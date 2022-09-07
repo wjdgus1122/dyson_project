@@ -332,7 +332,7 @@ export const Header = () => {
     }
   };
   window.addEventListener("scroll", sclhandle);
-  console.log(homefont);
+  // console.log(homefont);
   return (
     <SHeader color={hdcolor}>
       <Link to={"/"}>
