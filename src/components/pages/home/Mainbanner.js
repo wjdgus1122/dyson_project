@@ -133,7 +133,7 @@ export const Mainbanner = () => {
   return (
     <>
       <Swiper
-        modules={[Pagination]}
+        modules={[Pagination, Autoplay]}
         direction={"vertical"}
         pagination={{
           clickable: true,
