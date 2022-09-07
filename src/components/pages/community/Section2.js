@@ -1,5 +1,6 @@
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { mainStyle } from "../../../styles/Globalstyle";
 import { CommunityDB } from "../../../TextDB";
@@ -130,8 +131,11 @@ export const Section2 = () => {
             증정합니다.
           </Desc>
           <Btn>
-            더보기
-            <FontAwesomeIcon icon={faCaretRight} />
+            <Link to="#">
+              {" "}
+              더보기
+              <FontAwesomeIcon icon={faCaretRight} />
+            </Link>
           </Btn>
         </ConWrap>
         {CommunityDB && (
@@ -149,8 +153,11 @@ export const Section2 = () => {
                 <Date>{con.date}</Date>
                 <Desc>{con.text.slice(0, 50) + "..."}</Desc>
                 <Btn>
-                  더보기
-                  <FontAwesomeIcon icon={faCaretRight} />
+                  <Link to="#">
+                    {" "}
+                    더보기
+                    <FontAwesomeIcon icon={faCaretRight} />
+                  </Link>
                 </Btn>
               </ConWrap>
             ))}

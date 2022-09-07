@@ -135,6 +135,9 @@ const Button = styled.button`
   @media screen and (max-width: 500px) {
     font-size: 30px;
   }
+  a {
+    color: white;
+  }
 `;
 
 export const MainBanner = () => {
@@ -167,8 +170,10 @@ export const MainBanner = () => {
                 <br /> 참여자 전원 액세서리 바우처 증정
               </Desc>
               <Button>
-                더보기
-                <FontAwesomeIcon icon={faCaretRight} />
+                <Link to="#">
+                  더보기
+                  <FontAwesomeIcon icon={faCaretRight} />
+                </Link>
               </Button>
             </TextWrap>
           </ConWrap>
@@ -196,8 +201,10 @@ export const MainBanner = () => {
                 <br /> 참여자 전원 액세서리 바우처 증정
               </Desc>
               <Button>
-                더보기
-                <FontAwesomeIcon icon={faCaretRight} />
+                <Link to="#">
+                  더보기
+                  <FontAwesomeIcon icon={faCaretRight} />
+                </Link>
               </Button>
             </TextWrap>
             <ReviewImg
