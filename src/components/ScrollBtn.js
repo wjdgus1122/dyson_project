@@ -53,4 +53,8 @@ const Btn = styled.button`
   &:hover {
     background-color: rgba(${mainStyle.mainRgbColor}, 0.5);
   }
+  @media screen and (max-width: 500px) {
+    left: 20px;
+    bottom: 20px;
+  }
 `;
